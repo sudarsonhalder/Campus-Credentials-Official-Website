@@ -1,0 +1,108 @@
+import SectionWrapper from "@/components/SectionWrapper"
+import GradientWrapper from "@/components/GradientWrapper"
+import user1 from "@/public/testimonial/user1.webp"
+import user2 from "@/public/testimonial/user2.webp"
+import user3 from "@/public/testimonial/user3.webp"
+import user4 from "@/public/testimonial/user4.webp"
+import user5 from "@/public/testimonial/user5.webp"
+import user6 from "@/public/testimonial/user6.webp"
+import Image from "next/image"
+import LayoutEffect from "@/components/LayoutEffect"
+
+const Testimonial = () => {
+
+    const testimonials = [
+        {
+            avatar: user1,
+            name: "Dr. Anil Desai",
+            title: "TPO – IIT Bombay",
+            quote: "Campus Credentials has been transformative for our students, boosting placements with industry-relevant skills in full-stack development and data science."
+        },
+        {
+            avatar: user2,
+            name: "Ms. Shweta Patil",
+            title: "TPO – VJTI Mumbai",
+            quote: "Our students' technical skills have improved significantly with Campus Credentials' courses, especially in Python and ReactJS."
+        },
+        {
+            avatar: user3,
+            name: "Mr. Rahul Mehta",
+            title: "TPO – SPIT",
+            quote: "Campus Credentials has enhanced employability, focusing on practical learning in cloud computing and AI/ML, making our graduates stand out."
+        },
+        {
+            avatar: user4,
+            name: "Prof. Priya Menon",
+            title: "TPO – NMIMS Mumbai",
+            quote: "Campus Credentials bridges the gap between academia and industry with hands-on projects and job readiness workshops, improving placement numbers."
+        },
+        {
+            avatar: user5,
+            name: "Dr. Vijay Kulkarni",
+            title: "TPO – DJ Sanghvi College",
+            quote: "Campus Credentials excels in cybersecurity and full-stack development training, preparing students for dynamic roles with structured learning."
+        },
+        {
+            avatar: user6,
+            name: "Mr. Amit Joshi",
+            title: "TPO – KJ Somaiya Institute",
+            quote: "Our students' coding skills have improved greatly with Campus Credentials' Python and Java courses, leading to strong career growth."
+        }
+    ];
+    
+    
+
+    return (
+        <SectionWrapper>
+            <div id="testimonials" className="custom-screen text-gray-800">
+                <div className="max-w-2xl text-center md:mx-auto">
+                    <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                        Campus Credentials is loved by the best colleges around the world
+                    </h2>
+                </div>
+                <GradientWrapper wrapperClassName="max-w-sm h-40 top-12 inset-x-0" className="mt-12">
+                    <LayoutEffect
+                        className="duration-1000 delay-300"
+                        isInviewState={{
+                            trueState: "opacity-1",
+                            falseState: "opacity-0 translate-y-12"
+                        }}
+                    >
+                        <ul className="grid gap-6 duration-1000 delay-300 ease-in-out sm:grid-cols-2 lg:grid-cols-3">
+                            {
+                                testimonials.map((item, idx) => (
+                                    <li key={idx} className="p-4 rounded-xl border border-gray-800"
+                                        style={{
+                                            backgroundImage: "radial-gradient(100% 100% at 50% 50%, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0) 100%);"
+                                        }}
+                                    >
+                                        <figure className="flex flex-col justify-between gap-y-6 h-full">
+                                            <blockquote className="">
+                                                <p className="">
+                                                    {item.quote}
+                                                </p>
+                                            </blockquote>
+                                            <div className="flex items-center gap-x-4">
+                                                <Image
+                                                    src={item.avatar}
+                                                    alt={item.name}
+                                                    className="w-14 h-14 rounded-full object-cover"
+                                                />
+                                                <div>
+                                                    <span className="block text-gray-800 font-semibold">{item.name}</span>
+                                                    <span className="block text-sm mt-0.5">{item.title}</span>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </LayoutEffect>
+                </GradientWrapper>
+            </div>
+        </SectionWrapper>
+    )
+}
+
+export default Testimonial
