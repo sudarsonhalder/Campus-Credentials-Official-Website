@@ -58,7 +58,7 @@ const VisualFeatures = () => {
                                             ))}
                                         </ul>
                                         <div className="flex flex-col items-start mt-8 sm:space-x-4 sm:flex-row sm:items-center lg:mt-12">
-                                            <a href="#" title="" className="inline-flex items-center justify-center px-4 py-4 text-base font-semibold text-black transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700" role="button">
+                                            <a href="#" title="" className="inline-flex items-center justify-center px-3 py-3 text-base font-semibold text-white transition-all duration-200 bg-red-500 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700" role="button">
                                                Visit Now
                                             </a>
                                             {/* <a href="#" title="" className="inline-flex items-center justify-center px-4 py-4 mt-5 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-white rounded-md sm:mt-0 hover:bg-white hover:text-black" role="button">
