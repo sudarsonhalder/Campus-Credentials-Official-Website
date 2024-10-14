@@ -9,17 +9,25 @@ const VisualFeatures = () => {
             title: "Free Online Books and Resources",
             features: [
                 "Download 150+ books and freebies for free",
+                "Download 150+ books and freebies for free",
                 "Kickstart your career",
+                "Kickstart your career",
+                "Kickstart your career",
+                "Download 150+ books and freebies for free",
+                
             ],
             imageUrl: Feature1, 
         },
         {
             id: 2,
-            title: "Unlock your Career Potential",
+            title: "Learning Management System by Campus Credentials",
             features: [
-                "We coach and mentor students",
-                "Master the Campus Recruitment Process",
-                "Aptitude training and GDPI preparation",
+               "Download 150+ books and freebies for free",
+                "Download 150+ books and freebies for free",
+                "Kickstart your career",
+                "Kickstart your career",
+                "Kickstart your career",
+                "Download 150+ books and freebies for free",
             ],
             imageUrl: Feature2, // Replace with the actual URL or variable
         },
@@ -46,7 +54,7 @@ const VisualFeatures = () => {
                                         <Image className="w-full shadow-xl rounded-xl" src={card.imageUrl} alt="" />
                                     </div>
                                     <div className="lg:order-1">
-                                        <h2 className="text-3xl font-bold leading-tight text-black  sm:text-4xl lg:text-5xl lg:leading-snug">{card.title}</h2>
+                                        <h2 className="text-3xl font-bold leading-tight text-black  sm:text-3xl lg:text-4xl lg:leading-snug">{card.title}</h2>
                                         <ul className="grid grid-cols-1 mt-4 sm:mt-10 sm:grid-cols-2 gap-x-10 xl:gap-x-16 gap-y-4 xl:gap-y-6">
                                             {card.features.map((feature, featureIndex) => (
                                                 <li className="flex items-center" key={featureIndex}>
