@@ -39,7 +39,7 @@ const VisualFeatures = () => {
 
                 {cardsData.map((card, index) => (
                     <section key={card.id} className="bg-black rounded-full my-8 ">
-                        <div className="px-4 mx-auto bg-gray-600 max-w-7xl sm:px-6 lg:px-8 rounded-xl">
+                        <div className="px-4 mx-auto bg-gray-200 max-w-7xl sm:px-6 lg:px-8 rounded-xl">
                             <div className="py-10 sm:py-16 lg:py-24">
                                 <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-8">
                                     <div className="lg:order-2">
