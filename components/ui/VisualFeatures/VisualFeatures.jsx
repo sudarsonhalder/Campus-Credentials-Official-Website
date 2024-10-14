@@ -39,7 +39,7 @@ const VisualFeatures = () => {
 
                 {cardsData.map((card, index) => (
                     <section key={card.id} className="bg-black rounded-full my-8 ">
-                        <div className="px-4 mx-auto bg-black max-w-7xl sm:px-6 lg:px-8 rounded-xl">
+                        <div className="px-4 mx-auto bg-gray-600 max-w-7xl sm:px-6 lg:px-8 rounded-xl">
                             <div className="py-10 sm:py-16 lg:py-24">
                                 <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-8">
                                     <div className="lg:order-2">
@@ -59,11 +59,11 @@ const VisualFeatures = () => {
                                         </ul>
                                         <div className="flex flex-col items-start mt-8 sm:space-x-4 sm:flex-row sm:items-center lg:mt-12">
                                             <a href="#" title="" className="inline-flex items-center justify-center px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700" role="button">
-                                                Download Now
+                                               Visit Now
                                             </a>
-                                            <a href="#" title="" className="inline-flex items-center justify-center px-4 py-4 mt-5 text-base font-semibold text-white transition-all duration-200 bg-transparent border border-white rounded-md sm:mt-0 hover:bg-white hover:text-black" role="button">
+                                            {/* <a href="#" title="" className="inline-flex items-center justify-center px-4 py-4 mt-5 text-base font-semibold text-white transition-all duration-200 bg-transparent border border-white rounded-md sm:mt-0 hover:bg-white hover:text-black" role="button">
                                                 Explore UI Blocks
-                                            </a>
+                                            </a> */}
                                         </div>
                                     </div>
                                 </div>
