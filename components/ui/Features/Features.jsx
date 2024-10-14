@@ -65,7 +65,7 @@ const Features = () => {
                     }}
                 >
                     <div className="max-w-xl mx-auto text-center">
-                        <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                        <h2 className="text-gray-800 sm:mt-28 text-3xl font-semibold sm:text-4xl">
                         Unlock Your Potential with Campus Credentials
                         </h2>
                         <p className="mt-3">

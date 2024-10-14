@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import LayoutEffect from "@/components/LayoutEffect";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "../Button";
 
 const Pricing = () => {
+    const [hoveredCard, setHoveredCard] = useState(null);
 
     const plans = [
         {
@@ -49,11 +51,20 @@ const Pricing = () => {
         }
     ];
 
-    const mostPopPricingBg = "radial-gradient(130.39% 130.39% at 51.31% -0.71%, #F77F0E 0%, rgba(247, 127, 14, 0) 100%)";
+    const handleMouseEnter = (idx) => {
+        setHoveredCard(idx);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredCard(null);
+    };
+
+    // Updated radial gradient style for hover (constant over entire card)
+    const gradientStyle = "radial-gradient(circle, rgba(247, 127, 14, 0.7) 0%, rgba(247, 127, 14, 0) 100%)";
 
     return (
         <SectionWrapper id="pricing" className='custom-screen'>
-            <div className='relative max-w-4xl mx-auto text-center '>
+            <div className='relative max-w-4xl mx-auto text-center'>
                 <h2 className='text-gray-900 text-4xl font-bold sm:text-5xl'>
                     Choose the <span className="text-red-600">Perfect Plan</span> for Your Career Growth
                 </h2>
@@ -73,9 +84,17 @@ const Pricing = () => {
                         plans.map((item, idx) => (
                             <div 
                                 key={idx} 
-                                className={`relative flex flex-col justify-between h-full rounded-xl border border-gray-800 p-8 ${item.isMostPop ? "border-red-900 shadow-lg" : ""}`}
+                                className={`relative flex flex-col justify-between h-full rounded-xl border border-gray-800 p-8 transition-all duration-500`}
+                                onMouseEnter={() => handleMouseEnter(idx)}
+                                onMouseLeave={handleMouseLeave}
                                 style={{
-                                    backgroundImage: item.isMostPop ? mostPopPricingBg : ""
+                                    background: hoveredCard === idx 
+                                        ? gradientStyle 
+                                        : "",
+                                    backgroundColor: item.isMostPop ? "white" : "white", // Keep all cards white
+                                    boxShadow: hoveredCard === idx || item.isMostPop 
+                                        ? "0px 10px 15px rgba(0, 0, 0, 0.2)" 
+                                        : ""
                                 }}
                             >
                                 {/* Header */}
