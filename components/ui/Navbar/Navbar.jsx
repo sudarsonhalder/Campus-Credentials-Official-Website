@@ -39,7 +39,7 @@ const Navbar = () => {
             </p>
             <a
               href="#"
-              className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-blue-600"
+              className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-red-500"
             >
               APPLY NOW
             </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
             <div className="custom-screen md:hidden">
                 <NavHeader menuBtnEl={menuBtnEl} state={state} onClick={() => setState(!state)} />
             </div>
-            <nav className={`pb-5 md:text-sm md:static md:block ${state ? "bg-gray-900 absolute z-20 top-0 inset-x-0 rounded-b-2xl shadow-xl md:bg-gray-900" : "hidden"}`}>
+            <nav className={`pb-5 md:text-sm md:static md:block ${state ? "bg-gray-100 absolute z-20 top-0 inset-x-0 rounded-b-2xl shadow-xl md:bg-gray-900" : "hidden"}`}>
                 <div className="custom-screen items-center md:flex">
                     <NavHeader state={state} onClick={() => setState(!state)} />
                     <div className={`flex-1 items-center mt-8 text-gray-800 md:font-medium md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
