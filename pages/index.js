@@ -65,7 +65,7 @@ export default function Home() {
 
  <Testimonial />
  <FAQs />
- <CTA />
+ {/* <CTA /> */}
      {/* 
       <FAQs />
       <CTA /> */}
