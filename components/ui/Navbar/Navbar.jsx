@@ -29,24 +29,40 @@ const Navbar = () => {
 
     return (
         <header className='relative'>
-              {isVisible && (
-        <div className="bg-red-100 py-2 px-4 flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-2 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-          <p className="text-base sm:text-lg font-bold text-black">
-            Get a CAMPUS CREDENTIALS course with a Scholarship of 100%
-          </p>
-          <a
-            href="#"
-            className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-blue-600 w-full sm:w-auto"
+         {isVisible && (
+        <div className="bg-red-100 py-2 px-4 relative flex items-center justify-center">
+          {/* Centered Content */}
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <p className="text-base sm:text-md font-bold text-black">
+              Get a CC course with a Scholarship of 100%
+            </p>
+            <a
+              href="#"
+              className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-blue-600"
+            >
+              APPLY NOW
+            </a>
+          </div>
+
+          {/* Close Button */}
+          {/* <button
+            onClick={closeBanner}
+            className="absolute top-2 right-4 text-black focus:outline-none"
+            aria-label="Close banner"
           >
-            APPLY NOW
-          </a>
+            ✕
+          </button> */}
+
+
           <button
             onClick={closeBanner}
-            className="text-black focus:outline-none absolute top-2 right-4 sm:static"
+            className=" absolute right-4 text-black focus:outline-none text-black focus:outline-none right-4 flex items-center justify-center"
+            style={{ height: '100%' }}
             aria-label="Close banner"
           >
             ✕
           </button>
+
         </div>
       )}
             <div className="custom-screen md:hidden">
