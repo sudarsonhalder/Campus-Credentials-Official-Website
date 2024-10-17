@@ -32,7 +32,7 @@ const Navbar = () => {
                   {isVisible && (
         <div className="bg-red-100 py-2 px-4 flex items-center justify-center space-x-4">
           <p className="text-lg font-bold text-black">
-            Get a CAT course with a Scholarship of 100%
+            Get a CAMPUS CREDENTIALS course with a Scholarship of 100%
           </p>
           <a
             href="#"
