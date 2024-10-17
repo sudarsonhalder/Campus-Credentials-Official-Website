@@ -75,7 +75,7 @@ const CompanyLogos = () => {
         </div>
 
         <p className="mt-10 text-base text-center text-gray-500 md:mt-20">
-          and, 1000+ more companies
+          and, 200+ more Colleges
         </p>
       </div>
     </section>
