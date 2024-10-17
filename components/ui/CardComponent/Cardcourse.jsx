@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const CardComponent = () => {
   const [activeSection, setActiveSection] = useState('courses');
   const [currentPage, setCurrentPage] = useState(1);
+  const [loadedImages, setLoadedImages] = useState({}); // Tracks loaded images
   const itemsPerPage = 3;
 
   const viewAllLinks = {
@@ -19,7 +20,6 @@ const CardComponent = () => {
       link: 'https://campuscredentials.online',
     },
   };
-
   const courses = [
     {
       title: 'Logical Reasoning Simplified: A Comprehensive Guide by Vishwajeet Sir',
@@ -126,7 +126,7 @@ const CardComponent = () => {
     {
       title: 'Test Series 1',
       description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
-      price: '49',
+      price: '₹ 49',
       img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
     },
   ];
@@ -135,68 +135,92 @@ const CardComponent = () => {
     {
       title: 'Microsoft',
       description: 'A brief description of Microsoft-specific preparation.',
-      price: '129',
+      price: '₹ 129',
       img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
     },
   ];
+  const preloadImage = (src, index) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      setLoadedImages((prevState) => ({ ...prevState, [index]: true }));
+    };
+    img.onerror = () => console.warn(`Image at ${src} failed to load.`);
+  };
+
+  useEffect(() => {
+    const data =
+      activeSection === 'courses'
+        ? courses
+        : activeSection === 'testSeries'
+        ? testSeries
+        : companySpecific;
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const paginatedData = data.slice(startIndex, startIndex + itemsPerPage);
+
+    paginatedData.forEach((item, index) => {
+      const key = `${activeSection}-${startIndex + index}`;
+      if (!loadedImages[key]) {
+        preloadImage(item.img, key);
+      }
+    });
+  }, [activeSection, currentPage]);
 
   const renderCards = (data) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const paginatedData = data.slice(startIndex, startIndex + itemsPerPage);
 
-    return paginatedData.map((item, index) => (
-      <div
-        key={`${activeSection}-${currentPage}-${index}`}
-        className="bg-white rounded-lg shadow-md border border-gray-200 flex flex-col justify-between transform hover:scale-105 transition duration-300"
-      >
-        <img
-          src={item.img}
-          alt={item.title}
-          className="h-40 w-full object-cover transition-opacity duration-300 ease-in-out opacity-0"
-          onLoad={(e) => {
-            e.currentTarget.style.opacity = 1;
-          }}
-          onError={(e) => (e.currentTarget.style.display = 'none')}
-        />
+    return paginatedData.map((item, index) => {
+      const cardKey = `${activeSection}-${startIndex + index}`;
 
-        <div className="p-4 flex-grow flex flex-col">
-          <h3
-            className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2"
-            style={{ minHeight: '3rem', overflow: 'hidden', textOverflow: 'ellipsis' }}
-          >
-            {item.title}
-          </h3>
+      return (
+        <div
+          key={cardKey}
+          className="bg-white rounded-lg shadow-md border border-gray-200 flex flex-col justify-between transform hover:scale-105 transition duration-300"
+        >
+          <img
+            src={item.img}
+            alt={item.title}
+            className={`h-40 w-full object-cover transition-opacity duration-300 ease-in-out ${
+              loadedImages[cardKey] ? 'opacity-100' : 'opacity-0'
+            }`}
+            onError={(e) => (e.currentTarget.style.display = 'none')}
+          />
 
-          <p
-            className="text-gray-600 flex-grow mb-4 line-clamp-2"
-            style={{ minHeight: '3rem', overflow: 'hidden', textOverflow: 'ellipsis' }}
-          >
-            {item.description}
-          </p>
+          <div className="p-4 flex-grow flex flex-col">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-600 flex-grow mb-4 line-clamp-2">
+              {item.description}
+            </p>
+          </div>
+
+          <div className="p-4 border-t border-gray-200 flex justify-between items-center">
+            <span className="text-xl font-bold text-gray-900">₹ {item.price}</span>
+            <button
+              onClick={() => window.open(item.buyLink)}
+              className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
-
-        <div className="p-4 border-t border-gray-200 flex justify-between items-center">
-          <span className="text-xl font-bold text-gray-900">₹ {item.price}</span>
-          <button
-            onClick={() => window.open(item.buyLink)}
-            className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition"
-          >
-            Buy Now
-          </button>
-        </div>
-      </div>
-    ));
+      );
+    });
   };
 
   const getPageCount = (data) => Math.ceil(data.length / itemsPerPage);
 
-  const handlePageClick = (pageNumber) => setCurrentPage(pageNumber);
-
   const renderPagination = () => {
     const totalPages = getPageCount(
-      activeSection === 'courses' ? courses :
-      activeSection === 'testSeries' ? testSeries :
-      companySpecific
+      activeSection === 'courses'
+        ? courses
+        : activeSection === 'testSeries'
+        ? testSeries
+        : companySpecific
     );
 
     if (totalPages <= 1) return null;
@@ -206,13 +230,10 @@ const CardComponent = () => {
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index + 1}
-            onClick={(e) => {
-              e.preventDefault();
-              handlePageClick(index + 1);
-            }}
+            onClick={() => setCurrentPage(index + 1)}
             className={`w-8 h-8 rounded-full ${
               currentPage === index + 1 ? 'bg-black text-white' : 'bg-gray-200 text-gray-700'
-            } focus:outline-none`}
+            }`}
           >
             {index + 1}
           </button>
@@ -228,7 +249,10 @@ const CardComponent = () => {
         {['courses', 'testSeries', 'companySpecific'].map((section) => (
           <button
             key={section}
-            onClick={() => { setActiveSection(section); setCurrentPage(1); }}
+            onClick={() => {
+              setActiveSection(section);
+              setCurrentPage(1);
+            }}
             className={`w-full text-left p-2 mb-2 rounded-lg ${
               activeSection === section ? 'bg-red-500 text-white' : 'bg-gray-50 text-gray-700 hover:bg-gray-200'
             }`}

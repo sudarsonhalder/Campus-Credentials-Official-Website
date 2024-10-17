@@ -1,15 +1,32 @@
-import SectionWrapper from "@/components/SectionWrapper"
-import GradientWrapper from "@/components/GradientWrapper"
-import user1 from "@/public/testimonial/user1.webp"
-import user2 from "@/public/testimonial/user2.webp"
-import user3 from "@/public/testimonial/user3.webp"
-import user4 from "@/public/testimonial/user4.webp"
-import user5 from "@/public/testimonial/user5.webp"
-import user6 from "@/public/testimonial/user6.webp"
-import Image from "next/image"
-import LayoutEffect from "@/components/LayoutEffect"
+"use client";
+import { useState, useEffect } from "react";
+import SectionWrapper from "@/components/SectionWrapper";
+import GradientWrapper from "@/components/GradientWrapper";
+import user1 from "@/public/testimonial/user1.webp";
+import user2 from "@/public/testimonial/user2.webp";
+import user3 from "@/public/testimonial/user3.webp";
+import user4 from "@/public/testimonial/user4.webp";
+import user5 from "@/public/testimonial/user5.webp";
+import user6 from "@/public/testimonial/user6.webp";
+import Image from "next/image";
+import LayoutEffect from "@/components/LayoutEffect";
+
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const Testimonial = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize(); // Run on initial render
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const testimonials = [
         {
@@ -49,8 +66,6 @@ const Testimonial = () => {
             quote: "Our students' coding skills have improved greatly with Campus Credentials' Python and Java courses, leading to strong career growth."
         }
     ];
-    
-    
 
     return (
         <SectionWrapper>
@@ -68,41 +83,65 @@ const Testimonial = () => {
                             falseState: "opacity-0 translate-y-12"
                         }}
                     >
-                        <ul className="grid gap-6 duration-1000 delay-300 ease-in-out sm:grid-cols-2 lg:grid-cols-3">
-                            {
-                                testimonials.map((item, idx) => (
-                                    <li key={idx} className="p-4 rounded-xl border border-gray-800"
-                                        style={{
-                                            backgroundImage: "radial-gradient(100% 100% at 50% 50%, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0) 100%);"
-                                        }}
+                        {isMobile ? (
+                            <Swiper
+                                modules={[Autoplay]}
+                                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                                spaceBetween={16}
+                                slidesPerView={1}
+                                loop={true}
+                                className="w-full"
+                            >
+                                {testimonials.map((item, idx) => (
+                                    <SwiperSlide key={idx}>
+                                        <div className="flex justify-center p-4">
+                                            <TestimonialCard item={item} />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        ) : (
+                            <ul className="grid gap-6 duration-1000 delay-300 ease-in-out sm:grid-cols-2 lg:grid-cols-3">
+                                {testimonials.map((item, idx) => (
+                                    <li
+                                        key={idx}
+                                        className="flex"
                                     >
-                                        <figure className="flex flex-col justify-between gap-y-6 h-full">
-                                            <blockquote className="">
-                                                <p className="">
-                                                    {item.quote}
-                                                </p>
-                                            </blockquote>
-                                            <div className="flex items-center gap-x-4">
-                                                <Image
-                                                    src={item.avatar}
-                                                    alt={item.name}
-                                                    className="w-14 h-14 rounded-full object-cover"
-                                                />
-                                                <div>
-                                                    <span className="block text-gray-800 font-semibold">{item.name}</span>
-                                                    <span className="block text-sm mt-0.5">{item.title}</span>
-                                                </div>
-                                            </div>
-                                        </figure>
+                                        <TestimonialCard item={item} />
                                     </li>
-                                ))
-                            }
-                        </ul>
+                                ))}
+                            </ul>
+                        )}
                     </LayoutEffect>
                 </GradientWrapper>
             </div>
         </SectionWrapper>
-    )
-}
+    );
+};
 
-export default Testimonial
+const TestimonialCard = ({ item }) => (
+    <figure
+        className="flex flex-col justify-between gap-y-6 h-full w-full p-4 rounded-xl border border-gray-800"
+        style={{
+            backgroundImage:
+                "radial-gradient(100% 100% at 50% 50%, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0) 100%)"
+        }}
+    >
+        <blockquote>
+            <p className="text-gray-800">{item.quote}</p>
+        </blockquote>
+        <div className="flex items-center gap-x-4">
+            <Image
+                src={item.avatar}
+                alt={item.name}
+                className="w-14 h-14 rounded-full object-cover"
+            />
+            <div>
+                <span className="block text-gray-800 font-semibold">{item.name}</span>
+                <span className="block text-sm mt-0.5 text-gray-600">{item.title}</span>
+            </div>
+        </div>
+    </figure>
+);
+
+export default Testimonial;

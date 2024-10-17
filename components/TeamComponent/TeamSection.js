@@ -42,7 +42,7 @@ const CompanySection = () => {
       <div className="py-10 bg-gradient-to-r from-fuchsia-600 to-blue-600">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold leading-tight text-center text-white sm:text-4xl lg:text-5xl">
-      Team of Campus Credentials
+    Campus Credentials Team
           </h2>
         </div>
       </div>

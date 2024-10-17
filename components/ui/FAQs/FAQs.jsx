@@ -1,5 +1,7 @@
-import LayoutEffect from "@/components/LayoutEffect"
-import SectionWrapper from "@/components/SectionWrapper"
+import { useState } from 'react';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi'; // Import icons
+import LayoutEffect from "@/components/LayoutEffect";
+import SectionWrapper from "@/components/SectionWrapper";
 
 const faqsList = [
     {
@@ -28,47 +30,66 @@ const faqsList = [
     }
 ];
 
+const FAQs = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
 
-const FAQs = () => (
-    <SectionWrapper id="faqs">
-        <div className="custom-screen text-gray-800">
-            <div className="max-w-xl text-center xl:mx-auto">
-                <h2 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
-                    Everything you need to know
-                </h2>
-                <p className="mt-3">
-                    Here are the most questions people always ask about.
-                </p>
-            </div>
-            <div className='mt-12'>
-                <LayoutEffect
-                    className="duration-1000 delay-300"
-                    isInviewState={{
-                        trueState: "opacity-1",
-                        falseState: "opacity-0 translate-y-12"
-                    }}
-                >
-                    <ul className='space-y-8 gap-12 grid-cols-2 sm:grid sm:space-y-0 lg:grid-cols-3'>
-                        {faqsList.map((item, idx) => (
-                            <li
-                                key={idx}
-                                className="space-y-3"
-                            >
-                                <summary
-                                    className="flex items-center justify-between font-semibold text-gray-800">
-                                    {item.q}
-                                </summary>
-                                <p
-                                    dangerouslySetInnerHTML={{ __html: item.a }}
-                                    className='leading-relaxed'>
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </LayoutEffect>
-            </div>
-        </div>
-    </SectionWrapper>
-)
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
-export default FAQs
+    return (
+        <SectionWrapper id="faqs">
+            <div className="custom-screen text-gray-800">
+                <div className="max-w-xl text-center mx-auto">
+                    <h2 className="text-gray-800 text-2xl sm:text-3xl font-extrabold">
+                        Everything you need to know
+                    </h2>
+                    <p className="mt-2 text-base sm:text-lg text-gray-600">
+                        Here are the most questions people always ask about.
+                    </p>
+                </div>
+
+                <div className="mt-10">
+                    <LayoutEffect
+                        className="duration-1000 delay-300"
+                        isInviewState={{
+                            trueState: "opacity-1",
+                            falseState: "opacity-0 translate-y-12"
+                        }}
+                    >
+                        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            {faqsList.map((item, idx) => (
+                                <li key={idx} className="space-y-3">
+                                    <button
+                                        onClick={() => toggleAccordion(idx)}
+                                        className="flex items-center justify-between w-full font-semibold text-gray-800"
+                                    >
+                                        {/* Adjusted the font size for desktop */}
+                                        <span className="text-base lg:text-md text-left">
+                                            {item.q}
+                                        </span>
+                                        <span className="text-xl">
+                                            {activeIndex === idx ? (
+                                                <FiChevronUp />
+                                            ) : (
+                                                <FiChevronDown />
+                                            )}
+                                        </span>
+                                    </button>
+                                    {activeIndex === idx && (
+                                        <p
+                                            dangerouslySetInnerHTML={{ __html: item.a }}
+                                            className="mt-2 text-sm sm:text-base leading-relaxed text-gray-600"
+                                        ></p>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </LayoutEffect>
+                </div>
+            </div>
+        </SectionWrapper>
+    );
+};
+
+export default FAQs;

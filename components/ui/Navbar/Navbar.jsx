@@ -14,9 +14,10 @@ const Navbar = () => {
 
     const navigation = [
         { name: "Courses", href: "/#features" },
+        { name: "About Us", href: "/about-us" },
         { name: "Test Series", href: "/#pricing" },
-        { name: "Testimonials", href: "/#testimonials" },
-        { name: "FAQs", href: "/#faqs" },
+        // { name: "Testimonials", href: "/#testimonials" },
+        // { name: "FAQs", href: "/#faqs" },
         { name: "Free Resources", href: "https://resource.prepcrazy.com" },
     ]
 
