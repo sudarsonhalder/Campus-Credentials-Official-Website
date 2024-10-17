@@ -59,7 +59,7 @@ export default function Home() {
 
       {/* Other Components */}
       {/* <Hero /> */}
-      <Features />
+      {/* <Features /> */}
       <VisualFeatures />
  
 

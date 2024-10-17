@@ -4,7 +4,11 @@ import NavHeader from '../NavHeader'
 import NavLink from '../NavLink'
 
 const Navbar = () => {
+    const [isVisible, setIsVisible] = useState(true);
 
+    const closeBanner = () => {
+      setIsVisible(false);
+    };
     const [state, setState] = useState(false)
     const menuBtnEl = useRef()
 
@@ -25,6 +29,26 @@ const Navbar = () => {
 
     return (
         <header className='relative'>
+                  {isVisible && (
+        <div className="bg-red-100 py-2 px-4 flex items-center justify-center space-x-4">
+          <p className="text-lg font-bold text-black">
+            Get a CAT course with a Scholarship of 100%
+          </p>
+          <a
+            href="#"
+            className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-blue-600"
+          >
+            APPLY NOW
+          </a>
+          <button
+            onClick={closeBanner}
+            className="ml-2 text-black focus:outline-none"
+            aria-label="Close banner"
+          >
+            ✕
+          </button>
+        </div>
+      )}
             <div className="custom-screen md:hidden">
                 <NavHeader menuBtnEl={menuBtnEl} state={state} onClick={() => setState(!state)} />
             </div>
