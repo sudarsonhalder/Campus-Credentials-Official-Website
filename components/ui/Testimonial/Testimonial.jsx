@@ -2,12 +2,12 @@
 import { useState, useEffect } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import GradientWrapper from "@/components/GradientWrapper";
-import user1 from "@/public/testimonial/user1.webp";
-import user2 from "@/public/testimonial/user2.webp";
-import user3 from "@/public/testimonial/user3.webp";
-import user4 from "@/public/testimonial/user4.webp";
-import user5 from "@/public/testimonial/user5.webp";
-import user6 from "@/public/testimonial/user6.webp";
+import user1 from "/public/testimonial/user1.webp";
+import user2 from "/public/testimonial/user2.webp";
+import user3 from "/public/testimonial/user3.webp";
+import user4 from "/public/testimonial/user4.webp";
+import user5 from "/public/testimonial/user5.webp";
+import user6 from "/public/testimonial/user6.webp";
 import Image from "next/image";
 import LayoutEffect from "@/components/LayoutEffect";
 
@@ -15,57 +15,32 @@ import LayoutEffect from "@/components/LayoutEffect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/autoplay"; // Ensure Swiper styles are imported
+import "swiper/css/autoplay"; // Ensure autoplay styles are included
 
 const Testimonial = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
+        setMounted(true); // Ensure the component is mounted before rendering
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
         window.addEventListener("resize", handleResize);
         handleResize(); // Run on initial render
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    if (!mounted) return null; // Prevent rendering during SSR
+
     const testimonials = [
-        {
-            avatar: user1,
-            name: "Dr. Anil Desai",
-            title: "TPO – IIT Bombay",
-            quote: "Campus Credentials has been transformative for our students, boosting placements with industry-relevant skills in full-stack development and data science."
-        },
-        {
-            avatar: user2,
-            name: "Ms. Shweta Patil",
-            title: "TPO – VJTI Mumbai",
-            quote: "Our students' technical skills have improved significantly with Campus Credentials' courses, especially in Python and ReactJS."
-        },
-        {
-            avatar: user3,
-            name: "Mr. Rahul Mehta",
-            title: "TPO – SPIT",
-            quote: "Campus Credentials has enhanced employability, focusing on practical learning in cloud computing and AI/ML, making our graduates stand out."
-        },
-        {
-            avatar: user4,
-            name: "Prof. Priya Menon",
-            title: "TPO – NMIMS Mumbai",
-            quote: "Campus Credentials bridges the gap between academia and industry with hands-on projects and job readiness workshops, improving placement numbers."
-        },
-        {
-            avatar: user5,
-            name: "Dr. Vijay Kulkarni",
-            title: "TPO – DJ Sanghvi College",
-            quote: "Campus Credentials excels in cybersecurity and full-stack development training, preparing students for dynamic roles with structured learning."
-        },
-        {
-            avatar: user6,
-            name: "Mr. Amit Joshi",
-            title: "TPO – KJ Somaiya Institute",
-            quote: "Our students' coding skills have improved greatly with Campus Credentials' Python and Java courses, leading to strong career growth."
-        }
+        { avatar: user1, name: "Dr. Anil Desai", title: "TPO – IIT Bombay", quote: "Campus Credentials has been transformative for our students, boosting placements with industry-relevant skills in full-stack development and data science." },
+        { avatar: user2, name: "Ms. Shweta Patil", title: "TPO – VJTI Mumbai", quote: "Our students' technical skills have improved significantly with Campus Credentials' courses, especially in Python and ReactJS." },
+        { avatar: user3, name: "Mr. Rahul Mehta", title: "TPO – SPIT", quote: "Campus Credentials has enhanced employability, focusing on practical learning in cloud computing and AI/ML, making our graduates stand out." },
+        { avatar: user4, name: "Prof. Priya Menon", title: "TPO – NMIMS Mumbai", quote: "Campus Credentials bridges the gap between academia and industry with hands-on projects and job readiness workshops, improving placement numbers." },
+        { avatar: user5, name: "Dr. Vijay Kulkarni", title: "TPO – DJ Sanghvi College", quote: "Campus Credentials excels in cybersecurity and full-stack development training, preparing students for dynamic roles with structured learning." },
+        { avatar: user6, name: "Mr. Amit Joshi", title: "TPO – KJ Somaiya Institute", quote: "Our students' coding skills have improved greatly with Campus Credentials' Python and Java courses, leading to strong career growth." }
     ];
 
     return (
@@ -76,26 +51,13 @@ const Testimonial = () => {
                         Campus Credentials is loved by the best colleges around the world
                     </h2>
                 </div>
-                <GradientWrapper wrapperClassName="max-w-sm h-60 top-12 inset-x-0" className="mt-12">
-                    <LayoutEffect
-                        className="duration-1000 delay-300"
-                        isInviewState={{
-                            trueState: "opacity-1",
-                            falseState: "opacity-0 translate-y-12"
-                        }}
-                    >
+                <GradientWrapper wrapperClassName="max-w-sm h-40 top-12 inset-x-0" className="mt-12">
+                    <LayoutEffect className="duration-1000 delay-300" isInviewState={{ trueState: "opacity-1", falseState: "opacity-0 translate-y-12" }}>
                         {isMobile ? (
-                            <Swiper
-                                modules={[Autoplay]}
-                                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                                spaceBetween={16}
-                                slidesPerView={1}
-                                loop={true}
-                                className="w-full h-full"
-                            >
+                            <Swiper modules={[Autoplay]} autoplay={{ delay: 3000, disableOnInteraction: false }} spaceBetween={16} slidesPerView={1} loop={true} className="w-full">
                                 {testimonials.map((item, idx) => (
                                     <SwiperSlide key={idx}>
-                                        <div className="flex justify-center items-center h-full p-4">
+                                        <div className="flex justify-center p-4">
                                             <TestimonialCard item={item} />
                                         </div>
                                     </SwiperSlide>
@@ -118,22 +80,12 @@ const Testimonial = () => {
 };
 
 const TestimonialCard = ({ item }) => (
-    <figure
-        className="flex flex-col justify-between gap-y-6 h-full w-full p-4 rounded-xl border border-gray-800"
-        style={{
-            backgroundImage:
-                "radial-gradient(100% 100% at 50% 50%, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0) 100%)"
-        }}
-    >
+    <figure className="flex flex-col justify-between gap-y-6 h-full w-full p-4 rounded-xl border border-gray-800">
         <blockquote>
             <p className="text-gray-800">{item.quote}</p>
         </blockquote>
         <div className="flex items-center gap-x-4">
-            <Image
-                src={item.avatar}
-                alt={item.name}
-                className="w-14 h-14 rounded-full object-cover"
-            />
+            <Image src={item.avatar} alt={item.name} className="w-14 h-14 rounded-full object-cover" />
             <div>
                 <span className="block text-gray-800 font-semibold">{item.name}</span>
                 <span className="block text-sm mt-0.5 text-gray-600">{item.title}</span>
