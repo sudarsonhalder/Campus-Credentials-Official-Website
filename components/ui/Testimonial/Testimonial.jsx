@@ -15,6 +15,7 @@ import LayoutEffect from "@/components/LayoutEffect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/autoplay"; // Ensure Swiper styles are imported
 
 const Testimonial = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -75,7 +76,7 @@ const Testimonial = () => {
                         Campus Credentials is loved by the best colleges around the world
                     </h2>
                 </div>
-                <GradientWrapper wrapperClassName="max-w-sm h-40 top-12 inset-x-0" className="mt-12">
+                <GradientWrapper wrapperClassName="max-w-sm h-60 top-12 inset-x-0" className="mt-12">
                     <LayoutEffect
                         className="duration-1000 delay-300"
                         isInviewState={{
@@ -90,11 +91,11 @@ const Testimonial = () => {
                                 spaceBetween={16}
                                 slidesPerView={1}
                                 loop={true}
-                                className="w-full"
+                                className="w-full h-full"
                             >
                                 {testimonials.map((item, idx) => (
                                     <SwiperSlide key={idx}>
-                                        <div className="flex justify-center p-4">
+                                        <div className="flex justify-center items-center h-full p-4">
                                             <TestimonialCard item={item} />
                                         </div>
                                     </SwiperSlide>
@@ -103,10 +104,7 @@ const Testimonial = () => {
                         ) : (
                             <ul className="grid gap-6 duration-1000 delay-300 ease-in-out sm:grid-cols-2 lg:grid-cols-3">
                                 {testimonials.map((item, idx) => (
-                                    <li
-                                        key={idx}
-                                        className="flex"
-                                    >
+                                    <li key={idx} className="flex">
                                         <TestimonialCard item={item} />
                                     </li>
                                 ))}
