@@ -34,7 +34,7 @@ const CompanySection = () => {
     'https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/3/avatar-30.jpg',
     'https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/3/avatar-31.jpg',
     'https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/3/avatar-32.jpg',
-    'https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/3/avatar-33.jpg',
+    // 'https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/3/avatar-33.jpg',
   ];
 
   return (
