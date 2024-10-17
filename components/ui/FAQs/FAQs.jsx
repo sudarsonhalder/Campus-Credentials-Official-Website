@@ -41,7 +41,7 @@ const FAQs = () => {
         <SectionWrapper id="faqs">
             <div className="custom-screen text-gray-800">
                 <div className="max-w-xl text-center mx-auto">
-                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold">
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold py-8">
                         Everything you need to know
                     </h2>
                     <p className="mt-2 text-base sm:text-lg text-gray-600">
@@ -49,7 +49,7 @@ const FAQs = () => {
                     </p>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-6 py-2">
                     <LayoutEffect
                         className="duration-1000 delay-300"
                         isInviewState={{

@@ -13,9 +13,9 @@ const Navbar = () => {
     const menuBtnEl = useRef()
 
     const navigation = [
-        { name: "Courses", href: "/#features" },
+        { name: "Courses", href: "/#Courses" },
         { name: "About Us", href: "/about-us" },
-        { name: "Test Series", href: "/#pricing" },
+        { name: "Test Series", href: "/#Courses" },
         // { name: "Testimonials", href: "/#testimonials" },
         // { name: "FAQs", href: "/#faqs" },
         { name: "Free Resources", href: "https://resource.prepcrazy.com" },

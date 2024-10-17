@@ -37,10 +37,10 @@ const VisualFeatures = () => {
         <SectionWrapper>
             <div className="custom-screen text-gray-800">
                 <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl leading-snug">
-                        Enhance Your Learning Experience with Campus Credentials
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold">
+                        Enhance Your Learning Experience
                     </h2>
-                    <p className="mt-3 text-lg text-gray-600">
+                    <p className="mt-3 text-md text-gray-700">
                         Access our Resource Portal for a wealth of free resources and books. 
                         Elevate your skills by enrolling in expertly crafted courses through 
                         our LMS Portal to boost your career prospects.

@@ -1,5 +1,5 @@
 const SectionWrapper = ({ children, ...props }) => (
-    <section {...props} className={` lg:py-24 ${props.className || ""}`}>
+    <section {...props} className={` lg:py-18 ${props.className || ""}`}>
         {children}
     </section>
 )

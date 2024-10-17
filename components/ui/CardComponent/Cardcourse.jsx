@@ -243,7 +243,7 @@ const CardComponent = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4 min-h-screen">
+    <div id="Courses" className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4">
       <div className="md:w-1/4 w-full bg-white rounded-lg shadow-md border border-gray-200 p-4 md:h-56">
         <h2 className="text-lg font-bold text-gray-800 mb-4">Sections</h2>
         {['courses', 'testSeries', 'companySpecific'].map((section) => (
