@@ -86,7 +86,7 @@ const VisualFeatures = () => {
                                     <div className="mt-8 flex flex-wrap gap-4">
                                         <a 
                                             href="#" 
-                                            className="inline-flex items-center justify-center px-5 py-3 text-white text-lg font-medium bg-red-500 rounded-lg shadow transition"
+                                            className="inline-flex items-center justify-center px-3 py-2 text-white text-lg font-medium bg-red-500 rounded-lg shadow transition"
                                         >
                                             Visit Now
                                         </a>
