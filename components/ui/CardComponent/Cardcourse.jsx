@@ -152,9 +152,11 @@ const CardComponent = () => {
         <img
           src={item.img}
           alt={item.title}
-          className="h-40 w-full object-cover transition-opacity duration-300 ease-in-out"
-          style={{ opacity: 0 }}
-          onLoad={(e) => (e.currentTarget.style.opacity = 1)}
+          className="h-40 w-full object-cover transition-opacity duration-300 ease-in-out opacity-0"
+          onLoad={(e) => {
+            e.currentTarget.style.opacity = 1;
+          }}
+          onError={(e) => (e.currentTarget.style.display = 'none')}
         />
 
         <div className="p-4 flex-grow flex flex-col">
@@ -204,7 +206,10 @@ const CardComponent = () => {
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index + 1}
-            onClick={() => handlePageClick(index + 1)}
+            onClick={(e) => {
+              e.preventDefault();
+              handlePageClick(index + 1);
+            }}
             className={`w-8 h-8 rounded-full ${
               currentPage === index + 1 ? 'bg-black text-white' : 'bg-gray-200 text-gray-700'
             } focus:outline-none`}
