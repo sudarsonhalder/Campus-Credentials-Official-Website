@@ -60,7 +60,7 @@ const Pricing = () => {
     };
 
     // Updated radial gradient style for hover (constant over entire card)
-    const gradientStyle = "radial-gradient(circle, rgba(247, 127, 14, 0.7) 0%, rgba(247, 127, 14, 0) 100%)";
+    const gradientStyle = "linear-gradient(90deg, rgba(214,214,214,1) 0%, rgba(255,255,255,1) 97%)";
 
     return (
         <SectionWrapper id="pricing" className='custom-screen'>
