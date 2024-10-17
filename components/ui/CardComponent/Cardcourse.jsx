@@ -126,7 +126,7 @@ const CardComponent = () => {
     {
       title: 'Test Series 1',
       description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
-      price: '₹ 49',
+      price: '49',
       img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
     },
   ];
@@ -135,7 +135,7 @@ const CardComponent = () => {
     {
       title: 'Microsoft',
       description: 'A brief description of Microsoft-specific preparation.',
-      price: '₹ 129',
+      price: '129',
       img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
     },
   ];
