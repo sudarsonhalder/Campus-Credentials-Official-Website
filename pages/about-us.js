@@ -43,10 +43,10 @@ const AboutUs = ({ aboutData }) => {
     <TeamSection/>
     <Testimonial/>
     <FAQs/>
-    <section className="py-10 bg-white sm:py-16 lg:py-24">
+    <section className="py-10 bg-white">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-extrabold leading-tight text-gray-800 sm:text-4xl lg:text-4xl">
             {aboutData.title}
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
@@ -152,20 +152,20 @@ const aboutData = {
     ' Campus Credentials has been recognized for its innovative approach to placement training and featured in leading media outlets.',
   team: [
     {
-      name: 'John Doe',
-      role: 'CEO',
+      name: 'Campus Credentials',
+      role: 'Aaj Tak',
       image: 'https://via.placeholder.com/300',
       description: 'Leading the team with vision and passion.',
     },
     {
-      name: 'Jane Smith',
-      role: 'CTO',
+      name: 'Campus Credentials',
+      role: 'Times of India',
       image: 'https://via.placeholder.com/300',
       description: 'Innovating and pushing boundaries in technology.',
     },
     {
-      name: 'Sarah Lee',
-      role: 'Marketing Head',
+      name: 'Campus Credentials',
+      role: 'Bharat Samachar',
       image: 'https://via.placeholder.com/300',
       description: 'Ensuring our brand reaches the right audience.',
     },
