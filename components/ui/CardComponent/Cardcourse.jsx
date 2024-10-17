@@ -146,11 +146,17 @@ const CardComponent = () => {
 
     return paginatedData.map((item, index) => (
       <div
-        key={index}
+        key={`${activeSection}-${currentPage}-${index}`}
         className="bg-white rounded-lg shadow-md border border-gray-200 flex flex-col justify-between transform hover:scale-105 transition duration-300"
       >
-        <img src={item.img} alt={item.title} className="h-40 w-full object-cover" />
-        
+        <img
+          src={item.img}
+          alt={item.title}
+          className="h-40 w-full object-cover transition-opacity duration-300 ease-in-out"
+          style={{ opacity: 0 }}
+          onLoad={(e) => (e.currentTarget.style.opacity = 1)}
+        />
+
         <div className="p-4 flex-grow flex flex-col">
           <h3
             className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2"
@@ -158,7 +164,7 @@ const CardComponent = () => {
           >
             {item.title}
           </h3>
-          
+
           <p
             className="text-gray-600 flex-grow mb-4 line-clamp-2"
             style={{ minHeight: '3rem', overflow: 'hidden', textOverflow: 'ellipsis' }}
