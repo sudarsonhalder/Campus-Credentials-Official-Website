@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const logos = [
-  'https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-1.png',
+  'https://ik.imagekit.io/99djpd8k3/CC/Thakur%20Logo.png?updatedAt=1729316384828',
   'https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-2.png',
   'https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-3.png',
   'https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-4.png',
@@ -33,7 +33,7 @@ const CompanyLogos = () => {
           {logos.map((logo, index) => (
             <div key={index}>
               <img
-                className="object-contain w-full h-8 mx-auto"
+                className="object-contain w-full h-44 mx-auto"
                 src={logo}
                 alt={`logo-${index + 1}`}
               />
