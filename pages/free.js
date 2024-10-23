@@ -58,18 +58,20 @@ const App = () => {
   ];
 
   const features = [
-    { title: 'Lifetime Access', description: 'Access the course material anytime, anywhere.', image: 'https://via.placeholder.com/100x100.png?text=Access' },
-    { title: 'Certification', description: 'Receive a certificate upon successful completion.', image: 'https://via.placeholder.com/100x100.png?text=Certificate' },
-    { title: 'Self-Paced Learning', description: 'Learn at your own pace with flexible schedules.', image: 'https://via.placeholder.com/100x100.png?text=Pace' },
-    { title: '24/7 Support', description: 'Get help from instructors anytime.', image: 'https://via.placeholder.com/100x100.png?text=Support' },
-    { title: 'Community Access', description: 'Join our learner community for support and networking.', image: 'https://via.placeholder.com/100x100.png?text=Community' },
-    { title: 'Expert Instructors', description: 'Learn from industry experts and thought leaders.', image: 'https://via.placeholder.com/100x100.png?text=Experts' },
+    { title: 'Lifetime Access', description: 'Access the course material anytime, anywhere.', image: 'https://cdn-icons-png.flaticon.com/512/10765/10765372.png' },
+    { title: 'Certification', description: 'Receive a certificate upon successful completion.', image: 'https://cdn-icons-png.flaticon.com/512/2617/2617793.png' },
+    { title: 'Self-Paced Learning', description: 'Learn at your own pace with flexible schedules.', image: 'https://cdn-icons-png.flaticon.com/512/10765/10765372.png' },
+    { title: '24/7 Support', description: 'Get help from instructors anytime.', image: 'https://cdn-icons-png.flaticon.com/512/13636/13636397.png' },
+    { title: 'Community Access', description: 'Join our learner community for support and networking.', image: 'https://cdn-icons-png.flaticon.com/512/7829/7829198.png' },
+    { title: 'Expert Instructors', description: 'Learn from industry experts and thought leaders.', image: 'https://cdn-icons-png.flaticon.com/512/9746/9746379.png' },
   ];
 
   const faqs = [
     { question: 'What is the duration of the course?', answer: 'The course is self-paced.' },
     { question: 'Do I get lifetime access?', answer: 'Yes, lifetime access is included.' },
     { question: 'Is there a refund policy?', answer: 'Yes, a 30-day refund policy applies.' },
+    { question: 'Do I get lifetime access?', answer: 'Yes, lifetime access is included.' },
+    { question: 'What is the duration of the course?', answer: 'The course is self-paced.' },
   ];
 
   return (
@@ -78,10 +80,10 @@ const App = () => {
       <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12 md:py-16">
         <article className="md:w-1/2 w-full text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-red-600">
-            Master Your Skills Today
+            Full Aptitude Course for Placement Training
           </h1>
           <p className="text-base md:text-xl mt-4 mb-6 text-gray-700">
-            Join thousands of learners who have gained hands-on experience with our expert-led courses.
+            Join thousands of learners who have gained hands-on experience with our expert-led courses for placement training.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -102,8 +104,8 @@ const App = () => {
           {isMounted && (
             <div className="mt-6">
               <div className="flex items-center gap-4 justify-center md:justify-start">
-                <del className="text-3xl text-gray-500">$149</del>
-                <h2 className="text-5xl font-bold text-orange-500">$99</h2>
+                <del className="text-3xl text-gray-500">₹1500</del>
+                <h2 className="text-5xl font-bold text-orange-500">₹800</h2>
               </div>
               <p className="text-gray-600">One-time payment for lifetime access</p>
               <p className="text-red-600 mt-1 font-semibold">Limited Time Offer!</p>
@@ -119,7 +121,7 @@ const App = () => {
           <iframe
             className="w-full rounded-lg"
             height="400"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/YkvtJi5oWpA?si=Gb64C9zt23HDWR5R"
             title="Course Introduction"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
