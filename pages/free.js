@@ -90,11 +90,11 @@ const App = () => {
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-sm md:text-lg rounded-lg shadow-lg transform hover:scale-105 transition-transform">
               Enroll Now
             </button>
-            <a href="/contact">
+            {/* <Link href="/contact"> */}
               <button className="border border-orange-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-orange-50 transition-colors">
                 Contact Us
               </button>
-            </a>
+            {/* </Link> */}
           </div>
 
           <p className="mt-4 text-gray-600">
