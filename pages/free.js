@@ -156,7 +156,7 @@ const App = () => {
       </section>
       <section className="w-full py-12">
   <h2 className="text-4xl font-bold mb-8 text-center text-red-600">
-    You will get Placed in
+    Our learners are placed in
   </h2>
 
   {/* Grid Layout for Company Logos */}

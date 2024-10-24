@@ -8,7 +8,7 @@ const Pricing = () => {
 
     const plans = [
         {
-            name: "Basic Course",
+            name: "Aptitude",
             desc: "For students beginning their placement journey",
             price: 0,
             isMostPop: false,
@@ -22,7 +22,7 @@ const Pricing = () => {
             ],
         },
         {
-            name: "Advanced Training",
+            name: "Aptitude + Technical",
             desc: "For students seeking detailed interview preparation",
             price: 2999,
             isMostPop: false,
@@ -36,7 +36,7 @@ const Pricing = () => {
             ],
         },
         {
-            name: "Corporate Training",
+            name: "Technical",
             desc: "For professionals seeking career transitions",
             price: 7999,
             isMostPop: false,

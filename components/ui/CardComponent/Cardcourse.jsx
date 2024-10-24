@@ -139,12 +139,77 @@ const CardComponent = () => {
 
   const testSeries = [
     {
-      title: 'Test Series 1',
+      title: 'Complete Aptitude preparation series',
       description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
       price: '49',
       salePrice: '1500',
-      img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/274/aptitude",
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/1.png?updatedAt=1729745672845',
     },
+    {
+      title: 'Complete General Knowledge preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/260/general-knowledge",
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/2.png?updatedAt=1729746079539',
+    },
+    {
+      title: 'Complete English preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/263/english",
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/3.png?updatedAt=1729746354771',
+    },
+    {
+      title: 'Complete Psychometric preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/4.png?updatedAt=1729746441481',
+         buyLink:"https://exam.campuscredentials.com/ecatalog/272/psychometric"
+    },
+    {
+      title: 'Complete IQ Test Preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/5.png?updatedAt=1729746527323',
+      buyLink:""
+    },
+    {
+      title: 'Complete Spoken English Preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/6.png?updatedAt=1729746653557',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/1625/spoken-english"
+    },
+    {
+      title: 'Complete Company Specific series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/7.png?updatedAt=1729746775208',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/105/company-specific"
+    },
+    {
+      title: 'Complete Technology Specific series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/8.png?updatedAt=1729746870692',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/329/technology-specific"
+    },
+    {
+      title: 'Complete AWS Preparation series',
+      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      price: '49',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/9.png?updatedAt=1729746941941',
+      buyLink:"https://exam.campuscredentials.com/ecatalog/1358/amazon-web-services-aws"
+    }
   ];
 
   const companySpecific = [
@@ -200,7 +265,7 @@ const CardComponent = () => {
           <img
             src={item.img}
             alt={item.title}
-            className={`h-40 w-full object-cover transition-opacity duration-300 ease-in-out ${
+            className={`h-30 w-full object-cover transition-opacity duration-300 ease-in-out ${
               loadedImages[cardKey] ? 'opacity-100' : 'opacity-0'
             }`}
             onError={(e) => (e.currentTarget.style.display = 'none')}
