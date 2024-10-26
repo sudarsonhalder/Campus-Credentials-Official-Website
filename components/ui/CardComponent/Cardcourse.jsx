@@ -13,11 +13,11 @@ const CardComponent = () => {
     },
     testSeries: {
       label: 'View All Test Series',
-      link: 'https://test.campuscredentials.com',
+      link: 'https://exam.campuscredentials.com/exams/aptitude/523',
     },
     companySpecific: {
       label: 'View All Company Specific Courses',
-      link: 'https://campuscredentials.online',
+      link: 'https://exam.campuscredentials.com/ecatalog/105/company-specific',
     },
   };
 
@@ -139,88 +139,164 @@ const CardComponent = () => {
 
   const testSeries = [
     {
-      title: 'Complete Aptitude preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete Aptitude Preparation Series',
+      description: 'Master quantitative, logical, and verbal aptitude with comprehensive practice tests.',
       price: '49',
       salePrice: '1500',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/274/aptitude",
+      buyLink: "https://exam.campuscredentials.com/ecatalog/274/aptitude",
       img: 'https://ik.imagekit.io/99djpd8k3/CC/1.png?updatedAt=1729745672845',
     },
     {
-      title: 'Complete General Knowledge preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete General Knowledge Preparation Series',
+      description: 'Stay ahead with well-rounded practice on current affairs and general knowledge topics.',
       price: '49',
       salePrice: '1500',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/260/general-knowledge",
+      buyLink: "https://exam.campuscredentials.com/ecatalog/260/general-knowledge",
       img: 'https://ik.imagekit.io/99djpd8k3/CC/2.png?updatedAt=1729746079539',
     },
     {
-      title: 'Complete English preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete English Preparation Series',
+      description: 'Improve grammar, vocabulary, and comprehension skills with targeted practice.',
       price: '49',
       salePrice: '1500',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/263/english",
+      buyLink: "https://exam.campuscredentials.com/ecatalog/263/english",
       img: 'https://ik.imagekit.io/99djpd8k3/CC/3.png?updatedAt=1729746354771',
     },
     {
-      title: 'Complete Psychometric preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete Psychometric Preparation Series',
+      description: 'Prepare for psychometric tests with tools to assess cognitive and behavioral strengths.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/4.png?updatedAt=1729746441481',
-         buyLink:"https://exam.campuscredentials.com/ecatalog/272/psychometric"
+      buyLink: "https://exam.campuscredentials.com/ecatalog/272/psychometric"
     },
     {
-      title: 'Complete IQ Test Preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete IQ Test Preparation Series',
+      description: 'Sharpen your reasoning and problem-solving abilities with comprehensive IQ tests.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/5.png?updatedAt=1729746527323',
-      buyLink:""
+      buyLink: ""
     },
     {
-      title: 'Complete Spoken English Preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete Spoken English Preparation Series',
+      description: 'Enhance fluency and confidence in spoken English with engaging practice modules.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/6.png?updatedAt=1729746653557',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/1625/spoken-english"
+      buyLink: "https://exam.campuscredentials.com/ecatalog/1625/spoken-english"
     },
     {
-      title: 'Complete Company Specific series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete Company-Specific Series',
+      description: 'Prepare for company-specific assessments with tailored practice tests.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/7.png?updatedAt=1729746775208',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/105/company-specific"
+      buyLink: "https://exam.campuscredentials.com/ecatalog/105/company-specific"
     },
     {
-      title: 'Complete Technology Specific series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete Technology-Specific Series',
+      description: 'Master technical skills with tests aligned to specific technologies and domains.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/8.png?updatedAt=1729746870692',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/329/technology-specific"
+      buyLink: "https://exam.campuscredentials.com/ecatalog/329/technology-specific"
     },
     {
-      title: 'Complete AWS Preparation series',
-      description: 'A brief description of Test Series 1. Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.Test Series 1.',
+      title: 'Complete AWS Preparation Series',
+      description: 'Get AWS-certified with practice tests covering all key cloud concepts.',
       price: '49',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/9.png?updatedAt=1729746941941',
-      buyLink:"https://exam.campuscredentials.com/ecatalog/1358/amazon-web-services-aws"
+      buyLink: "https://exam.campuscredentials.com/ecatalog/1358/amazon-web-services-aws"
     }
   ];
+  
 
   const companySpecific = [
     {
-      title: 'Microsoft',
-      description: 'A brief description of Microsoft-specific preparation.',
+      title: 'Ace your Cognizant Interview with Campus Credentials',
+      description: 'Comprehensive preparation tailored for Cognizant interviews, covering aptitude, reasoning, and technical topics.',
       price: '129',
       salePrice: '1500',
-      img: 'https://campuscredentials.online/wp-content/uploads/2024/06/LMS-Course-Thumbnails-Sanskruti-Rishi-1-870x440.png',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/16.png?updatedAt=1729793736261',
+      buyLink: 'https://exam.campuscredentials.com/tests/777/cognizant',
+    },
+    {
+      title: 'Ace your Capgemini Interview with Campus Credentials',
+      description: 'Focused guidance for Capgemini interviews with mock tests, aptitude, and technical round practice.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/11.png?updatedAt=1729793736306',
+      buyLink: 'https://exam.campuscredentials.com/tests/116/capgemini',
+    },
+    {
+      title: 'Ace your Larsen & Toubro Interview with Campus Credentials',
+      description: 'L&T-specific preparation covering aptitude tests and technical interview strategies.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(17).png?updatedAt=17298670830346',
+      buyLink: 'https://exam.campuscredentials.com/tests/114/larsen-toubro',
+    },
+    {
+      title: 'Ace your Wipro Interview with Campus Credentials',
+      description: 'In-depth practice materials and mock interviews for Wipro’s selection process.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(16).png?updatedAt=1729867082810',
+      buyLink: 'https://exam.campuscredentials.com/tests/110/wipro',
+    },
+    {
+      title: 'Ace your HCL Interview with Campus Credentials',
+      description: 'Specialized preparation materials focusing on HCL’s aptitude and technical requirements.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(11).png?updatedAt=1729793736191',
+      buyLink: 'https://exam.campuscredentials.com/tests/107/hcl',
+    },
+    {
+      title: 'Ace your Google Interview with Campus Credentials',
+      description: 'Premium guidance on cracking Google’s interviews with coding challenges and aptitude tests.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/13.png?updatedAt=1729793735847',
+      buyLink: 'https://exam.campuscredentials.com/tests/956/google',
+    },
+    {
+      title: 'Ace your Accenture Interview with Campus Credentials',
+      description: 'Comprehensive preparation for Accenture’s hiring process, including aptitude and case studies.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/15.png?updatedAt=1729793735855',
+      buyLink: 'https://exam.campuscredentials.com/tests/113/accenture',
+    },
+    {
+      title: 'Ace your TCS Interview with Campus Credentials',
+      description: 'End-to-end preparation for TCS interviews, including Ninja and Digital hiring rounds.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/12.png?updatedAt=1729793735843',
+      buyLink: 'https://exam.campuscredentials.com/tests/2180/tcs-ninja',
+    },
+    {
+      title: 'Ace your Jio Interview with Campus Credentials',
+      description: 'Preparation series for Reliance Jio’s recruitment, including aptitude and technical questions.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/14.png?updatedAt=1729793735817',
+      buyLink: 'https://exam.campuscredentials.com/tests/954/reliance-jio',
+    },
+    {
+      title: 'Ace your Hexaware Interview with Campus Credentials',
+      description: 'Tailored preparation series for Hexaware’s interview process with mock tests and aptitude training.',
+      price: '129',
+      salePrice: '1500',
+      img: 'https://ik.imagekit.io/99djpd8k3/CC/Hexaware.png?updatedAt=1729794113249',
+      buyLink: 'https://exam.campuscredentials.com/tests/1246/hexaware',
     },
   ];
+
+  
 
   const preloadImage = (src, index) => {
     const img = new Image();

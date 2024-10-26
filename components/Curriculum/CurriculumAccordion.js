@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-const CurriculumAccordion = ({ curriculum }) => {
+
+
+const CurriculumAccordion = ({ curriculum = CURRICULUM_DATA }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -21,7 +23,11 @@ const CurriculumAccordion = ({ curriculum }) => {
             {activeIndex === index ? <FiChevronUp /> : <FiChevronDown />}
           </button>
           {activeIndex === index && (
-            <div className="mt-2 text-gray-600">{item.content}</div>
+            <ul className="mt-2 text-gray-600 list-disc list-inside">
+              {item.content.map((point, i) => (
+                <li key={i} className="my-1">{point}</li>
+              ))}
+            </ul>
           )}
         </div>
       ))}

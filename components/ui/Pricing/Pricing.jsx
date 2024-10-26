@@ -1,14 +1,17 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router'; 
 import LayoutEffect from "@/components/LayoutEffect";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "../Button";
 
 const Pricing = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const router = useRouter();
 
     const plans = [
         {
-            name: "Aptitude",
+            name: "Complete Aptitude Preparation",
             desc: "For students beginning their placement journey",
             price: 0,
             isMostPop: false,
@@ -22,7 +25,7 @@ const Pricing = () => {
             ],
         },
         {
-            name: "Aptitude + Technical",
+            name: "Complete Aptitude + Technical Preparation",
             desc: "For students seeking detailed interview preparation",
             price: 2999,
             isMostPop: false,
@@ -36,7 +39,7 @@ const Pricing = () => {
             ],
         },
         {
-            name: "Technical",
+            name: "Complete Technical Preparation",
             desc: "For professionals seeking career transitions",
             price: 7999,
             isMostPop: false,
@@ -52,6 +55,26 @@ const Pricing = () => {
     ];
 
     const gradientStyle = "linear-gradient(90deg, rgba(214,214,214,1) 0%, rgba(255,255,255,1) 97%)";
+
+    const handleAptitudeClick = () => {
+        router.push("http://localhost:3000/aptitude-full-course");
+    };
+
+    const handlePlacementTrainingClick = () => {
+        router.push("http://localhost:3000/complete-placement-training");
+    };
+
+    const handleTechnicalClick = (e) => {
+        e.stopPropagation();
+        setShowDropdown((prev) => !prev);
+    };
+
+    const handleLanguageSelect = (language) => {
+        const route = language === 'Java' 
+            ? '/technical-course-java' 
+            : '/technical-course-python';
+        router.push(`http://localhost:3000${route}`);
+    };
 
     return (
         <SectionWrapper id="pricing" className="custom-screen">
@@ -93,7 +116,7 @@ const Pricing = () => {
                                     {item.name}
                                 </span>
                                 <div className="text-gray-800 text-3xl font-semibold">₹ {item.price}</div>
-                                <p className="text-gray-800">{item.desc}</p>
+                                <p className="text-red-500 font-bold">{item.desc}</p>
                             </div>
 
                             {/* Features List */}
@@ -119,17 +142,49 @@ const Pricing = () => {
                                 </ul>
                             </div>
 
-                            {/* Footer with Button */}
-                            <div className="pt-8">
+                            {/* Footer with Button or Dropdown */}
+                            <div className="pt-8 relative">
                                 <Button
                                     className={`w-full rounded-full text-white ring-offset-2 focus:ring transition-all duration-300 
                                         ${item.isMostPop 
                                             ? "bg-red-500 ring-gray-800" 
                                             : "bg-gray-800 ring-gray-800"}
                                         group-hover:bg-red-600`}
+                                    onClick={
+                                        item.name === "Complete Aptitude Preparation"
+                                            ? handleAptitudeClick
+                                            : item.name === "Complete Technical Preparation"
+                                            ? handleTechnicalClick
+                                            : handlePlacementTrainingClick
+                                    }
                                 >
-                                    {item.price === 0 ? "Get Started" : "Enroll Now"}
+                                    Enroll Now
                                 </Button>
+
+                                {item.name === "Complete Technical Preparation" && showDropdown && (
+                                    <div
+                                        className="absolute z-10 left-0 right-0 mx-auto mt-2 w-64 bg-white rounded-lg shadow-lg p-5"
+                                        style={{ top: "100%" }}
+                                    >
+                                        <p className="text-gray-700 font-semibold mb-2">
+                                            Select a Language:
+                                        </p>
+                                        <div className="space-y-2">
+                                            <button
+                                                className="w-full text-left p-2 hover:bg-gray-100 rounded-lg transition"
+                                                onClick={() => handleLanguageSelect('Java')}
+                                            >
+                                                Java
+                                            </button>
+                                            <button
+                                                className="w-full text-left p-2 hover:bg-gray-100 rounded-lg transition"
+                                                onClick={() => handleLanguageSelect('Python')}
+                                            >
+                                                Python
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

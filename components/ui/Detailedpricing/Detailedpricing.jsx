@@ -2,7 +2,7 @@ import React from 'react';
 
 const Detailedpricing = [
   {
-    name: 'Basic Course',
+    name: 'Aptitude',
     price: 'Free',
     perMonth: '',
     popular: false,
@@ -30,7 +30,7 @@ const Detailedpricing = [
     },
   },
   {
-    name: 'Corporate Training',
+    name: 'Technical',
     price: '₹7999',
     perMonth: 'One-time',
     popular: false,
@@ -53,7 +53,7 @@ const PricingPlan = ({ plan }) => (
   >
     {plan.popular && (
       <span className="px-4 py-2 text-base font-medium text-white bg-blue-600 rounded-full">
-    Advance Training
+Aptitude + Technical
       </span>
     )}
     <span className={`text-base font-medium ${plan.popular ? 'text-white' : 'text-blue-600'}`}>

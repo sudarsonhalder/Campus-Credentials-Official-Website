@@ -1,9 +1,40 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
 import { Autoplay } from 'swiper/modules'; // Only import Autoplay
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    Name: '',
+    Email: '',
+    Phone: '',
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('https://sheetdb.io/api/v1/ntxoegztbokfu', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([formData]),
+    });
+
+    if (response.ok) {
+      setStatus('Message sent successfully!');
+      setFormData({ Name: '', Email: '', Phone: '' });
+    } else {
+      setStatus('Error sending message. Please try again.');
+    }
+  };
+
   const reviews = [
     {
       name: 'Jenny Wilson',
@@ -33,10 +64,10 @@ function Contact() {
           <div className="flex flex-col justify-between lg:py-5">
             <div>
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl">
-              Contact us to Campus Credentials
+                Contact us to Campus Credentials
               </h2>
               <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white">
-lorem ipsum dummy text
+                Lorem ipsum dummy text.
               </p>
               <img
                 className="relative z-10 max-w-xs mx-auto -mb-16 md:hidden"
@@ -53,11 +84,11 @@ lorem ipsum dummy text
             {/* Swiper Slider for Reviews */}
             <div className="hidden md:mt-auto md:block">
               <Swiper
-                modules={[Autoplay]} // Use only Autoplay
-                autoplay={{ delay: 2000, disableOnInteraction: false }} // Enable autoplay
+                modules={[Autoplay]}
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
                 spaceBetween={30}
                 slidesPerView={1}
-                loop={true} // Enable continuous loop
+                loop={true}
               >
                 {reviews.map((review, index) => (
                   <SwiperSlide key={index}>
@@ -99,58 +130,50 @@ lorem ipsum dummy text
             <div className="overflow-hidden bg-white rounded-md">
               <div className="p-6 sm:p-10">
                 <h3 className="text-3xl font-semibold text-black">Contact Us</h3>
-                <p className="mt-4 text-base text-gray-600">
-                Contact Us form 
-                </p>
-                <form action="#" method="POST" className="mt-4">
-                  <div className="space-y-6">
-                    <div>
-                      <label className="text-base font-medium text-gray-900">Your name</label>
-                      <div className="mt-2.5">
-                        <input
-                          type="text"
-                          placeholder="Enter your full name"
-                          className="block w-full px-3 py-3 text-black placeholder-gray-500 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="text-base font-medium text-gray-900">Email address</label>
-                      <div className="mt-2.5">
-                        <input
-                          type="email"
-                          placeholder="Enter your email address"
-                          className="block w-full px-3 py-3 text-black placeholder-gray-500 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="text-base font-medium text-gray-900">Phone Number</label>
-                      <div className="mt-1.2">
-                        <input
-                          type="email"
-                          placeholder="Enter your Phone Number"
-                          className="block w-full px-3 py-3 text-black placeholder-gray-500 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      {/* <label className="text-base font-medium text-gray-900">Project brief</label>
-                      <div className="mt-2.5">
-                        <textarea
-                          placeholder="Enter your project brief"
-                        //   rows="4"
-                          className="block w-full px-3 py-3 text-black placeholder-gray-500 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                        ></textarea>
-                      </div> */}
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full px-4 py-4 text-base font-bold text-white bg-red-500 rounded-lg hover:bg-orange-600 focus:outline-none"
-                    >
-                    Submit
-                    </button>
+                <form onSubmit={handleSubmit} className="mt-4 space-y-6">
+                  <div>
+                    <label className="text-base font-medium text-gray-900">Your name</label>
+                    <input
+                      type="text"
+                      name="Name"
+                      value={formData.Name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      required
+                    />
                   </div>
+                  <div>
+                    <label className="text-base font-medium text-gray-900">Email address</label>
+                    <input
+                      type="email"
+                      name="Email"
+                      value={formData.Email}
+                      onChange={handleChange}
+                      placeholder="Enter your email address"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-base font-medium text-gray-900">Phone Number</label>
+                    <input
+                      type="text"
+                      name="Phone"
+                      value={formData.Phone}
+                      onChange={handleChange}
+                      placeholder="Enter your Phone Number"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full px-4 py-4 text-base font-bold text-white bg-red-500 rounded-lg hover:bg-orange-600"
+                  >
+                    Submit
+                  </button>
+                  {status && <p className="mt-4 text-center text-gray-700">{status}</p>}
                 </form>
               </div>
             </div>

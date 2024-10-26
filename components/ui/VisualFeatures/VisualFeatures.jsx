@@ -16,6 +16,7 @@ const VisualFeatures = () => {
                 "Kickstart your career",
                 "Download 150+ books and freebies for free",
             ],
+            url:"https://resource.prepcrazy.com/",
             imageUrl: Feature1,
         },
         {
@@ -28,7 +29,9 @@ const VisualFeatures = () => {
                 "Kickstart your career",
                 "Kickstart your career",
                 "Download 150+ books and freebies for free",
+               
             ],
+             url:"https://campuscredentials.online/",
             imageUrl: Feature2,
         },
     ];
@@ -85,10 +88,10 @@ const VisualFeatures = () => {
                                     </ul>
                                     <div className="mt-8 flex flex-wrap gap-4">
                                         <a 
-                                            href="#" 
+                                            href= {card.url} 
                                             className="inline-flex items-center justify-center px-3 py-2 text-white text-lg font-medium bg-red-500 rounded-lg shadow transition"
                                         >
-                                            Visit Now
+                                         Visit Now
                                         </a>
                                     </div>
                                 </div>
