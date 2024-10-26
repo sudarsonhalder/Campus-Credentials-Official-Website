@@ -38,7 +38,7 @@ const AboutUs = ({ aboutData }) => {
 
   
     
-    <CompanyLogos/>
+    {/* <CompanyLogos/> */}
 
     {/* <TeamSection/> */}
     {/* <Testimonial/> */}

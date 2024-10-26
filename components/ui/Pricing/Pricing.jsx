@@ -28,7 +28,7 @@ const Pricing = () => {
             name: "Complete Aptitude + Technical Preparation",
             desc: "For students seeking detailed interview preparation",
             price: 2999,
-            isMostPop: false,
+            isMostPop: true, // This is the most popular card
             features: [
                 "Everything in Basic Course included",
                 "Advanced interview prep sessions",
@@ -53,8 +53,6 @@ const Pricing = () => {
             ],
         }
     ];
-
-    const gradientStyle = "linear-gradient(90deg, rgba(214,214,214,1) 0%, rgba(255,255,255,1) 97%)";
 
     const handleAptitudeClick = () => {
         router.push("http://localhost:3000/aptitude-full-course");
@@ -98,24 +96,17 @@ const Pricing = () => {
                     {plans.map((item, idx) => (
                         <div
                             key={idx}
-                            className={`relative flex flex-col justify-between h-full rounded-xl border border-gray-800 p-8 transition-all duration-500 group`}
-                            style={{
-                                background: hoveredCard === idx ? gradientStyle : "",
-                                backgroundColor: item.isMostPop ? "white" : "white",
-                                boxShadow:
-                                    hoveredCard === idx || item.isMostPop
-                                        ? "0px 10px 15px rgba(0, 0, 0, 0.2)"
-                                        : ""
-                            }}
+                            className={`relative flex flex-col justify-between h-full p-8 transition-all duration-500 
+                                        transform ${idx === 1 || hoveredCard === idx ? 'scale-105 shadow-2xl bg-white' : 'scale-100'} group rounded-lg border text-red border-gray-300`}
                             onMouseEnter={() => setHoveredCard(idx)}
                             onMouseLeave={() => setHoveredCard(null)}
                         >
                             {/* Header */}
                             <div className="text-center space-y-4">
-                                <span className={`text-black font-medium ${item.isMostPop ? "text-xl" : ""}`}>
+                                <span className={`text-black ${item.isMostPop ? "text-xl font-bold" : ""}`}>
                                     {item.name}
                                 </span>
-                                <div className="text-gray-800 text-3xl font-semibold">₹ {item.price}</div>
+                                <div className="text-gray-800 text-3xl font-semibold">₹ <span className="text-4xl font-bold">{item.price}</span></div>
                                 <p className="text-red-500 font-bold">{item.desc}</p>
                             </div>
 
@@ -145,11 +136,12 @@ const Pricing = () => {
                             {/* Footer with Button or Dropdown */}
                             <div className="pt-8 relative">
                                 <Button
-                                    className={`w-full rounded-full text-white ring-offset-2 focus:ring transition-all duration-300 
-                                        ${item.isMostPop 
-                                            ? "bg-red-500 ring-gray-800" 
-                                            : "bg-gray-800 ring-gray-800"}
-                                        group-hover:bg-red-600`}
+                                    className={`rounded-md w-full text-lg font-semibold transition duration-100 
+                                        ${
+                                            item.isMostPop || hoveredCard === idx
+                                                ? "bg-orange-600 text-white hover:bg-orange-500 ring-orange-600" // Orange for center or hovered card
+                                                : "text-black ring-gray-300 hover:bg-orange-500 hover:text-white" // Neutral until hovered
+                                        } shadow-md`}
                                     onClick={
                                         item.name === "Complete Aptitude Preparation"
                                             ? handleAptitudeClick

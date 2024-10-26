@@ -36,25 +36,25 @@ function Contact() {
   };
 
   const reviews = [
-    {
-      name: 'Jenny Wilson',
-      role: 'Product Designer',
-      text: 'You made it so simple. My new site is so much faster and easier to work with than my old site.',
-      avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
-    },
-    {
-      name: 'John Doe',
-      role: 'Software Engineer',
-      text: 'This is hands down the best experience I have had. Quick and efficient service with amazing design.',
-      avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
-    },
-    {
-      name: 'Anna Smith',
-      role: 'Marketing Manager',
-      text: 'I am beyond happy with the results. This team has surpassed my expectations!',
-      avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
-    },
-  ];
+      {
+        name: 'Rohan Verma',
+        role: 'Software Engineer',
+        text: 'The technical resources and mock interviews provided by the team were incredibly helpful. I secured a job in my dream company!',
+        avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
+      },
+      {
+        name: 'Sneha Gupta',
+        role: 'Data Analyst',
+        text: 'The career guidance and mentorship sessions made a big difference. I felt more confident and well-prepared for my interviews.',
+        avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
+      },
+      {
+        name: 'Vikram Iyer',
+        role: 'Product Manager',
+        text: 'The resume optimization service was excellent! I started getting interview calls almost immediately after the changes.',
+        avatar: 'https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/avatar.jpg',
+      },
+    ];
 
   return (
     <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
@@ -64,10 +64,10 @@ function Contact() {
           <div className="flex flex-col justify-between lg:py-5">
             <div>
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl">
-                Contact us to Campus Credentials
+              Get in Touch with Campus Credentials  
               </h2>
               <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white">
-                Lorem ipsum dummy text.
+              Helping you unlock opportunities, one credential at a time.
               </p>
               <img
                 className="relative z-10 max-w-xs mx-auto -mb-16 md:hidden"

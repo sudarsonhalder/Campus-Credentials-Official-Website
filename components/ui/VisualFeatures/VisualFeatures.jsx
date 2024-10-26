@@ -40,7 +40,7 @@ const VisualFeatures = () => {
         <SectionWrapper>
             <div className="custom-screen text-gray-800">
                 <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold">
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold mt-20">
                         Enhance Your Learning Experience
                     </h2>
                     <p className="mt-3 text-md text-gray-700">

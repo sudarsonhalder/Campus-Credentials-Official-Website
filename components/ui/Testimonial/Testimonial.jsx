@@ -47,7 +47,7 @@ const Testimonial = () => {
         <SectionWrapper>
             <div id="testimonials" className="custom-screen text-gray-800">
                 <div className="max-w-2xl text-center md:mx-auto">
-                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold">
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold mt-20">
                         Campus Credentials is loved by the best colleges around the world
                     </h2>
                 </div>

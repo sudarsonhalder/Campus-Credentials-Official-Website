@@ -1,45 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+html, body {
+  font-family: 'Nunito', sans-serif; /* Set Nunito as the default font */
+}
+
+/* Tailwind CSS styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Classes */
 .custom-screen {
-    @apply max-w-screen-xl mx-auto px-4 md:px-8;
+  @apply max-w-screen-xl mx-auto px-4 md:px-8;
 }
 
 .custom-btn-bg {
-    background: radial-gradient(67.5% 67.5% at 50% 50%, #F77F0E 0%, rgba(75, 85, 99, 0) 100%)
+  background: radial-gradient(67.5% 67.5% at 50% 50%, #F77F0E 0%, rgba(75, 85, 99, 0) 100%);
 }
 
 .custom-btn-bg:hover {
-    background: radial-gradient(118.75% 118.75% at 50% 50%, #F77F0E 0%, rgba(75, 85, 99, 0) 100%);
+  background: radial-gradient(118.75% 118.75% at 50% 50%, #F77F0E 0%, rgba(75, 85, 99, 0) 100%);
 }
 
 .team-section {
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .team-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-  
-  .team-role {
-    margin-top: 10px;
-    /* font-size: 2s; */
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
+  text-align: center;
+  padding: 50px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  margin: 20px;
+  text-align: center;
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.team-role {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600; /* Set font weight to medium (600) */
+}

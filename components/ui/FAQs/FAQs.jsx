@@ -41,7 +41,7 @@ const FAQs = () => {
         <SectionWrapper id="faqs">
             <div className="custom-screen text-gray-800">
                 <div className="max-w-xl text-center mx-auto">
-                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold py-8">
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold py-8 mt-6">
                         Everything you need to know
                     </h2>
                     <p className="mt-2 text-base sm:text-lg text-gray-600">
@@ -57,7 +57,7 @@ const FAQs = () => {
                             falseState: "opacity-0 translate-y-12"
                         }}
                     >
-                        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
                             {faqsList.map((item, idx) => (
                                 <li key={idx} className="space-y-3">
                                     <button
