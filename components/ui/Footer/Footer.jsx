@@ -59,19 +59,22 @@ const Footer = () => {
     
                     <ul class="mt-6 space-y-4">
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
+                            <a href="/about-us" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
                         </li>
     
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Features </a>
+                            <a href="https://campuscredentials.online" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> LMS Portal </a>
                         </li>
     
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Works </a>
+                            <a href="https://resource.prepcrazy.com" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Resource Portal </a>
                         </li>
     
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Career </a>
+                            <a href="https://exam.campuscredentials.com" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Test Portal </a>
+                        </li>
+                        <li>
+                            <a href="https://read.careercredentials.in" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Blog Portal </a>
                         </li>
                     </ul>
                 </div>
@@ -81,24 +84,21 @@ const Footer = () => {
     
                     <ul class="mt-6 space-y-4">
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Customer Support </a>
+                            <a href="/contact" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact Us </a>
+                        </li>
+    
+    
+                        <li>
+                            <a href="/Terms-and-Conditions" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
                         </li>
     
                         <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Delivery Details </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Privacy Policy </a>
+                            <a href="/Refund-Policy" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Refund Policy </a>
                         </li>
                     </ul>
                 </div>
     
-                <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+                {/* <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
                     <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
     
                     <form action="#" method="POST" class="mt-6">
@@ -110,7 +110,7 @@ const Footer = () => {
                         <button className="mt-4 py-2 px-4 text-white bg-red-500 rounded-md self-start">
               Learn More
             </button>                    </form>
-                </div>
+                </div> */}
             </div>
     
             <hr class="mt-16 mb-10 border-gray-200" />

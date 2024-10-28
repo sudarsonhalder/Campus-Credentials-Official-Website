@@ -63,7 +63,7 @@ export default function Home() {
       <VisualFeatures />
  
 
- <Testimonial />
+ {/* <Testimonial /> */}
  <FAQs />
  {/* <CTA /> */}
      {/* 

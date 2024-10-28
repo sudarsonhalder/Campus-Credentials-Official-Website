@@ -13,22 +13,23 @@ const faqsList = [
         a: "Campus Credentials offers a range of benefits, including access to expert-led courses, comprehensive study materials, and targeted test series to help students excel in their job search."
     },
     {
-        q: "How do I get started with Campus Credentials?",
-        a: "To get started with Campus Credentials, simply sign up for an account on our website. Once registered, you can explore our courses and resources tailored to your learning needs."
+        q: "What types of packages and courses are offered?",
+        a: "We provide a variety of specialized packages tailored to meet student needs:\n- Aptitude (Apti): Focused entirely on aptitude skills.\n- Aptitude + Technical (Java or Python and SQL): Covers aptitude skills along with technical topics in Java or Python and SQL.\n- Aptitude (All Topics): A complete package covering all aptitude topics comprehensively.\n- Technical Packages (Java or Python and SQL): Purely technical courses to develop programming and database management skills."
     },
     {
-        q: "What types of courses are offered?",
-        a: "Campus Credentials offers a variety of courses, including full-stack development, data science, Python, and placement preparation, ensuring students gain the skills required for today’s job market."
+        q: "How do I get started with Campus Credentials?",
+        a: "To get started, simply sign up for an account on our website. Once registered, you can explore and enroll in courses or packages that match your learning goals. You can also enroll in the packages mentioned on the home page: Apti, Tech, or Apti + Tech, consisting of everything required from a placement point of view."
     },
     {
         q: "Can I access free resources through Campus Credentials?",
-        a: "Yes, Campus Credentials provides a comprehensive resource library where you can find free materials and books to support your learning journey."
+        a: "Yes, we provide a comprehensive resource library with free materials and books to support your learning journey."
     },
     {
-        q: "Can I sell my digital products using Campus Credentials?",
-        a: "Of course you can market and sell your digital products and subscriptions with Campus Credentials to drive higher conversions and save big on fees."
+        q: "How can Campus Credentials help me in placement preparation?",
+        a: "Campus Credentials offers targeted placement preparation courses, covering aptitude tests, coding interviews, and soft skills training to ensure you are fully prepared to excel in placement drives and secure your dream job."
     }
 ];
+
 
 const FAQs = () => {
     const [activeIndex, setActiveIndex] = useState(null);

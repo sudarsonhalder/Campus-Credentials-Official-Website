@@ -77,8 +77,8 @@ const Navbar = () => {
                             {
                                 navigation.map((item, idx) => {
                                     return (
-                                        <li key={idx} className="hover:text-gray-800">
-                                            <Link href={item.href} className="block">
+                                        <li key={idx} className="hover:text-gray-800 font-semibold">
+                                            <Link href={item.href} className="block ">
                                                 {item.name}
                                             </Link>
                                         </li>
@@ -87,7 +87,7 @@ const Navbar = () => {
                             }
                         </ul>
                         <div className="gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-                            <Link href="/contact" className="block hover:text-gray-800">
+                            <Link href="/contact" className="block hover:text-gray-800 font-semibold">
 Contact Us                            </Link>
                             <NavLink href="" className="flex items-center justify-center gap-x-1 text-sm text-white font-medium bg-red-500 border border-gray-500 active:bg-gray-900 md:inline-flex">
                          Schedule Free Counselling

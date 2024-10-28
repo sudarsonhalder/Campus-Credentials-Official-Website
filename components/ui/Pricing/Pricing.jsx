@@ -13,7 +13,7 @@ const Pricing = () => {
         {
             name: "Complete Aptitude Preparation",
             desc: "For students beginning their placement journey",
-            price: 0,
+            price: 1599,
             isMostPop: false,
             features: [
                 "Access to foundational study materials",
@@ -27,7 +27,7 @@ const Pricing = () => {
         {
             name: "Complete Aptitude + Technical Preparation",
             desc: "For students seeking detailed interview preparation",
-            price: 2999,
+            price: 2500,
             isMostPop: true, // This is the most popular card
             features: [
                 "Everything in Basic Course included",
@@ -41,7 +41,7 @@ const Pricing = () => {
         {
             name: "Complete Technical Preparation",
             desc: "For professionals seeking career transitions",
-            price: 7999,
+            price: 1599,
             isMostPop: false,
             features: [
                 "Everything in Professional Program included",
@@ -103,7 +103,7 @@ const Pricing = () => {
                         >
                             {/* Header */}
                             <div className="text-center space-y-4">
-                                <span className={`text-black ${item.isMostPop ? "text-xl font-bold" : ""}`}>
+                                <span className={`text-black font-bold ${item.isMostPop ? "text-xl font-bold" : ""}`}>
                                     {item.name}
                                 </span>
                                 <div className="text-gray-800 text-3xl font-semibold">₹ <span className="text-4xl font-bold">{item.price}</span></div>
@@ -136,10 +136,10 @@ const Pricing = () => {
                             {/* Footer with Button or Dropdown */}
                             <div className="pt-8 relative">
                                 <Button
-                                    className={`rounded-md w-full text-lg font-semibold transition duration-100 
+                                    className={`rounded-md w-full text-lg font-bold transition duration-100 
                                         ${
                                             item.isMostPop || hoveredCard === idx
-                                                ? "bg-orange-600 text-white hover:bg-orange-500 ring-orange-600" // Orange for center or hovered card
+                                                ? "bg-orange-600  text-white hover:bg-orange-500 ring-orange-600" // Orange for center or hovered card
                                                 : "text-black ring-gray-300 hover:bg-orange-500 hover:text-white" // Neutral until hovered
                                         } shadow-md`}
                                     onClick={
