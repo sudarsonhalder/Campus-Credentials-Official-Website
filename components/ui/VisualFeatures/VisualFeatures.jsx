@@ -8,28 +8,25 @@ const VisualFeatures = () => {
         {
             id: 1,
             title: "Free Online Books and Resources",
-            features: [
-                "Download 150+ books and freebies for free",
-                "Download 150+ books and freebies for free",
-                "Kickstart your career",
-                "Kickstart your career",
-                "Kickstart your career",
-                "Download 150+ books and freebies for free",
-            ],
+          "features": [
+        "Access 150+ books covering technology, aptitude, and career development",
+        "Download resources for free to support your learning journey",
+        "Explore materials on coding, problem-solving, and technical skills",
+        "Stay ahead with aptitude guides for competitive exams and interviews",
+        "Kickstart your career with comprehensive, downloadable study content"
+    ],
             url:"https://resource.prepcrazy.com/",
             imageUrl: Feature1,
         },
         {
             id: 2,
             title: "Learning Management System by Campus Credentials",
-            features: [
-                "Download 150+ books and freebies for free",
-                "Download 150+ books and freebies for free",
-                "Kickstart your career",
-                "Kickstart your career",
-                "Kickstart your career",
-                "Download 150+ books and freebies for free",
-               
+            "features": [
+                "Engage with trainers directly through interactive Q&A discussions",
+                "Track your learning progress with real-time updates and reports",
+                "Earn certifications to boost your resume and career prospects",
+                "Access courses anytime, anywhere with a user-friendly mobile platform",
+                "Join live webinars and recorded sessions for flexible learning"
             ],
              url:"https://campuscredentials.online/",
             imageUrl: Feature2,

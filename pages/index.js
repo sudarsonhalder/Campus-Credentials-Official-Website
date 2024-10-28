@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Pricing />
 
-      <div className="flex flex-col items-center mt-6">
+      {/* <div className="flex flex-col items-center mt-6">
         <button
           onClick={toggleDetailedPricing}
           className="text-2xl font-semibold flex-col items-center space-y-2 focus:outline-none hidden md:flex"
@@ -46,7 +46,7 @@ export default function Home() {
             />
           </svg>
         </button>
-      </div>
+      </div> */}
 
       {isDetailedPricingOpen && (
         <div className="mt-2">

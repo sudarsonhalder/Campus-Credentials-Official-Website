@@ -16,12 +16,12 @@ const Pricing = () => {
             price: 1599,
             isMostPop: false,
             features: [
-                "Access to foundational study materials",
-                "Mock interview practice sessions",
-                "Webinars on career guidance",
-                "Basic resume templates and tools",
-                "Email support for query resolution",
-                "Free coding challenges access",
+              "Access to foundational study materials",
+        "Practice tests for aptitude topics",
+        "Webinars on career guidance",
+        "Basic resume templates and tools",
+        "Email support for query resolution",
+        "Regular course updates with quizzes"
             ],
         },
         {
@@ -30,12 +30,12 @@ const Pricing = () => {
             price: 2500,
             isMostPop: true, // This is the most popular card
             features: [
-                "Everything in Basic Course included",
-                "Advanced interview prep sessions",
-                "Professional resume optimization",
-                "Career mentorship with industry experts",
-                "Priority support via email and phone",
-                "Job fairs and placement opportunities",
+                "Complete access to all aptitude materials",
+                "Java and Python courses included",
+                "SQL and logic-building exercises and lectures",
+                "Regular quizzes and lecture updates",
+                "Comprehensive career development resources",
+                "24/7 query resolution support"
             ],
         },
         {
@@ -44,12 +44,12 @@ const Pricing = () => {
             price: 1599,
             isMostPop: false,
             features: [
-                "Everything in Professional Program included",
-                "Executive coaching for leadership roles",
-                "Industry-specific career development",
-                "Company placements with partners",
-                "Exclusive professional network access",
-                "Interview calls guaranteed by partners",
+                "Access to technical lectures and materials",
+        "Choose between Python or Java courses",
+        "Includes SQL as part of the curriculum",
+        "Focus on logic-building exercises",
+        "Course updates with quizzes and lectures",
+        "Support through email and chat"
             ],
         }
     ];
@@ -81,7 +81,7 @@ const Pricing = () => {
                     Choose the <span className="text-red-600">Perfect Plan</span> for Your Career Growth
                 </h2>
                 <p className="mt-4 text-lg text-gray-700">
-                    Tailored programs designed to help you succeed. Whether you're just getting started or looking to level up your career, we’ve got you covered!
+                    Programs crafted to help you excel—whether you're beginning your journey or advancing your skills, Campus Credentials has the right fit for you!
                 </p>
             </div>
 
