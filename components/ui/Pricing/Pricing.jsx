@@ -55,11 +55,11 @@ const Pricing = () => {
     ];
 
     const handleAptitudeClick = () => {
-        router.push("http://localhost:3000/aptitude-full-course");
+        router.push("/aptitude-full-course");
     };
 
     const handlePlacementTrainingClick = () => {
-        router.push("http://localhost:3000/complete-placement-training");
+        router.push("/complete-placement-training");
     };
 
     const handleTechnicalClick = (e) => {
@@ -71,7 +71,7 @@ const Pricing = () => {
         const route = language === 'Java' 
             ? '/technical-course-java' 
             : '/technical-course-python';
-        router.push(`http://localhost:3000${route}`);
+        router.push(`/${route}`);
     };
 
     return (

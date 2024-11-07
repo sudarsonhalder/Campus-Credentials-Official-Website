@@ -490,7 +490,7 @@ const sqlCurriculum = [
         className="border border-orange-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-orange-50 transition-colors"
         onClick={handleDownloadBrochure}
       >
-        Download Brochure
+        Download Curriculum
       </button>
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
