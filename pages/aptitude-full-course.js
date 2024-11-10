@@ -268,7 +268,7 @@ const App = () => {
   <p className="mt-4 text-gray-600">
       Trusted by over <strong>5000 learners</strong> worldwide.
     </p>
-    <h1 className="text-3xl md:text-4xl font-extrabold leading-tight text-red-600">
+    <h1 className="text-5xl md:text-4xl font-extrabold leading-tight text-red-600">
       Full Aptitude Course for Placement Training
     </h1>
     <p className="text-base md:text-xl mt-4 mb-6 text-gray-700">
@@ -308,7 +308,7 @@ const App = () => {
         Enroll Now
       </button>
       <button
-        className="border border-orange-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-orange-50 transition-colors"
+        className="border border-orange-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-red-100 transition-colors"
         onClick={handleDownloadBrochure}
       >
         Download Curriculum
