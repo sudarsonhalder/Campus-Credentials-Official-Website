@@ -160,7 +160,7 @@ const PricingTable = () => (
               >
                 <button
                   className={`px-4 py-2 rounded w-full ${
-                    plan.popular ? 'bg-orange-500 text-white' : 'bg-blue-500 text-white'
+                    plan.popular ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
                   }`}
                 >
                   Get Started →

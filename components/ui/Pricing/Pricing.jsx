@@ -77,7 +77,7 @@ const Pricing = () => {
     return (
         <SectionWrapper id="pricing" className="custom-screen">
             <div className="relative max-w-4xl mx-auto text-center">
-                <h2 className="text-gray-900 text-4xl font-bold sm:text-5xl">
+                <h2 className="text-gray-900 text-4xl mt-8 font-bold sm:text-5xl">
                     Choose the <span className="text-red-500">Perfect Plan</span> for Your Career Growth
                 </h2>
                 <p className="mt-4 text-lg text-gray-700">

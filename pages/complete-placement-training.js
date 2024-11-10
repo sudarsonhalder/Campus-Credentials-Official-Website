@@ -723,10 +723,13 @@ const javaCurriculum = [
   
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-100 to-orange-50 px-8 md:px-24 py-6">
+    <main className="min-h-screen bg-white px-8 md:px-24 py-6">
       {/* Hero Section */}
       <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-8 md:py-16">
   <article className="md:w-1/2 w-full text-center md:text-left">
+  <p className="mt-4 text-gray-600">
+      Trusted by over <strong>5000 learners</strong> worldwide.
+    </p>
     <h1 className="text-3xl md:text-4xl font-extrabold leading-tight text-red-600">
      Complete placement training Consisting of Aptitude and Technical
     </h1>
@@ -763,7 +766,7 @@ const javaCurriculum = [
     </div>
 
     <div className="flex flex-wrap justify-center md:justify-start gap-4">
-      <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-sm md:text-lg rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+      <button className="bg-red-500 hover:bg-orange-600 text-white px-6 py-3 text-sm md:text-lg rounded-lg shadow-lg transform hover:scale-105 transition-transform">
         Enroll Now
       </button>
       <button
@@ -803,9 +806,6 @@ const javaCurriculum = [
     </div>
 
 
-    <p className="mt-4 text-gray-600">
-      Trusted by over <strong>5000 learners</strong> worldwide.
-    </p>
 
     {isMounted && (
       <div className="mt-6">
@@ -813,8 +813,8 @@ const javaCurriculum = [
           <del className="text-3xl text-gray-500">₹1500</del>
           <h2 className="text-5xl font-bold text-orange-500">₹800</h2>
         </div>
-        <p className="text-gray-600">One-time payment for lifetime access</p>
-        <p className="text-red-600 mt-1 font-semibold">Limited Time Offer!</p>
+        <p className="text-gray-600"></p>
+        
 
         <p className="mt-2 text-lg font-semibold text-red-600">
           Offer ends in: <span className="font-bold">{formatTime(timeLeft)}</span>
