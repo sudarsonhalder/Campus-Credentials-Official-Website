@@ -73,7 +73,7 @@ const Navbar = () => {
                             {
                                 navigation.map((item, idx) => {
                                     return (
-                                        <li key={idx} className="hover:text-gray-800 font-semibold">
+                                        <li key={idx} className="hover:text-gray-800 text-lg font-semibold">
                                             <Link href={item.href} className="block ">
                                                 {item.name}
                                             </Link>
