@@ -276,7 +276,7 @@ const App = () => {
     <div className="flex items-center justify-center md:justify-start gap-6 mb-6">
       <div className="flex items-center gap-2">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/826/826165.png"
+          src="https://ik.imagekit.io/99djpd8k3/CC/clock-solid.svg?updatedAt=1731241594030"
           alt="Time Icon"
           className="w-6 h-6"
         />
