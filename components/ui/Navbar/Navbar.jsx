@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <header className='relative'>
          {isVisible && (
-        <div className="bg-red-100 py-2 px-4 relative flex items-center justify-center">
+        <div className="bg-amber-300 py-2 px-4 relative flex items-center justify-center">
           {/* Centered Content */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
             <p className="text-base sm:text-md font-bold text-black">
@@ -39,7 +39,7 @@ const Navbar = () => {
             </p>
             <a
               href="#"
-              className="px-4 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-red-500"
+              className="px-3 py-1 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-red-500"
             >
               APPLY NOW
             </a>
