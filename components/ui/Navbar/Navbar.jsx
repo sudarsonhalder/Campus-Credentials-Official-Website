@@ -29,27 +29,27 @@ const Navbar = () => {
     return (
         <header className="relative shadow-lg">
             {isVisible && (
-                <div className="bg-amber-300 flex items-center justify-center px-1 py-1">
-                    <div className="flex items-center space-x-2">
+                <div className="bg-amber-300 flex items-center justify-center px-4 py-2">
+                    <div className="flex items-center space-x-3">
                         {/* SVG Image */}
                         <img
                             src="https://ik.imagekit.io/99djpd8k3/CC/referal.4822d099%20(1).svg?updatedAt=1731239516352"
                             alt="Referral Icon"
-                            className="w-4 h-4 object-contain"
+                            className="w-6 h-6 object-contain"
                         />
-                        <p className="text-base font-semibold text-black">
+                        <p className="text-sm sm:text-base font-semibold text-black">
                             Get a CC course with a Scholarship of 100%
                         </p>
                         <a
                             href="#"
-                            className="px-1 py-2 text-white bg-red-500 rounded text-base font-semibold"
+                            className="px-2 py-1 text-white bg-red-500 rounded text-sm font-semibold hover:bg-red-600"
                         >
                             APPLY NOW
                         </a>
                     </div>
                     <button
                         onClick={closeBanner}
-                        className="absolute top-1 right-2 text-black focus:outline-none text-xs"
+                        className="absolute top-2 right-3 text-black focus:outline-none text-sm"
                         aria-label="Close banner"
                     >
                         ✕
@@ -68,7 +68,7 @@ const Navbar = () => {
                                 navigation.map((item, idx) => {
                                     return (
                                         <li key={idx} className="hover:text-gray-800 text-base font-semibold">
-                                            <Link href={item.href} className="block ">
+                                            <Link href={item.href} className="block">
                                                 {item.name}
                                             </Link>
                                         </li>
