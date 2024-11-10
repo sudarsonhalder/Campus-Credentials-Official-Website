@@ -6,7 +6,40 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [status, setStatus] = useState('');
-  
+  useEffect(() => {
+    const loadRazorpayForm = () => {
+      // Check if the form already exists to prevent duplicate buttons
+      if (!document.getElementById("razorpay-form")) {
+        const form = document.createElement("form");
+        form.id = "razorpay-form"; // Set an ID to check for duplicates
+        const script = document.createElement("script");
+
+        // Set the Razorpay script attributes
+        script.src = "https://checkout.razorpay.com/v1/payment-button.js";
+        script.setAttribute("data-payment_button_id", "pl_PJdpX1IBSSjJo5");
+        script.async = true;
+
+        // Append the script to the form
+        form.appendChild(script);
+
+        // Append the form to the container div
+        const container = document.getElementById("razorpay-form-container");
+        if (container) {
+          container.appendChild(form);
+        }
+      }
+    };
+
+    loadRazorpayForm(); // Call the function to load Razorpay form
+
+    // Cleanup to remove form if component unmounts
+    return () => {
+      const form = document.getElementById("razorpay-form");
+      if (form) {
+        form.remove();
+      }
+    };
+  }, []);
   const pageName = "Complete Aptitude Preparation"; // Page name to be sent
 
   // Set the browser tab title
@@ -303,16 +336,20 @@ const App = () => {
       </div>
     </div>
 
-    <div className="flex flex-wrap justify-center md:justify-start gap-4">
-      <button className="bg-red-500 hover:bg-orange-600 text-white px-6 py-3 text-sm md:text-lg rounded-lg shadow-lg transform hover:scale-105 transition-transform">
-        Enroll Now
-      </button>
+    <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-1">
+      {/* Razorpay Form Container */}
+      <div id="razorpay-form-container" className="flex items-center">
+        {/* Razorpay form and button will load here */}
+      </div>
+
       <button
-        className="border border-red-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-red-100 transition-colors"
+        className="border rounded border-red-500 text-red-600 px-2 mb-2 py-2 text-base md:text-sm hover:bg-red-100 transition-colors"
         onClick={handleDownloadBrochure}
       >
         Download Curriculum
       </button>
+
+      {/* Modal for Phone Number Input */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg w-96">
@@ -342,6 +379,7 @@ const App = () => {
         </div>
       )}
     </div>
+
 
 
  

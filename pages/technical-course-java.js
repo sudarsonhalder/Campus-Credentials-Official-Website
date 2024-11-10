@@ -6,7 +6,40 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [status, setStatus] = useState('');
-  
+  useEffect(() => {
+    const loadRazorpayForm = () => {
+      // Check if the form already exists to prevent duplicate buttons
+      if (!document.getElementById("razorpay-form")) {
+        const form = document.createElement("form");
+        form.id = "razorpay-form"; // Set an ID to check for duplicates
+        const script = document.createElement("script");
+
+        // Set the Razorpay script attributes
+        script.src = "https://checkout.razorpay.com/v1/payment-button.js";
+        script.setAttribute("data-payment_button_id", "pl_PJelZUhscpqjFX");
+        script.async = true;
+
+        // Append the script to the form
+        form.appendChild(script);
+
+        // Append the form to the container div
+        const container = document.getElementById("razorpay-form-container");
+        if (container) {
+          container.appendChild(form);
+        }
+      }
+    };
+
+    loadRazorpayForm(); // Call the function to load Razorpay form
+
+    // Cleanup to remove form if component unmounts
+    return () => {
+      const form = document.getElementById("razorpay-form");
+      if (form) {
+        form.remove();
+      }
+    };
+  }, []);
   const pageName = "Complete Java Preparation"; // Page name to be sent
 
   // Set the browser tab title
@@ -124,7 +157,7 @@ const App = () => {
             'Beginner Practices on Java',
             'Java Typecasting',
             'Basic Practice on Java Data Types',
-            'Java Scanner Class',
+            'Java Scanner className',
         ],
     },    
     {
@@ -161,7 +194,7 @@ const App = () => {
     {
         title: 'Object Oriented Programming (Total: 1 hr)',
         content: [
-            'Introduction to Class and Objects',
+            'Introduction to className and Objects',
             'Practice Questions',
             'Introduction to Constructors',
             'Constructor Overloading',
@@ -187,7 +220,7 @@ const App = () => {
             content: [
                 'String functions',
                 'String manipulations',
-                'String class',
+                'String className',
                 'Strings and Operators',
                 'Immutability and mutability in string',
             ],
@@ -248,11 +281,11 @@ const App = () => {
             title: 'Abstraction in Java (Total: 1 hr 30 mins)',
             content: [
                 'Abstraction in java',
-                'Abstract class in java',
-                'Non implementation of abstract class',
-                'Difference between abstract class and interface',
+                'Abstract className in java',
+                'Non implementation of abstract className',
+                'Difference between abstract className and interface',
                 'Encapsulation in java',
-                'Implementation of abstract class',
+                'Implementation of abstract className',
             ],
         },
         {
@@ -444,8 +477,8 @@ const sqlCurriculum = [
 
   return (
     <main className="min-h-screen bg-white px-8 md:px-24 py-6">
-      {/* Hero Section */}
-      <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-8 md:py-16">
+    {/* Hero Section */}
+    <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-8 md:py-8">
   <article className="md:w-1/2 w-full text-center md:text-left">
   <p className="mt-4 text-gray-600">
       Trusted by over <strong>5000 learners</strong> worldwide
@@ -485,16 +518,20 @@ const sqlCurriculum = [
       </div>
     </div>
 
-    <div className="flex flex-wrap justify-center md:justify-start gap-4">
-      <button className="bg-red-500 hover:bg-orange-600 text-white px-6 py-3 text-sm md:text-lg rounded-lg shadow-lg transform hover:scale-105 transition-transform">
-        Enroll Now
-      </button>
+    <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-1">
+      {/* Razorpay Form Container */}
+      <div id="razorpay-form-container" className="flex items-center">
+        {/* Razorpay form and button will load here */}
+      </div>
+
       <button
-        className="border border-red-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-red-100 transition-colors"
+        className="border rounded border-red-500 text-red-600 px-2 mb-2 py-2 text-base md:text-sm hover:bg-red-100 transition-colors"
         onClick={handleDownloadBrochure}
       >
         Download Curriculum
       </button>
+
+      {/* Modal for Phone Number Input */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg w-96">

@@ -3,21 +3,21 @@ import Link from 'next/link';
 const Footer = () => {
 
     return (
-        <section class="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-                <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-                    <img class="w-auto h-20" src="https://campuscredentials.online/wp-content/uploads/2022/08/CC-Logo-Dark.png" alt="" />
+        <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+                <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+                    <img className="w-auto h-20" src="https://campuscredentials.online/wp-content/uploads/2022/08/CC-Logo-Dark.png" alt="" />
     
-                    <p class="text-base leading-relaxed text-gray-600 mt-7">We provide Comprehensive Campus Recruitment Training to allow students to crack any Placement Interview and get their Dream Job</p>
+                    <p className="text-base leading-relaxed text-gray-600 mt-7">We provide Comprehensive Campus Recruitment Training to allow students to crack any Placement Interview and get their Dream Job</p>
     
-                    <ul class="flex items-center space-x-3 mt-9">
+                    <ul className="flex items-center space-x-3 mt-9">
                     
     
                
                         <li>
-                            <Link href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <Link href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                                <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
                                     <circle cx="16.806" cy="7.207" r="1.078"></circle>
                                     <path
@@ -32,56 +32,56 @@ const Footer = () => {
                 </div>
     
                 <div>
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
+                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
     
-                    <ul class="mt-6 space-y-4">
+                    <ul className="mt-6 space-y-4">
                         <li>
-                            <Link href="/about-us" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </Link>
+                            <Link href="/about-us" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </Link>
                         </li>
     
                         <li>
-                            <Link href="https://campuscredentials.online" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> LMS Portal </Link>
+                            <Link href="https://campuscredentials.online" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> LMS Portal </Link>
                         </li>
     
                         <li>
-                            <Link href="https://resource.prepcrazy.com" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Resource Portal </Link>
+                            <Link href="https://resource.prepcrazy.com" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Resource Portal </Link>
                         </li>
     
                         <li>
-                            <Link href="https://exam.campuscredentials.com" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Test Portal </Link>
+                            <Link href="https://exam.campuscredentials.com" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Test Portal </Link>
                         </li>
                         <li>
-                            <Link href="https://read.careercredentials.in" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Blog Portal </Link>
+                            <Link href="https://read.careercredentials.in" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Blog Portal </Link>
                         </li>
                     </ul>
                 </div>
     
                 <div>
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Help</p>
+                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Help</p>
     
-                    <ul class="mt-6 space-y-4">
+                    <ul className="mt-6 space-y-4">
                         <li>
-                            <Link href="/contact" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact Us </Link>
+                            <Link href="/contact" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact Us </Link>
                         </li>
     
     
                         <li>
-                            <Link href="/Terms-and-Conditions" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </Link>
+                            <Link href="/Terms-and-Conditions" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </Link>
                         </li>
     
                         <li>
-                            <Link href="/Refund-Policy" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Refund Policy </Link>
+                            <Link href="/Refund-Policy" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Refund Policy </Link>
                         </li>
                     </ul>
                 </div>
     
-                {/* <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
+                {/* <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
     
-                    <form action="#" method="POST" class="mt-6">
+                    <form action="#" method="POST" className="mt-6">
                         <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email" class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+                            <label for="email" className="sr-only">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
                         </div>
     
                         <button className="mt-4 py-2 px-4 text-white bg-red-500 rounded-md self-start">
@@ -90,9 +90,9 @@ const Footer = () => {
                 </div> */}
             </div>
     
-            <hr class="mt-16 mb-10 border-gray-200" />
+            <hr className="mt-16 mb-10 border-gray-200" />
     
-            <p class="text-sm text-center text-gray-600">© Copyright 2024, All Rights Reserved by Campus Credentials</p>
+            <p className="text-sm text-center text-gray-600">© Copyright 2024, All Rights Reserved by Campus Credentials</p>
         </div>
     </section>
     

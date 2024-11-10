@@ -127,7 +127,7 @@ const CardComponent = () => {
         img: 'https://campuscredentials.online/wp-content/uploads/2023/10/Profit-and-loss-Course-thumbnail-870x440.png',
       },{
   title: 'Learn Ratio and Proportion - Basics to Advanced | The Practical Way',
-  description: 'Unlock the power of ratios and proportions with our comprehensive Ratio and Proportion Course! Whether you’re a student seeking to excel in math class, a teacher looking to enhance your instructional methods, or simply someone who wants to become more mathematically literate, this course is tailor-made for you.Enroll today and take the first step toward mastering ratios and proportions! Mathematics is the language of the universe, and with our course, you can become fluent in it.',
+  description: 'Unlock the power of ratios and proportions with our comprehensive Ratio and Proportion Course! Whether you’re a student seeking to excel in math className, a teacher looking to enhance your instructional methods, or simply someone who wants to become more mathematically literate, this course is tailor-made for you.Enroll today and take the first step toward mastering ratios and proportions! Mathematics is the language of the universe, and with our course, you can become fluent in it.',
   price: '800',
   salePrice: '1500',
   buyLink:"https://campuscredentials.online/courses-page/learn-ratio-and-proportion-basics-to-advanced-or-the-practical-way/",
