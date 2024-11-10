@@ -38,7 +38,7 @@ const Navbar = () => {
          <img
            src="https://ik.imagekit.io/99djpd8k3/CC/referal.4822d099%20(1).svg?updatedAt=1731239516352"
            alt="Referral Icon"
-           className="w-4 h-4 sm:w-8 sm:h-8 object-contain"
+           className="w-4 h-4 sm:w-10 sm:h-10 object-contain hidden md:block"
          />
          <p className="text-base sm:text-md font-bold text-black">
            Get a CC course with a Scholarship of 100%
@@ -54,7 +54,7 @@ const Navbar = () => {
        {/* Close Button */}
        <button
          onClick={closeBanner}
-         className="absolute top-2 right-4 text-black focus:outline-none"
+         className="absolute top-4 right-4 text-black focus:outline-none"
          aria-label="Close banner"
        >
          ✕
