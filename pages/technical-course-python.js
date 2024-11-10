@@ -614,7 +614,7 @@ const sqlCurriculum = [
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform"
+              className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform"
             >
               <div className="flex flex-col items-center md:flex-row gap-4">
                 <img
@@ -670,7 +670,7 @@ const sqlCurriculum = [
     ].map((company, index) => (
       <div
         key={index}
-        className="p-6 bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center h-28"
+        className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center h-28"
       >
         <img
           src={company.logo}

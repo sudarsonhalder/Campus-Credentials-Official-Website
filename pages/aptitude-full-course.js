@@ -442,7 +442,7 @@ const App = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform"
+              className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform"
             >
               <div className="flex flex-col items-center md:flex-row gap-4">
                 <img
@@ -478,7 +478,7 @@ const App = () => {
   </h2>
 
   {/* Grid Layout for Company Logos */}
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 px-4 sm:px-8">
+  <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 px-4 sm:px-8">
     {[
       { name: 'Infosys', logo: 'https://companieslogo.com/img/orig/INFY_BIG-9635f314.png?t=1720244492' },
       { name: 'Cognizant', logo: 'https://companieslogo.com/img/orig/CTSH_BIG-953fa309.png?t=1720244491' },
@@ -498,7 +498,7 @@ const App = () => {
     ].map((company, index) => (
       <div
         key={index}
-        className="p-6 bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center h-28"
+        className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center h-28"
       >
         <img
           src={company.logo}
