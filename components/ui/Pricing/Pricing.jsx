@@ -78,7 +78,7 @@ const Pricing = () => {
         <SectionWrapper id="pricing" className="custom-screen">
             <div className="relative max-w-4xl mx-auto text-center">
                 <h2 className="text-gray-900 text-4xl font-bold sm:text-5xl">
-                    Choose the <span className="text-red-600">Perfect Plan</span> for Your Career Growth
+                    Choose the <span className="text-red-500">Perfect Plan</span> for Your Career Growth
                 </h2>
                 <p className="mt-4 text-lg text-gray-700">
                     Programs crafted to help you excel—whether you're beginning your journey or advancing your skills, Campus Credentials has the right fit for you!
@@ -139,8 +139,8 @@ const Pricing = () => {
                                     className={`rounded-md w-full text-lg font-bold transition duration-100 
                                         ${
                                             item.isMostPop || hoveredCard === idx
-                                                ? "bg-orange-600  text-white hover:bg-orange-500 ring-orange-600" // Orange for center or hovered card
-                                                : "text-black ring-gray-300 hover:bg-orange-500 hover:text-white" // Neutral until hovered
+                                                ? "bg-red-500  text-white hover:bg-red-500 ring-orange-600" // Orange for center or hovered card
+                                                : "text-black ring-gray-300 hover:bg-red-600 hover:text-white" // Neutral until hovered
                                         } shadow-md`}
                                     onClick={
                                         item.name === "Complete Aptitude Preparation"
