@@ -29,32 +29,35 @@ const Navbar = () => {
     return (
         <header className="relative shadow-lg">
             {isVisible && (
-                <div className="bg-amber-300 flex items-center justify-center px-4 py-2">
-                    <div className="flex items-center space-x-3">
-                        {/* SVG Image */}
-                        <img
-                            src="https://ik.imagekit.io/99djpd8k3/CC/referal.4822d099%20(1).svg?updatedAt=1731239516352"
-                            alt="Referral Icon"
-                            className="w-6 h-6 object-contain"
-                        />
-                        <p className="text-sm sm:text-base font-semibold text-black">
-                            Get a CC course with a Scholarship of 100%
-                        </p>
-                        <a
-                            href="#"
-                            className="px-2 py-1 text-white bg-red-500 rounded text-sm font-semibold hover:bg-red-600"
-                        >
-                            APPLY NOW
-                        </a>
-                    </div>
-                    <button
-                        onClick={closeBanner}
-                        className="absolute top-2 right-3 text-black focus:outline-none text-sm"
-                        aria-label="Close banner"
-                    >
-                        ✕
-                    </button>
-                </div>
+               <div className="bg-amber-300 py-2 px-2 relative flex items-center justify-center">
+               {/* Centered Content */}
+               <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                 {/* SVG Image */}
+                 <img
+                   src="https://ik.imagekit.io/99djpd8k3/CC/referal.4822d099%20(1).svg?updatedAt=1731239516352"
+                   alt="Referral Icon"
+                   className="w-4 h-4 sm:w-10 sm:h-10 object-contain hidden md:block"
+                 />
+                 <p className="text-base sm:text-md font-bold text-black">
+                   Get a CC course with a Scholarship of 100%
+                 </p>
+                 <a
+                   href="#"
+                   className="px-2 py-2 text-white bg-red-500 rounded-md text-sm font-semibold hover:bg-red-500"
+                 >
+                   APPLY NOW
+                 </a>
+               </div>
+             
+               {/* Close Button */}
+               <button
+                 onClick={closeBanner}
+                 className="absolute top-4 right-4 text-black focus:outline-none"
+                 aria-label="Close banner"
+               >
+                 ✕
+               </button>
+             </div>
             )}
             <div className="custom-screen md:hidden">
                 <NavHeader menuBtnEl={menuBtnEl} state={state} onClick={() => setState(!state)} />
