@@ -276,7 +276,7 @@ const App = () => {
     <div className="flex items-center justify-center md:justify-start gap-6 mb-6">
       <div className="flex items-center gap-2">
         <img
-          src="https://ik.imagekit.io/99djpd8k3/CC/clock-solid.svg?updatedAt=1731241594030"
+          src="https://ik.imagekit.io/99djpd8k3/CC/clock-solid%20(1).svg?updatedAt=1731241927965"
           alt="Time Icon"
           className="w-6 h-6"
         />
@@ -284,7 +284,7 @@ const App = () => {
       </div>
       <div className="flex items-center gap-2">
         <img
-          src="https://ik.imagekit.io/99djpd8k3/CC/graduation-cap-solid.svg?updatedAt=1731241670493"
+          src="https://ik.imagekit.io/99djpd8k3/CC/building-columns-solid.svg?updatedAt=1731241943946"
           alt="Self-Paced Icon"
           className="w-6 h-6"
         />
@@ -292,7 +292,7 @@ const App = () => {
       </div>
       <div className="flex items-center gap-2">
         <img
-          src="https://ik.imagekit.io/99djpd8k3/CC/chart-simple-solid.svg?updatedAt=1731241715312"
+          src="https://ik.imagekit.io/99djpd8k3/CC/chart-simple-solid%20(2).svg?updatedAt=1731241983259"
           alt="Level Icon"
           className="w-6 h-6"
         />
