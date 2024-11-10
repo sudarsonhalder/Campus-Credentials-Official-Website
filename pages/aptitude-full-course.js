@@ -266,7 +266,7 @@ const App = () => {
       <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-8 md:py-8">
   <article className="md:w-1/2 w-full text-center md:text-left">
   <p className="mt-4 text-gray-600">
-      Trusted by over <strong>5000 learners</strong> worldwide.
+      Trusted by over <strong>5000 learners</strong> worldwide
     </p>
     <h1 className="text-5xl md:text-4xl font-extrabold leading-tight text-red-600">
       Full Aptitude Course for Placement Training
@@ -355,7 +355,7 @@ const App = () => {
         {/* <p className="text-gray-600"></p> */}
         
 
-        <p className="mt-2 text-lg font-semibold text-red-600">
+        <p className="mt-2 text-lg font-semibold text-gray-600">
           Offer ends in: <span className="font-bold">{formatTime(timeLeft)}</span>
         </p>
       </div>
