@@ -284,7 +284,7 @@ const App = () => {
       </div>
       <div className="flex items-center gap-2">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/13441/13441798.png"
+          src="https://ik.imagekit.io/99djpd8k3/CC/graduation-cap-solid.svg?updatedAt=1731241670493"
           alt="Self-Paced Icon"
           className="w-6 h-6"
         />
