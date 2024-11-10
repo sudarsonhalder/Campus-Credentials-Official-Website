@@ -65,7 +65,7 @@ const Navbar = () => {
             <div className="custom-screen md:hidden">
                 <NavHeader menuBtnEl={menuBtnEl} state={state} onClick={() => setState(!state)} />
             </div>
-            <nav className={`pb-2 md:text-sm md:static md:block ${state ? "bg-gray-100 absolute z-20 top-0 inset-x-0 rounded-b-2xl shadow-xl md:bg-gray-900" : "hidden"}`}>
+            <nav className={`md:text-sm md:static md:block ${state ? "bg-gray-100 absolute z-20 top-0 inset-x-0 rounded-b-2xl shadow-xl md:bg-gray-900" : "hidden"}`}>
                 <div className="custom-screen items-center md:flex">
                     <NavHeader state={state} onClick={() => setState(!state)} />
                     <div className={`flex-1 items-center mt-8 text-gray-800 md:font-medium md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>

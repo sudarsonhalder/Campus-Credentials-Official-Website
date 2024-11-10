@@ -261,7 +261,7 @@ const App = () => {
   
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-100 to-orange-50 px-8 md:px-24 py-6">
+    <main className="min-h-screen bg-white px-8 md:px-24 py-6">
       {/* Hero Section */}
       <section className="w-full flex flex-col md:flex-row items-center justify-between gap-12 py-8 md:py-16">
   <article className="md:w-1/2 w-full text-center md:text-left">
