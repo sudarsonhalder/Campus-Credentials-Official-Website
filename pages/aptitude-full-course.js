@@ -292,7 +292,7 @@ const App = () => {
       </div>
       <div className="flex items-center gap-2">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1162/1162481.png"
+          src="https://ik.imagekit.io/99djpd8k3/CC/chart-simple-solid.svg?updatedAt=1731241715312"
           alt="Level Icon"
           className="w-6 h-6"
         />
