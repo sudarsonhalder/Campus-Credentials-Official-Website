@@ -139,7 +139,7 @@ function Contact() {
                       value={formData.Name}
                       onChange={handleChange}
                       placeholder="Enter your full name"
-                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-red-500"
                       required
                     />
                   </div>
@@ -151,7 +151,7 @@ function Contact() {
                       value={formData.Email}
                       onChange={handleChange}
                       placeholder="Enter your email address"
-                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-red-500"
                       required
                     />
                   </div>
@@ -163,7 +163,7 @@ function Contact() {
                       value={formData.Phone}
                       onChange={handleChange}
                       placeholder="Enter your Phone Number"
-                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                      className="block w-full px-3 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-red-500"
                       required
                     />
                   </div>

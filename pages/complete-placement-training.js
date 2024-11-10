@@ -770,7 +770,7 @@ const javaCurriculum = [
         Enroll Now
       </button>
       <button
-        className="border border-orange-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-red-100 transition-colors"
+        className="border border-red-500 text-red-600 px-6 py-3 text-sm md:text-lg rounded-lg hover:bg-red-100 transition-colors"
         onClick={handleDownloadBrochure}
       >
         Download Curriculum
@@ -810,8 +810,8 @@ const javaCurriculum = [
     {isMounted && (
       <div className="mt-6">
         <div className="flex items-center gap-4 justify-center md:justify-start">
-          <del className="text-3xl text-gray-500">₹1500</del>
-          <h2 className="text-5xl font-bold text-orange-500">₹800</h2>
+          <del className="text-3xl text-gray-500">₹3999</del>
+          <h2 className="text-5xl font-bold text-red-500">₹1599</h2>
         </div>
         <p className="text-gray-600"></p>
         
