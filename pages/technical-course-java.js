@@ -537,7 +537,7 @@ const sqlCurriculum = [
         <p className="text-gray-600"></p>
         
 
-        <p className="mt-2 text-lg font-semibold text-gray-600">
+        <p className="mt-2 text-lg font-semibold text-red-600">
           Offer ends in: <span className="font-bold">{formatTime(timeLeft)}</span>
         </p>
       </div>
