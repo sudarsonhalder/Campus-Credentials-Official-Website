@@ -853,9 +853,7 @@ const javaCurriculum = [
         <p className="text-gray-600"></p>
         
 
-        <p className="mt-2 text-lg font-semibold text-red-600">
-          Offer ends in: <span className="font-bold">{formatTime(timeLeft)}</span>
-        </p>
+  
       </div>
     )}
   </article>
@@ -864,7 +862,7 @@ const javaCurriculum = [
     <iframe
       className="w-full rounded-lg"
       height="400"
-      src="https://www.youtube.com/embed/YkvtJi5oWpA?si=Oe6xBW2A8Z9QMhyk"
+ src="https://www.youtube.com/embed/tPB47qslYxk?si=vNCbi6rAchYugN1R"
       title="Course Introduction"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
