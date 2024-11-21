@@ -583,7 +583,7 @@ const sqlCurriculum = [
     <iframe
       className="w-full rounded-lg"
       height="400"
-      src="https://www.youtube.com/embed/tPB47qslYxk?si=vNCbi6rAchYugN1R"
+      src="https://www.youtube.com/embed/nF5s0-H6kp4?si=vyGhQ7luKyI0vUHf"
       title="Course Introduction"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

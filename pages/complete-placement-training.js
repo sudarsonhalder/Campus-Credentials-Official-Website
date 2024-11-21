@@ -862,7 +862,7 @@ const javaCurriculum = [
     <iframe
       className="w-full rounded-lg"
       height="400"
- src="https://www.youtube.com/embed/tPB47qslYxk?si=vNCbi6rAchYugN1R"
+ src="https://www.youtube.com/embed/BqgmRGExcj4?si=cTmT81qWFxsn7ygk"
       title="Course Introduction"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

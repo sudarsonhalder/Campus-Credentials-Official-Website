@@ -404,7 +404,7 @@ const App = () => {
     <iframe
       className="w-full rounded-lg"
       height="400"
-      src="https://www.youtube.com/embed/tPB47qslYxk?si=vNCbi6rAchYugN1R"
+      src="https://www.youtube.com/embed/V6JV4FwGhsU?si=OT_M9PCFdBZgd0in"
       title="Course Introduction"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
