@@ -1,11 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import CurriculumAccordion from '@/components/Curriculum/CurriculumAccordion';
 import FAQAccordion from '@/components/ui/FAQs/FAQAccordion';
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [status, setStatus] = useState('');
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(false);
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (videoRef.current) {
+        if (document.visibilityState === "hidden") {
+          videoRef.current.pause();
+        } else if (document.visibilityState === "visible") {
+          videoRef.current.play();
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
   useEffect(() => {
     const loadRazorpayForm = () => {
       // Check if the form already exists to prevent duplicate buttons
@@ -858,17 +885,30 @@ const javaCurriculum = [
     )}
   </article>
 
-  <div className="md:w-1/2 w-full">
-    <iframe
-      className="w-full rounded-lg"
-      height="400"
- src="https://www.youtube.com/embed/BqgmRGExcj4?si=cTmT81qWFxsn7ygk"
-      title="Course Introduction"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+
+  <div className="relative md:w-1/2 w-full">
+      <video
+        ref={videoRef}
+        className="w-full rounded-lg"
+        height="400"
+        autoPlay
+        playsInline
+        onCanPlay={() => videoRef.current?.play()}
+      >
+        <source
+          src="https://acecredentials.b-cdn.net/Campus%20Intro%20Videos/Masterclass%20noice%20removed.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      {/* Mute/Unmute Icon */}
+      <button
+        onClick={toggleMute}
+        className="absolute bottom-4 right-4 p-1 bg-black bg-opacity-50 text-white rounded-full"
+      >
+        {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
+      </button>
+    </div>
   
 </section>
 
