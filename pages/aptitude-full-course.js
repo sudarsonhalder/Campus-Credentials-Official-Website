@@ -436,7 +436,7 @@ const App = () => {
         onCanPlay={() => videoRef.current?.play()}
       >
         <source
-          src="https://acecredentials.b-cdn.net/Campus%20Intro%20Videos/Technical%20noice%20removed.mp4"
+          src="https://acecredentials.b-cdn.net/Campus%20Intro%20Videos/Aptitude%20noice%20removed.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
