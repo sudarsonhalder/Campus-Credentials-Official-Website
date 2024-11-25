@@ -105,7 +105,7 @@ const CognizantPage = () => {
 
       {/* About Section */}
       <section className="mt-10">
-        <h2 className="text-3xl font-bold text-blue-600 mb-4">About Cognizant</h2>
+        <h2 className="text-3xl font-bold text-red-600 mb-4">About Cognizant</h2>
         <p className="text-gray-600 leading-relaxed">
           Founded in 1994, Cognizant has grown into a multinational technology
           company headquartered in Teaneck, New Jersey. It offers IT services,
@@ -117,7 +117,7 @@ const CognizantPage = () => {
 
       {/* Roles and Salary Section */}
       <section className="mt-16">
-        <h2 className="text-3xl font-bold text-blue-600 mb-4">
+        <h2 className="text-3xl font-bold text-red-600 mb-4">
           Roles and Salary Packages
         </h2>
         <table className="w-full border-collapse border border-gray-300 text-gray-600">
@@ -142,7 +142,7 @@ const CognizantPage = () => {
 
       {/* Hiring Process Section */}
       <section className="mt-16">
-        <h2 className="text-3xl font-bold text-blue-600 mb-4">
+        <h2 className="text-3xl font-bold text-red-600 mb-4">
           Cognizant Hiring Process
         </h2>
         <h3 className="text-xl font-semibold text-gray-800 mb-2">
