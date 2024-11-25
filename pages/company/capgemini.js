@@ -6,28 +6,24 @@ import SectionWrapper from "@/components/SectionWrapper";
 // FAQs data
 const faqsList = [
   {
-    q: "What is the test pattern for the TCS National Qualifier Test (NQT)?",
-    a: "The NQT consists of sections including Quantitative Aptitude, Logical Reasoning, Verbal Ability, and Coding. It is designed to evaluate a candidate's technical and problem-solving skills over a duration of 180 minutes.",
+    q: "What is the eligibility criteria for Capgemini recruitment?",
+    a: "Candidates must have a minimum of 60% marks in 10th, 12th, and graduation with no active backlogs. Degrees like B.E, B.Tech, MCA, or equivalent are typically required.",
   },
   {
-    q: "Does TCS provide training for freshers after recruitment?",
-    a: "Yes, TCS offers comprehensive training programs for freshers, such as the Initial Learning Program (ILP), which equips them with the necessary technical and professional skills before deployment to projects.",
+    q: "Does Capgemini provide training for freshers?",
+    a: "Yes, Capgemini offers extensive training programs for freshers, focusing on technical, professional, and soft skills development.",
   },
   {
-    q: "What is the eligibility criteria to apply for TCS?",
-    a: "Candidates must have at least 60% marks in 10th, 12th, and graduation with no active backlogs. A degree in relevant fields such as B.Tech, B.E., or MCA is typically required.",
+    q: "How do I prepare for the Capgemini recruitment process?",
+    a: "Focus on technical skills, problem-solving, and communication. Practice coding and aptitude tests on platforms like HackerRank and PrepInsta.",
   },
   {
-    q: "How do I prepare for the TCS National Qualifier Test (NQT)?",
-    a: "Prepare for NQT by practicing aptitude, logical reasoning, verbal ability, and coding. Focus on platforms like PrepInsta and HackerRank for mock tests and revise programming basics.",
+    q: "What are the primary roles offered by Capgemini?",
+    a: "Capgemini offers roles such as Software Engineer, Consultant, Senior Consultant, and Manager, with opportunities for advancement.",
   },
   {
-    q: "What are the main roles offered by TCS for freshers?",
-    a: "TCS offers roles like TCS Ninja (entry-level IT services), TCS Digital (focused on advanced technologies like AI, blockchain), and TCS Innovator (niche skills in ML, data science, etc.).",
-  },
-  {
-    q: "Does TCS provide opportunities for international postings?",
-    a: "Yes, TCS provides opportunities for international postings and global projects across over 50 countries. These are based on performance and project requirements.",
+    q: "Does Capgemini offer international projects?",
+    a: "Yes, Capgemini provides opportunities to work on international projects based on business requirements and performance.",
   },
 ];
 
@@ -51,7 +47,7 @@ const FAQs = () => {
             Frequently Asked Questions
           </h2>
           <p className="mt-2 text-base sm:text-lg text-gray-600">
-            Here are the most commonly asked questions about TCS.
+            Here are the most commonly asked questions about Capgemini.
           </p>
         </div>
 
@@ -95,25 +91,25 @@ const FAQs = () => {
   );
 };
 
-const TCSPage = () => {
+const CapgeminiPage = () => {
   const salaryDetails = [
     {
-      role: "TCS Ninja",
+      role: "Software Engineer",
       description:
-        "This is an entry-level role for freshers. Employees work on core IT services such as application development, maintenance, and support for clients across industries. It involves understanding client requirements and delivering effective solutions.",
-      salary: "₹3.36 LPA",
+        "Involved in designing, developing, and maintaining software applications for clients across various industries.",
+      salary: "₹4.8 LPA",
     },
     {
-      role: "TCS Digital",
+      role: "Senior Consultant",
       description:
-        "This role focuses on cutting-edge digital technologies such as cloud computing, artificial intelligence, machine learning, and blockchain. Employees work on innovative projects aimed at transforming businesses digitally.",
-      salary: "₹7 LPA",
+        "Provides expert advice and solutions in specific domains, leading project teams to deliver client objectives.",
+      salary: "₹13.2 LPA",
     },
     {
-      role: "TCS Innovator",
+      role: "Manager",
       description:
-        "Designed for niche skills, this role involves working on high-level projects in advanced fields like data science, cybersecurity, and next-gen technology development.",
-      salary: "₹9+ LPA",
+        "Oversees project delivery, manages client relationships, and ensures the achievement of business goals.",
+      salary: "₹16.5 LPA",
     },
   ];
 
@@ -122,31 +118,23 @@ const TCSPage = () => {
       {/* Header Section */}
       <header className="mb-10">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png"
-          alt="TCS Logo"
+          src="https://download.logo.wine/logo/Capgemini/Capgemini-Logo.wine.png"
+          alt="Capgemini Logo"
           className="w-36 mb-4"
         />
         <h1 className="text-4xl font-bold text-gray-800">
-          Tata Consultancy Services (TCS)
+          Capgemini
         </h1>
         <p className="text-gray-600 mt-2">
-          A global IT services and consulting leader, TCS empowers enterprises
-          to embrace digital transformation and achieve business excellence.
+          A global leader in consulting, technology services, and digital transformation, Capgemini empowers businesses to unlock innovation and achieve excellence in an ever-evolving technological landscape.
         </p>
       </header>
 
-      {/* About TCS */}
+      {/* About Capgemini */}
       <section className="mt-10">
-        <h2 className="text-3xl font-bold text-red-600 mb-4">About TCS</h2>
+        <h2 className="text-3xl font-bold text-red-600 mb-4">About Capgemini</h2>
         <p className="text-gray-600 leading-relaxed">
-          Tata Consultancy Services (TCS) is a global IT services, consulting,
-          and business solutions leader headquartered in Mumbai, India. Founded
-          in 1968, TCS has become one of the most valuable IT services brands
-          globally, with a presence in over 50 countries.
-        </p>
-        <p className="text-gray-600 mt-4">
-          TCS is known for its innovative solutions in artificial intelligence,
-          machine learning, cloud computing, and blockchain.
+          Capgemini, founded in 1967, is a global leader in consulting, technology services, and digital transformation. With a presence in over 50 countries, Capgemini offers a wide range of services, including strategy and transformation consulting, application development, and managed services.
         </p>
       </section>
 
@@ -178,38 +166,32 @@ const TCSPage = () => {
       {/* Hiring Process */}
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-red-600 mb-4">
-          TCS Hiring Process
+          Capgemini Hiring Process
         </h2>
         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-          Step 1: National Qualifier Test (NQT)
+          Step 1: Online Assessment
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          The NQT is a mandatory online test conducted by TCS to evaluate
-          candidates' aptitude, logical reasoning, verbal ability, and
-          programming knowledge.
+          The initial step involves an online assessment that evaluates candidates on various parameters:
         </p>
         <ul className="list-disc list-inside mt-2">
-          <li>Quantitative Aptitude: Covers mathematics, percentages, and logic.</li>
-          <li>Verbal Ability: Tests reading comprehension and grammar.</li>
-          <li>Logical Reasoning: Focuses on puzzles, seating arrangements, and patterns.</li>
-          <li>Coding: Advanced coding challenges for technical roles.</li>
+          <li>Technical Test: Assesses knowledge in programming and technical concepts.</li>
+          <li>Essay Writing: Evaluates written communication skills.</li>
+          <li>Game-Based Aptitude Test: Measures cognitive abilities through interactive games.</li>
+          <li>Spoken English Test: Assesses verbal communication proficiency.</li>
+          <li>Coding Test: Tests problem-solving and coding skills.</li>
         </ul>
         <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-2">
           Step 2: Technical Interview
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          In this round, candidates are assessed on programming languages (Java,
-          Python, C++), data structures, algorithms, and database management.
-          Practical problem-solving skills are tested through live coding
-          challenges.
+          Candidates are evaluated on their technical knowledge, problem-solving abilities, and understanding of programming languages, data structures, and algorithms.
         </p>
         <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-2">
           Step 3: HR Interview
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          The HR interview evaluates communication skills, adaptability, and
-          alignment with TCS’s core values. Common topics include long-term
-          career goals, strengths, and how candidates handle challenges.
+          The HR interview focuses on assessing the candidate's fit within the company culture, communication skills, and alignment with Capgemini's values.
         </p>
       </section>
 
@@ -219,4 +201,4 @@ const TCSPage = () => {
   );
 };
 
-export default TCSPage;
+export default CapgeminiPage;

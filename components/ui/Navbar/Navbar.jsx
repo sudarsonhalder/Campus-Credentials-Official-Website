@@ -17,6 +17,7 @@ const Navbar = () => {
         { name: "About Us", href: "/about-us" },
         { name: "Test Series", href: "/#Courses" },
         { name: "Free Resources", href: "https://resource.prepcrazy.com" },
+        { name: "Companies", href: "/company" },
     ]
 
     useEffect(() => {

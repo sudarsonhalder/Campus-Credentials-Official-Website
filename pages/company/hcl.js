@@ -6,28 +6,24 @@ import SectionWrapper from "@/components/SectionWrapper";
 // FAQs data
 const faqsList = [
   {
-    q: "What is the test pattern for the TCS National Qualifier Test (NQT)?",
-    a: "The NQT consists of sections including Quantitative Aptitude, Logical Reasoning, Verbal Ability, and Coding. It is designed to evaluate a candidate's technical and problem-solving skills over a duration of 180 minutes.",
+    q: "What is the eligibility criteria for HCL recruitment?",
+    a: "Candidates must have a minimum of 60% marks in 10th, 12th, and graduation with no active backlogs. Relevant degrees like B.E., B.Tech, or MCA are typically required.",
   },
   {
-    q: "Does TCS provide training for freshers after recruitment?",
-    a: "Yes, TCS offers comprehensive training programs for freshers, such as the Initial Learning Program (ILP), which equips them with the necessary technical and professional skills before deployment to projects.",
+    q: "Does HCL provide training for freshers?",
+    a: "Yes, HCL provides training programs focused on technical and soft skills development for freshers.",
   },
   {
-    q: "What is the eligibility criteria to apply for TCS?",
-    a: "Candidates must have at least 60% marks in 10th, 12th, and graduation with no active backlogs. A degree in relevant fields such as B.Tech, B.E., or MCA is typically required.",
+    q: "What are the roles offered for freshers at HCL?",
+    a: "HCL offers roles such as Graduate Engineer Trainee, Software Engineer, and Senior Software Engineer.",
   },
   {
-    q: "How do I prepare for the TCS National Qualifier Test (NQT)?",
-    a: "Prepare for NQT by practicing aptitude, logical reasoning, verbal ability, and coding. Focus on platforms like PrepInsta and HackerRank for mock tests and revise programming basics.",
+    q: "What is the test pattern for HCL's recruitment process?",
+    a: "The recruitment process includes an online assessment with sections on aptitude, logical reasoning, verbal ability, and technical knowledge.",
   },
   {
-    q: "What are the main roles offered by TCS for freshers?",
-    a: "TCS offers roles like TCS Ninja (entry-level IT services), TCS Digital (focused on advanced technologies like AI, blockchain), and TCS Innovator (niche skills in ML, data science, etc.).",
-  },
-  {
-    q: "Does TCS provide opportunities for international postings?",
-    a: "Yes, TCS provides opportunities for international postings and global projects across over 50 countries. These are based on performance and project requirements.",
+    q: "Does HCL offer opportunities for international projects?",
+    a: "Yes, HCL offers opportunities to work on global projects based on performance and business requirements.",
   },
 ];
 
@@ -51,7 +47,7 @@ const FAQs = () => {
             Frequently Asked Questions
           </h2>
           <p className="mt-2 text-base sm:text-lg text-gray-600">
-            Here are the most commonly asked questions about TCS.
+            Here are the most commonly asked questions about HCL.
           </p>
         </div>
 
@@ -95,25 +91,25 @@ const FAQs = () => {
   );
 };
 
-const TCSPage = () => {
+const HCLPage = () => {
   const salaryDetails = [
     {
-      role: "TCS Ninja",
+      role: "Graduate Engineer Trainee (GET)",
       description:
-        "This is an entry-level role for freshers. Employees work on core IT services such as application development, maintenance, and support for clients across industries. It involves understanding client requirements and delivering effective solutions.",
-      salary: "₹3.36 LPA",
+        "Entry-level role focusing on software development, testing, and maintenance across various projects.",
+      salary: "₹3.5 LPA",
     },
     {
-      role: "TCS Digital",
+      role: "Senior Software Engineer",
       description:
-        "This role focuses on cutting-edge digital technologies such as cloud computing, artificial intelligence, machine learning, and blockchain. Employees work on innovative projects aimed at transforming businesses digitally.",
-      salary: "₹7 LPA",
+        "Involves leading development teams, designing solutions, and ensuring quality delivery.",
+      salary: "₹6.5 LPA",
     },
     {
-      role: "TCS Innovator",
+      role: "Technical Lead",
       description:
-        "Designed for niche skills, this role involves working on high-level projects in advanced fields like data science, cybersecurity, and next-gen technology development.",
-      salary: "₹9+ LPA",
+        "Responsible for overseeing technical aspects of projects, mentoring teams, and client interactions.",
+      salary: "₹9 LPA",
     },
   ];
 
@@ -122,31 +118,23 @@ const TCSPage = () => {
       {/* Header Section */}
       <header className="mb-10">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png"
-          alt="TCS Logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/HCL_Technologies_logo.svg/2560px-HCL_Technologies_logo.svg.png"
+          alt="HCL Logo"
           className="w-36 mb-4"
         />
         <h1 className="text-4xl font-bold text-gray-800">
-          Tata Consultancy Services (TCS)
+          HCL Technologies
         </h1>
         <p className="text-gray-600 mt-2">
-          A global IT services and consulting leader, TCS empowers enterprises
-          to embrace digital transformation and achieve business excellence.
+          A global leader in IT services and consulting, HCL leverages technology to drive innovation and deliver transformative solutions to clients worldwide.
         </p>
       </header>
 
-      {/* About TCS */}
+      {/* About HCL */}
       <section className="mt-10">
-        <h2 className="text-3xl font-bold text-red-600 mb-4">About TCS</h2>
+        <h2 className="text-3xl font-bold text-red-600 mb-4">About HCL Technologies</h2>
         <p className="text-gray-600 leading-relaxed">
-          Tata Consultancy Services (TCS) is a global IT services, consulting,
-          and business solutions leader headquartered in Mumbai, India. Founded
-          in 1968, TCS has become one of the most valuable IT services brands
-          globally, with a presence in over 50 countries.
-        </p>
-        <p className="text-gray-600 mt-4">
-          TCS is known for its innovative solutions in artificial intelligence,
-          machine learning, cloud computing, and blockchain.
+          Founded in 1976, HCL Technologies is a global IT services company headquartered in Noida, India. With a presence in over 60 countries, HCL offers services in IT and business services, engineering and R&D, and products and platforms.
         </p>
       </section>
 
@@ -178,38 +166,31 @@ const TCSPage = () => {
       {/* Hiring Process */}
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-red-600 mb-4">
-          TCS Hiring Process
+          HCL Hiring Process
         </h2>
         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-          Step 1: National Qualifier Test (NQT)
+          Step 1: Online Assessment
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          The NQT is a mandatory online test conducted by TCS to evaluate
-          candidates' aptitude, logical reasoning, verbal ability, and
-          programming knowledge.
+          The initial step involves an online assessment that evaluates candidates on various parameters:
         </p>
         <ul className="list-disc list-inside mt-2">
-          <li>Quantitative Aptitude: Covers mathematics, percentages, and logic.</li>
-          <li>Verbal Ability: Tests reading comprehension and grammar.</li>
-          <li>Logical Reasoning: Focuses on puzzles, seating arrangements, and patterns.</li>
-          <li>Coding: Advanced coding challenges for technical roles.</li>
+          <li>Quantitative Aptitude: Tests mathematical and analytical skills.</li>
+          <li>Logical Reasoning: Assesses problem-solving and reasoning abilities.</li>
+          <li>Verbal Ability: Evaluates English language proficiency.</li>
+          <li>Technical Knowledge: Questions related to programming and domain-specific topics.</li>
         </ul>
         <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-2">
           Step 2: Technical Interview
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          In this round, candidates are assessed on programming languages (Java,
-          Python, C++), data structures, algorithms, and database management.
-          Practical problem-solving skills are tested through live coding
-          challenges.
+          Candidates are evaluated on their technical knowledge, problem-solving abilities, and understanding of programming languages, data structures, and algorithms.
         </p>
         <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-2">
           Step 3: HR Interview
         </h3>
         <p className="text-gray-600 leading-relaxed">
-          The HR interview evaluates communication skills, adaptability, and
-          alignment with TCS’s core values. Common topics include long-term
-          career goals, strengths, and how candidates handle challenges.
+          The HR interview focuses on assessing the candidate's fit within the company culture, communication skills, and alignment with HCL's values.
         </p>
       </section>
 
@@ -219,4 +200,4 @@ const TCSPage = () => {
   );
 };
 
-export default TCSPage;
+export default HCLPage;
