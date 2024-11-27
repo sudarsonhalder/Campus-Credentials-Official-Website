@@ -132,6 +132,14 @@ const CardComponent = () => {
   salePrice: '800',
   buyLink:"https://campuscredentials.online/courses-page/learn-ratio-and-proportion-basics-to-advanced-or-the-practical-way/",
   img: 'https://campuscredentials.online/wp-content/uploads/2023/10/RR-Thumb-870x440.png',
+},
+{
+  title: 'Java Fundamentals - Crash Course By Ashish Gadpayle sir',
+  description: 'Dive into the essentials of programming with our Java Fundamentals - Crash Course by Ashish Gadpayle Sir! Perfect for beginners starting their coding journey, students preparing for exams, or professionals looking for a quick refresher, this course covers all the basics you need to get started with Java.Enroll today and gain a strong foundation in Java programming! From understanding core concepts to writing your first lines of code, this crash course is your gateway to mastering one of the most popular programming languages in the world.',
+  price: '6000',
+  salePrice: '4000',
+  buyLink:"https://campuscredentials.online/courses-page/java-fundamentals/",
+  img: 'https://campuscredentials.online/wp-content/uploads/2024/11/19-870x440.png',
 },{
     title: 'Logic Building using Python by Prashant Sir',
     description: 'Unlock the art of problem-solving with our Logic Building using Python Course by Prashant Sir! Whether you’re a beginner aiming to enhance your programming skills, a student seeking to develop computational thinking, or a professional wanting to sharpen your logical reasoning, this course is designed just for you.Enroll today and start building a solid foundation in logic and Python programming! With our course, youll master the essential skill of breaking down problems and solving them step by step—empowering you to tackle challenges in coding and beyond.',
@@ -146,13 +154,14 @@ const CardComponent = () => {
     salePrice: '2000',
     buyLink:"https://campuscredentials.online/courses-page/data-structures-and-algorithm-in-java-by-ashish-gadpayle-sir/",
     img: 'https://campuscredentials.online/wp-content/uploads/2024/11/DSA-in-Java-870x440.png',
-  },{
-    title: 'Java Fundamentals - Crash Course By Ashish Gadpayle sir',
-    description: 'Dive into the essentials of programming with our Java Fundamentals - Crash Course by Ashish Gadpayle Sir! Perfect for beginners starting their coding journey, students preparing for exams, or professionals looking for a quick refresher, this course covers all the basics you need to get started with Java.Enroll today and gain a strong foundation in Java programming! From understanding core concepts to writing your first lines of code, this crash course is your gateway to mastering one of the most popular programming languages in the world.',
-    price: '6000',
-    salePrice: '4000',
-    buyLink:"https://campuscredentials.online/courses-page/java-fundamentals/",
-    img: 'https://campuscredentials.online/wp-content/uploads/2024/11/19-870x440.png',
+  }
+  ,{
+    title: 'Coding Fundamentals by Dr.Amar Panchal',
+    description: 'Embark on a coding journey with our Coding Fundamentals course. Whether youre a complete beginner or seeking to reinforce your coding basics, this course offers a solid foundation. Explore key programming concepts, learn essential languages, and gain problem-solving skills. From variables to debugging, we cover it all. Join us, collaborate on coding projects, and develop the confidence to write clean, efficient code. No prior experience needed; just bring your enthusiasm for learning and dive into the world of programming.',
+    price: '1000',
+    salePrice: 'Free',
+    buyLink:"https://campuscredentials.online/courses-page/coding-fundamentals-by-dr-amar-panchal/",
+    img: 'https://campuscredentials.online/wp-content/uploads/2023/10/coding-fundamentals-course-thumb-870x440.png',
   },{
     title: 'Data Structures and Algorithm in Python By Prashant Sir',
     description: 'Elevate your programming skills with our Data Structures and Algorithms in Python course by Prashant Sir! Whether youre a beginner eager to learn the building blocks of coding, a student preparing for technical interviews, or a professional aiming to optimize your problem-solving techniques, this course is tailored for you.Enroll today and unlock the power of Python to master data structures and algorithms! Learn to write efficient and scalable code while building a strong foundation for tackling real-world challenges and advancing your coding career.',
@@ -167,13 +176,6 @@ const CardComponent = () => {
     salePrice: 'Free',
     buyLink:"https://campuscredentials.online/courses-page/operating-systems-by-amar-panchal-sir/",
     img: 'https://campuscredentials.online/wp-content/uploads/2024/07/Operating-System-Course-By-Amar-Sir-1-870x440.png',
-  },{
-    title: 'Coding Fundamentals by Dr.Amar Panchal',
-    description: 'Embark on a coding journey with our Coding Fundamentals course. Whether youre a complete beginner or seeking to reinforce your coding basics, this course offers a solid foundation. Explore key programming concepts, learn essential languages, and gain problem-solving skills. From variables to debugging, we cover it all. Join us, collaborate on coding projects, and develop the confidence to write clean, efficient code. No prior experience needed; just bring your enthusiasm for learning and dive into the world of programming.',
-    price: '1000',
-    salePrice: 'Free',
-    buyLink:"https://campuscredentials.online/courses-page/coding-fundamentals-by-dr-amar-panchal/",
-    img: 'https://campuscredentials.online/wp-content/uploads/2023/10/coding-fundamentals-course-thumb-870x440.png',
   },{
     title: 'Numbers: Exploring Power Cycles and Beyond by Vishwajeet Sir',
     description: 'Gain in-depth knowledge of the fascinating world of Numbers: Exploring Power Cycles and Beyond with Vishwajeet Sir! Whether youre a student eager to understand the mathematical patterns behind numbers, an aspiring coder looking to enhance your problem-solving skills, or a professional wanting to deepen your understanding of number theory, this course is designed for you.Enroll today and dive into the world of numbers! From power cycles to advanced number patterns, master the essential concepts that will elevate your mathematical and programming skills, giving you the tools to tackle complex challenges and advance in your career.',
