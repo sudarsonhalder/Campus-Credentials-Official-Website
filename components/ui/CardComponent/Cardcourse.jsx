@@ -273,7 +273,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Cognizant Interview with Campus Credentials',
       description: 'Comprehensive preparation tailored for Cognizant interviews, covering aptitude, reasoning, and technical topics.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/16.png?updatedAt=1729793736261',
       buyLink: 'https://exam.campuscredentials.com/tests/777/cognizant',
@@ -281,7 +281,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Capgemini Interview with Campus Credentials',
       description: 'Focused guidance for Capgemini interviews with mock tests, aptitude, and technical round practice.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/11.png?updatedAt=1729793736306',
       buyLink: 'https://exam.campuscredentials.com/tests/116/capgemini',
@@ -289,7 +289,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Larsen & Toubro Interview with Campus Credentials',
       description: 'L&T-specific preparation covering aptitude tests and technical interview strategies.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(17).png?updatedAt=17298670830346',
       buyLink: 'https://exam.campuscredentials.com/tests/114/larsen-toubro',
@@ -297,7 +297,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Wipro Interview with Campus Credentials',
       description: 'In-depth practice materials and mock interviews for Wipro’s selection process.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(16).png?updatedAt=1729867082810',
       buyLink: 'https://exam.campuscredentials.com/tests/110/wipro',
@@ -305,7 +305,7 @@ const CardComponent = () => {
     {
       title: 'Ace your HCL Interview with Campus Credentials',
       description: 'Specialized preparation materials focusing on HCL’s aptitude and technical requirements.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/Complete%20Aptitude%20Preparation%20Series%20(11).png?updatedAt=1729793736191',
       buyLink: 'https://exam.campuscredentials.com/tests/107/hcl',
@@ -313,7 +313,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Google Interview with Campus Credentials',
       description: 'Premium guidance on cracking Google’s interviews with coding challenges and aptitude tests.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/13.png?updatedAt=1729793735847',
       buyLink: 'https://exam.campuscredentials.com/tests/956/google',
@@ -321,7 +321,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Accenture Interview with Campus Credentials',
       description: 'Comprehensive preparation for Accenture’s hiring process, including aptitude and case studies.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/15.png?updatedAt=1729793735855',
       buyLink: 'https://exam.campuscredentials.com/tests/113/accenture',
@@ -329,7 +329,7 @@ const CardComponent = () => {
     {
       title: 'Ace your TCS Interview with Campus Credentials',
       description: 'End-to-end preparation for TCS interviews, including Ninja and Digital hiring rounds.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/12.png?updatedAt=1729793735843',
       buyLink: 'https://exam.campuscredentials.com/tests/2180/tcs-ninja',
@@ -337,7 +337,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Jio Interview with Campus Credentials',
       description: 'Preparation series for Reliance Jio’s recruitment, including aptitude and technical questions.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/14.png?updatedAt=1729793735817',
       buyLink: 'https://exam.campuscredentials.com/tests/954/reliance-jio',
@@ -345,7 +345,7 @@ const CardComponent = () => {
     {
       title: 'Ace your Hexaware Interview with Campus Credentials',
       description: 'Tailored preparation series for Hexaware’s interview process with mock tests and aptitude training.',
-      price: '129',
+      price: '1800',
       salePrice: '1500',
       img: 'https://ik.imagekit.io/99djpd8k3/CC/Hexaware.png?updatedAt=1729794113249',
       buyLink: 'https://exam.campuscredentials.com/tests/1246/hexaware',
