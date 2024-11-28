@@ -22,7 +22,7 @@ jobs:
           npm install -g next
           npm install
           npm run build
-          npm next export
+          npx next export
           
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
