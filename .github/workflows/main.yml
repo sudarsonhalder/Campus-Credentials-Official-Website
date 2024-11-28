@@ -19,6 +19,7 @@ jobs:
 
       - name: 🔨 Build Project
         run: |
+          pnpm install
           npm install
           npm run build
           npx next export
