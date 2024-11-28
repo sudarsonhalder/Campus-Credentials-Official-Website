@@ -31,8 +31,8 @@ const Pricing = () => {
             isMostPop: true, // This is the most popular card
             features: [
                 "Complete access to all aptitude materials",
-                "Java and Python courses included",
-                "SQL and logic-building exercises and lectures",
+                "Choose between Java and Python courses",
+                "SQL and logic-building exercises for both python and java lectures",
                 "Regular quizzes and lecture updates",
                 "Comprehensive career development resources",
                 "24/7 query resolution support"
