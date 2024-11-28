@@ -4,11 +4,11 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head />
-      <Script
+      {/* <Script
         src="https://embed.cal.com/embed.js"
         strategy="beforeInteractive"
       />
-      <Script async src="https://tally.so/widgets/embed.js"></Script>
+      <Script async src="https://tally.so/widgets/embed.js"></Script> */}
       <body className='bg-white'>
         <Main />
         <NextScript />
