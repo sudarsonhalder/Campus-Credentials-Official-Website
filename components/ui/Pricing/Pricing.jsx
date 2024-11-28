@@ -83,6 +83,47 @@ const Pricing = () => {
                 <p className="mt-4 text-lg text-gray-700">
                     Programs crafted to help you excel—whether you're beginning your journey or advancing your skills, Campus Credentials has the right fit for you!
                 </p>
+                <div className="flex items-center bg-blue-100 p-4 rounded-lg">
+      {/* Google Icon */}
+      <div className="text-black text-3xl font-bold">G</div>
+
+      {/* Stars */}
+      <div className="flex items-center ml-2">
+        {/* Render 4 filled stars */}
+        {[...Array(4)].map((_, index) => (
+          <svg
+            key={index}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            className="w-5 h-5 text-yellow-400"
+          >
+            <path d="M12 .587l3.668 7.568L24 9.432l-6 5.851 1.416 8.717L12 18.432l-7.416 5.568L6 15.283 0 9.432l8.332-1.277z" />
+          </svg>
+        ))}
+
+        {/* Half star */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          className="w-5 h-5 text-yellow-400"
+        >
+          <path d="M12 .587l3.668 7.568L24 9.432l-6 5.851 1.416 8.717L12 18.432V.587z" />
+          <path
+            fill="none"
+            stroke="#ccc"
+            strokeWidth="2"
+            d="M12 .587l3.668 7.568L24 9.432l-6 5.851 1.416 8.717L12 18.432l-7.416 5.568L6 15.283 0 9.432l8.332-1.277z"
+          />
+        </svg>
+      </div>
+
+      {/* Text */}
+      <span className="ml-2 text-black font-medium text-sm">
+        100+ Google ratings
+      </span>
+    </div>
             </div>
 
             <LayoutEffect
