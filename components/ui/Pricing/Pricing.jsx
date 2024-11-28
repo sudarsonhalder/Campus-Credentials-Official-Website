@@ -83,6 +83,9 @@ const Pricing = () => {
                 <p className="mt-4 text-lg text-gray-700">
                     Programs crafted to help you excel—whether you're beginning your journey or advancing your skills, Campus Credentials has the right fit for you!
                 </p>
+               
+                
+               
             </div>
 
             <LayoutEffect
