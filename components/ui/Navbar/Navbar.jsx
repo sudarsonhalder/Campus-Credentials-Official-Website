@@ -5,12 +5,12 @@ import NavHeader from '../NavHeader'
 import NavLink from '../NavLink'
 
 const Navbar = () => {
-	useEffect(()=>{
-        (async function () {
-          const cal = await getCalApi({"namespace":"15min"});
-          cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#ffffff"}},"hideEventTypeDetails":true,"layout":"month_view"});
-        })();
-      }, [])
+	// useEffect(()=>{
+    //     (async function () {
+    //       const cal = await getCalApi({"namespace":"15min"});
+    //       cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#ffffff"}},"hideEventTypeDetails":true,"layout":"month_view"});
+    //     })();
+    //   }, [])
     const [isVisible, setIsVisible] = useState(true);
 
     const closeBanner = () => {
@@ -91,36 +91,7 @@ const Navbar = () => {
                             {/* <Link href="/contact" className="block hover:text-gray-800 text-base font-semibold">
                                 Contact Us
                             </Link> */}
- <NavLink
-  href="#"
-  className="flex items-center justify-center gap-x-1 text-base text-white font-medium bg-red-500 active:bg-gray-900 md:inline-flex"
-  data-cal-namespace="15min"
-  data-cal-link="campuscredentials/15min"
-  data-cal-config='{"layout":"month_view","theme":"light"}'
->
-  <span style={{ color: "white" }}>👉</span> Schedule a Meeting
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    className="w-4 h-4"
-  >
-    <path
-      fillRule="evenodd"
-      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-      clipRule="evenodd"
-    />
-  </svg>
-  {/* Hidden button for functionality */}
-  <button
-    data-cal-namespace="15min"
-    data-cal-link="campuscredentials/15min"
-    data-cal-config='{"layout":"month_view","theme":"light"}'
-    style={{ display: "none" }}
-  >
-    Hidden Button
-  </button>
-</NavLink>
+ 
 
                            
 	
