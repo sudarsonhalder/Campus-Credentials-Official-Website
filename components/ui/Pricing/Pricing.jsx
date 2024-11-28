@@ -12,7 +12,7 @@ const Pricing = () => {
     const plans = [
         {
             name: "Complete Aptitude Preparation",
-            desc: "For students beginning their placement journey",
+            desc: "Begin your placement journey with complete aptitude prep!",
             price: 1599,
             isMostPop: false,
             features: [
@@ -26,7 +26,7 @@ const Pricing = () => {
         },
         {
             name: "Complete Aptitude + Technical Preparation",
-            desc: "For students seeking detailed interview preparation",
+            desc: "Begin your journey with the Complete Placement Masterclass!",
             price: 2500,
             isMostPop: true, // This is the most popular card
             features: [
@@ -40,7 +40,7 @@ const Pricing = () => {
         },
         {
             name: "Complete Technical Preparation",
-            desc: "For professionals seeking career transitions",
+            desc: "Begin your placement journey with complete technical preparation!",
             price: 1599,
             isMostPop: false,
             features: [
