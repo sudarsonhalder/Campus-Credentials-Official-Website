@@ -22,9 +22,6 @@ jobs:
           npm install
           npm run build
 
-      - name: List output files
-        run: ls -al ./out/
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -33,4 +30,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           local-dir: ./out/
-          remote-dir: /public_html/
+          debug: true
