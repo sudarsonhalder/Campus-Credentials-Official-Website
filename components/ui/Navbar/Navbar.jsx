@@ -98,7 +98,7 @@ const Navbar = () => {
   data-cal-link="campuscredentials/15min"
   data-cal-config='{"layout":"month_view","theme":"light"}'
 >
-  <span style={{ color: "white" }}>👉</span> Schedule a Meeting
+  <span style={{ color: "white" }}>👉</span> Schedule 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
