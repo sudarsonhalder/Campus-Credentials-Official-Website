@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-// import Cal, { getCalApi } from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import NavHeader from '../NavHeader'
 import NavLink from '../NavLink'
 
