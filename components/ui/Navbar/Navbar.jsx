@@ -5,12 +5,12 @@ import NavHeader from '../NavHeader'
 import NavLink from '../NavLink'
 
 const Navbar = () => {
-	// useEffect(()=>{
-    //     (async function () {
-    //       const cal = await getCalApi({"namespace":"15min"});
-    //       cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#ffffff"}},"hideEventTypeDetails":true,"layout":"month_view"});
-    //     })();
-    //   }, [])
+	useEffect(()=>{
+        (async function () {
+          const cal = await getCalApi({"namespace":"15min"});
+          cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#ffffff"}},"hideEventTypeDetails":true,"layout":"month_view"});
+        })();
+      }, [])
     const [isVisible, setIsVisible] = useState(true);
 
     const closeBanner = () => {

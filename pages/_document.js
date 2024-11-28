@@ -8,8 +8,18 @@ export default function Document() {
         src="https://embed.cal.com/embed.js"
         strategy="beforeInteractive"
       />
-      <Script async src="https://tally.so/widgets/embed.js"></Script>
-      <body className='bg-white'>
+ <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var script = document.createElement('script');
+                script.src = "https://tally.so/widgets/embed.js";
+                script.async = true;
+                document.head.appendChild(script);
+              })();
+            `,
+          }}
+        />      <body className='bg-white'>
         <Main />
         <NextScript />
       </body>
