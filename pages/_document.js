@@ -8,7 +8,7 @@ export default function Document() {
         src="https://embed.cal.com/embed.js"
         strategy="beforeInteractive"
       />
-      <script async src="https://tally.so/widgets/embed.js"></script>
+      <Script async src="https://tally.so/widgets/embed.js"></Script>
       <body className='bg-white'>
         <Main />
         <NextScript />
