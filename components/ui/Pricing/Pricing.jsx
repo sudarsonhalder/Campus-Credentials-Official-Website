@@ -16,19 +16,19 @@ const Pricing = () => {
             price: 1599,
             isMostPop: false,
             features: [
-              "Access to foundational study materials",
-        "Practice tests for aptitude topics",
-        "Webinars on career guidance",
-        "Basic resume templates and tools",
-        "Email support for query resolution",
-        "Regular course updates with quizzes"
+                "Access to foundational study materials",
+                "Practice tests for aptitude topics",
+                "Webinars on career guidance",
+                "Basic resume templates and tools",
+                "Email support for query resolution",
+                "Regular course updates with quizzes"
             ],
         },
         {
             name: "Complete Aptitude + Technical Preparation",
             desc: "Begin your journey with the Complete Placement Masterclass!",
             price: 2500,
-            isMostPop: true, // This is the most popular card
+            isMostPop: true,
             features: [
                 "Complete access to all aptitude materials",
                 "Choose between Java and Python courses",
@@ -45,11 +45,11 @@ const Pricing = () => {
             isMostPop: false,
             features: [
                 "Access to technical lectures and materials",
-        "Choose between Python or Java courses",
-        "Includes SQL as part of the curriculum",
-        "Focus on logic-building exercises",
-        "Course updates with quizzes and lectures",
-        "Support through email and chat"
+                "Choose between Python or Java courses",
+                "Includes SQL as part of the curriculum",
+                "Focus on logic-building exercises",
+                "Course updates with quizzes and lectures",
+                "Support through email and chat"
             ],
         }
     ];
@@ -75,17 +75,14 @@ const Pricing = () => {
     };
 
     return (
-        <SectionWrapper id="pricing" className="custom-screen">
+        <SectionWrapper id="pricing" className="custom-screen mt-24">
             <div className="relative max-w-4xl mx-auto text-center">
                 <h2 className="text-gray-900 text-4xl mt-10 font-bold sm:text-5xl">
                     Choose the <span className="text-red-500">Perfect Plan</span> for Your Career Growth
                 </h2>
                 <p className="mt-4 text-lg text-gray-700">
-                    Programs crafted to help you excel—whether you're beginning your journey or advancing your skills, Campus Credentials has the right fit for you!
+                    Programs crafted to help you excel—whether you're beginning your journey or advancing your skills,<br /> Campus Credentials has the right fit for you!
                 </p>
-               
-                
-               
             </div>
 
             <LayoutEffect
@@ -142,8 +139,8 @@ const Pricing = () => {
                                     className={`rounded-md w-full text-lg font-bold transition duration-100 
                                         ${
                                             item.isMostPop || hoveredCard === idx
-                                                ? "bg-red-500  text-white hover:bg-red-500 ring-orange-600" // Orange for center or hovered card
-                                                : "text-black ring-gray-300 hover:bg-red-600 hover:text-white" // Neutral until hovered
+                                                ? "bg-red-500  text-white hover:bg-red-500 ring-orange-600"
+                                                : "text-black ring-gray-300 hover:bg-red-600 hover:text-white"
                                         } shadow-md`}
                                     onClick={
                                         item.name === "Complete Aptitude Preparation"
