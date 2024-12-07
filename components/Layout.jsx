@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <>
             <Head>
                 {/* Primary Meta Tags */}
-                <title>Campus Credentials - Empowering Employability, Job-Ready Skills & Placements</title>
+                <title>Campus Credentials - Empowering Student Employability</title>
                 <meta 
                     name="description" 
                     content="Campus Credentials empowers students with the essential employability, soft skills, and technical training they need to excel in job interviews, secure placements, and advance their careers. Access comprehensive aptitude courses, interview preparation, corporate skill-building modules, and test series designed for success." 
