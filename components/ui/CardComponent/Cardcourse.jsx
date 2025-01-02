@@ -394,7 +394,7 @@ const CardComponent = () => {
           <img
             src={item.img}
             alt={item.title}
-            className={`h-30 w-full object-cover transition-opacity duration-300 ease-in-out ${
+            className={`h-30 w-100 object-cover transition-opacity duration-300 ease-in-out ${
               loadedImages[cardKey] ? 'opacity-100' : 'opacity-0'
             }`}
             onError={(e) => (e.currentTarget.style.display = 'none')}
