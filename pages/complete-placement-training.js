@@ -875,7 +875,7 @@ const javaCurriculum = [
       <div className="mt-6">
         <div className="flex items-center gap-4 justify-center md:justify-start">
           <del className="text-3xl text-gray-500">₹3999</del>
-          <h2 className="text-5xl font-bold text-red-500">₹1599</h2>
+          <h2 className="text-5xl font-bold text-red-500">₹2500</h2>
         </div>
         <p className="text-gray-600"></p>
         
