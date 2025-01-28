@@ -5,9 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disables image optimization for static export
   },
-}
+  trailingSlash: true, // Adds trailing slash to all paths
+  assetPrefix: './', // Ensures assets load correctly in static exports
+};
 
-module.exports = nextConfig
-
-
-
+module.exports = nextConfig;
