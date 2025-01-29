@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disables image optimization for static export
   },
+  trailingSlash: true, // Adds trailing slash for compatibility
+  assetPrefix: "",
 };
 
 module.exports = nextConfig;
