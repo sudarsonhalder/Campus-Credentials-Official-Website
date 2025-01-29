@@ -253,27 +253,32 @@ const App = () => {
         </div>
       </article>
       <div className="relative md:w-1/2 w-full">
-        <video
-          ref={videoRef}
-          className="w-full rounded-lg"
-          height="400"
-          autoPlay
-          playsInline
-          onCanPlay={() => videoRef.current?.play()}
-        >
-          <source
-            src="https://acecredentials.b-cdn.net/Campus%20Intro%20Videos/Aptitude%20noice%20removed.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <button
-          onClick={toggleMute}
-          className="absolute bottom-4 right-4 p-1 bg-black bg-opacity-50 text-white rounded-full"
-        >
-          {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
-        </button>
-      </div>
+        <img
+    src="https://ik.imagekit.io/99djpd8k3/CC/SQL%20Advanced.png?updatedAt=1738162411690"
+   
+    className="w-full h-[300px] object-contain"
+  />
+          {/* <video
+            ref={videoRef}
+            className="w-full rounded-lg"
+            height="400"
+            autoPlay
+            playsInline
+            onCanPlay={() => videoRef.current?.play()}
+          >
+            <source
+              src="https://acecredentials.b-cdn.net/Campus%20Intro%20Videos/Aptitude%20noice%20removed.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-4 right-4 p-1 bg-black bg-opacity-50 text-white rounded-full"
+          >
+            {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
+          </button> */}
+        </div>
     </section>
     {/* Course Curriculum */}
     <section className="w-full py-8">

@@ -4,149 +4,92 @@ const Cardcertificate = () => {
   const [activeCategory, setActiveCategory] = useState('java');
 
   const courses = {
-    java: [
-      {
-        title: 'Java Fundamentals - Crash Course',
-        price: '₹1599',
-        description: 'Begin your placement journey with Java fundamentals.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/java-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
-      },
-      {
-        title: 'Advanced Java Programming',
-        price: '₹2500',
-        description: 'Master advanced Java concepts for real-world applications.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/advanced-java-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
-      },
-      {
-        title: 'Data Structures and Algorithms in Java',
-        price: '₹1599',
-        description: 'Learn DSA with Java for technical interviews and projects.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/dsa-java-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
-      },
-    ],
     python: [
       {
-        title: 'Python Basics - Crash Course',
-        price: '₹1599',
-        description: 'Start your coding journey with Python fundamentals.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/python-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Core Python Certification',
+        price: '₹1999',
+        description: 'Gain fundamental and advanced Python skills with certification.',
+        features: ['Live and Recorded Sessions', 'Industry Projects', 'Hands-on Learning'],
+        link: '/python-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/Core%20python%20certification%20course%20thumbnail.png?updatedAt=1738164570907',
       },
       {
-        title: 'Advanced Python Programming',
-        price: '₹2500',
-        description: 'Deep dive into Python for data science and automation.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/advanced-python-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Mastering Python Through Project-Based Learning',
+        price: '₹2999',
+        description: 'Master Python by building real-world projects.',
+        features: ['Live and Recorded Sessions', 'Hands-on Projects', 'Industry-Oriented Curriculum'],
+        link: '/python-project-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/Python%20with%20Projects.png?updatedAt=1738162412627',
+      },
+      // {
+      //   title: 'Mastering Django Framework: From Basics to Advanced with Projects',
+      //   price: '₹3499',
+      //   description: 'Learn Django from scratch and build scalable web applications.',
+      //   features: ['Live and Recorded Sessions', 'Project-Based Learning', 'Advanced Web Development'],
+      //   link: '',
+      //   img: 'https://ik.imagekit.io/99djpd8k3/CC/Django%20Framework%20Certification.png?updatedAt=1738162412196',
+      // },
+    ],
+    java: [
+      {
+        title: 'Java Mastery Certification: From Fundamentals to Advanced Concepts',
+        price: '₹2499',
+        description: 'Become proficient in Java with a structured certification program.',
+        features: ['Live and Recorded Sessions', 'Comprehensive Java Training', 'Industry Projects'],
+        link: '/java-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/java%20mastery%20certification.png?updatedAt=1738162412621',
       },
       {
-        title: 'Data Structures and Algorithms in Python',
-        price: '₹1599',
-        description: 'Master DSA with Python for technical excellence.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/dsa-python-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Mastering Java Through Project-Based Learning',
+        price: '₹2999',
+        description: 'Learn Java by working on real-world projects.',
+        features: ['Live and Recorded Sessions', 'Hands-on Learning', 'Industry Relevant Projects'],
+        link: '/java-project-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/java%20with%20Projects.png?updatedAt=1738162411765',
       },
     ],
     sql: [
       {
-        title: 'SQL Basics - Crash Course',
-        price: '₹1599',
-        description: 'Learn SQL fundamentals for database management.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/sql-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Mastering SQL: From Fundamentals to Advanced with Projects',
+        price: '₹1999',
+        description: 'Master SQL with hands-on projects and real-world applications.',
+        features: ['Live and Recorded Sessions', 'Practical Database Training', 'Advanced SQL Techniques'],
+        link: '/sql-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/SQL%20Advanced.png?updatedAt=1738162411690',
       },
+    ],
+    c: [
       {
-        title: 'Advanced SQL Techniques',
-        price: '₹2500',
-        description: 'Master advanced SQL for complex database queries.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/advanced-sql-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Mastering C Programming: From Fundamentals to Core Concepts',
+        price: '₹1799',
+        description: 'Learn C programming from scratch to advanced applications.',
+        features: ['Live and Recorded Sessions', 'Comprehensive Curriculum', 'Hands-on Projects'],
+        link: '/c-programming-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/C%20programming%20certification.png?updatedAt=1738162411931',
       },
+    ],
+    cpp: [
       {
-        title: 'SQL for Data Analysis',
-        price: '₹1599',
-        description: 'Use SQL to extract insights from data effectively.',
-        features: [
-          'Live and Recorded Sessions',
-          '4 Months Program',
-          '75+ Projects',
-          'Live and Recorded Sessions',
-          '4 Months Program',
-        ],
-        link: 'https://example.com/sql-analysis-course',
-        img: 'https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/177741/courses/214672/LMS_Course_Thumbnails_Sanskruti_Rishi_1_870x440_lyst1733154252102.png',
+        title: 'Mastering C++: Comprehensive Certification for Modern Programming',
+        price: '₹1999',
+        description: 'Learn modern C++ programming techniques and best practices.',
+        features: ['Live and Recorded Sessions', 'Project-Based Learning', 'Industry-Oriented Curriculum'],
+        link: '/cpp-certification',
+        img: 'https://ik.imagekit.io/99djpd8k3/CC/C%20++%20Programming%20Certification.png?updatedAt=1738162412041',
       },
     ],
   };
+  
 
   return (
     <div className="bg-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center text-orange-600 mb-8">
-          Explore Our Placement-Assured Courses
+          Explore Our Certification Programs
         </h2>
 
         <div className="flex justify-center space-x-6 mb-10">
-          {['java', 'python', 'sql'].map((category) => (
+          {['java', 'python', 'sql',"cpp"].map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
@@ -167,11 +110,22 @@ const Cardcertificate = () => {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between group hover:shadow-lg"
             >
-              <img
-                src={course.img}
-                alt={course.title}
-                className="h-40 w-full object-cover mb-4 rounded"
-              />
+<div className="w-full rounded-lg overflow-hidden flex justify-center items-center p-4">
+  <img
+    src={course.img}
+    alt={course.title}
+    className="w-full h-[250px] object-contain"
+  />
+</div>
+
+
+
+
+
+
+
+
+
               <h3 className="text-xl font-bold text-gray-800 mb-2">
                 {course.title}
               </h3>

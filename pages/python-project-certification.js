@@ -250,7 +250,12 @@ python.          </p>
           </div>
         </article>
         <div className="relative md:w-1/2 w-full">
-          <video
+        <img
+    src="https://ik.imagekit.io/99djpd8k3/CC/Python%20with%20Projects.png?updatedAt=1738162412627"
+   
+    className="w-full h-[300px] object-contain"
+  />
+          {/* <video
             ref={videoRef}
             className="w-full rounded-lg"
             height="400"
@@ -269,7 +274,7 @@ python.          </p>
             className="absolute bottom-4 right-4 p-1 bg-black bg-opacity-50 text-white rounded-full"
           >
             {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
-          </button>
+          </button> */}
         </div>
       </section>
       {/* Course Curriculum */}

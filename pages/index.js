@@ -57,9 +57,9 @@ export default function Home() {
       <div className="mt-14">
         <CardComponent />
       </div>
-      {/* <div className="mt-14">
+      <div className="mt-14">
       <CardCertificate/>
-      </div> */}
+      </div>
 
       {/* Other Components */}
       {/* <Hero /> */}

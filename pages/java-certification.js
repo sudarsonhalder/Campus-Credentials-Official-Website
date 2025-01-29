@@ -460,7 +460,12 @@ const App = () => {
           </div>
         </article>
         <div className="relative md:w-1/2 w-full">
-          <video
+        <img
+    src="https://ik.imagekit.io/99djpd8k3/CC/java%20mastery%20certification.png?updatedAt=1738162412621"
+   
+    className="w-full h-[300px] object-contain"
+  />
+          {/* <video
             ref={videoRef}
             className="w-full rounded-lg"
             height="400"
@@ -479,7 +484,7 @@ const App = () => {
             className="absolute bottom-4 right-4 p-1 bg-black bg-opacity-50 text-white rounded-full"
           >
             {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
-          </button>
+          </button> */}
         </div>
       </section>
       <section className="w-full py-8">
