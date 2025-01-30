@@ -7,7 +7,8 @@ const Cardcertificate = () => {
     python: [
       {
         title: 'Core Python Certification',
-        price: '₹1999',
+        price: '₹6000',
+        delprice: '₹8000',
         description: 'Gain fundamental and advanced Python skills with certification.',
         features: ['Live and Recorded Sessions', 'Industry Projects', 'Hands-on Learning'],
         link: '/python-certification',
@@ -15,25 +16,19 @@ const Cardcertificate = () => {
       },
       {
         title: 'Mastering Python Through Project-Based Learning',
-        price: '₹2999',
+        price: '₹8000',
+        delprice: '₹12000',
         description: 'Master Python by building real-world projects.',
         features: ['Live and Recorded Sessions', 'Hands-on Projects', 'Industry-Oriented Curriculum'],
         link: '/python-project-certification',
         img: 'https://ik.imagekit.io/99djpd8k3/CC/Python%20with%20Projects.png?updatedAt=1738162412627',
       },
-      // {
-      //   title: 'Mastering Django Framework: From Basics to Advanced with Projects',
-      //   price: '₹3499',
-      //   description: 'Learn Django from scratch and build scalable web applications.',
-      //   features: ['Live and Recorded Sessions', 'Project-Based Learning', 'Advanced Web Development'],
-      //   link: '',
-      //   img: 'https://ik.imagekit.io/99djpd8k3/CC/Django%20Framework%20Certification.png?updatedAt=1738162412196',
-      // },
     ],
     java: [
       {
         title: 'Java Mastery Certification: From Fundamentals to Advanced Concepts',
-        price: '₹2499',
+        price: '₹12000',
+        delprice: '₹15000',
         description: 'Become proficient in Java with a structured certification program.',
         features: ['Live and Recorded Sessions', 'Comprehensive Java Training', 'Industry Projects'],
         link: '/java-certification',
@@ -41,7 +36,8 @@ const Cardcertificate = () => {
       },
       {
         title: 'Mastering Java Through Project-Based Learning',
-        price: '₹2999',
+        price: '₹8000',
+        delprice: '₹12000',
         description: 'Learn Java by working on real-world projects.',
         features: ['Live and Recorded Sessions', 'Hands-on Learning', 'Industry Relevant Projects'],
         link: '/java-project-certification',
@@ -51,7 +47,8 @@ const Cardcertificate = () => {
     sql: [
       {
         title: 'Mastering SQL: From Fundamentals to Advanced with Projects',
-        price: '₹1999',
+        price: '₹8000',
+        delprice: '₹10000',
         description: 'Master SQL with hands-on projects and real-world applications.',
         features: ['Live and Recorded Sessions', 'Practical Database Training', 'Advanced SQL Techniques'],
         link: '/sql-certification',
@@ -61,7 +58,8 @@ const Cardcertificate = () => {
     c: [
       {
         title: 'Mastering C Programming: From Fundamentals to Core Concepts',
-        price: '₹1799',
+        price: '₹8000',
+        delprice: '₹10000',
         description: 'Learn C programming from scratch to advanced applications.',
         features: ['Live and Recorded Sessions', 'Comprehensive Curriculum', 'Hands-on Projects'],
         link: '/c-programming-certification',
@@ -71,7 +69,8 @@ const Cardcertificate = () => {
     cpp: [
       {
         title: 'Mastering C++: Comprehensive Certification for Modern Programming',
-        price: '₹1999',
+        price: '₹8000',
+        delprice: '₹10000',
         description: 'Learn modern C++ programming techniques and best practices.',
         features: ['Live and Recorded Sessions', 'Project-Based Learning', 'Industry-Oriented Curriculum'],
         link: '/cpp-certification',
@@ -79,6 +78,7 @@ const Cardcertificate = () => {
       },
     ],
   };
+  
   
 
   return (
@@ -154,7 +154,8 @@ const Cardcertificate = () => {
               <div className="flex justify-between items-center">
                 <div>
                   <del className="text-gray-400 text-lg">
-                    ₹{parseInt(course.price.replace('₹', '')) + 500}
+                    {/* ₹{parseInt(course.price.replace('₹', '')) + 500} */}
+                    {course.delprice}
                   </del>
                   <span className="text-orange-600 text-2xl font-bold ml-2">
                     {course.price}

@@ -62,7 +62,7 @@ const App = () => {
     };
   }, []);
 
-  const pageName = "Mastering C Programming: From Fundamentals to Advanced Core Concepts";
+  const pageName = "Mastering Python through Project-Based";
 
   useEffect(() => {
     document.title = pageName;
@@ -241,12 +241,12 @@ python.          </p>
             <div id="razorpay-form-container" className="flex items-center">
               {/* Razorpay form will load here */}
             </div>
-            <button
+            {/* <button
               className="border rounded border-red-500 text-red-600 px-2 mb-2 py-2 text-base md:text-sm hover:bg-red-100 transition-colors"
               onClick={handleDownloadBrochure}
             >
               Download Curriculum
-            </button>
+            </button> */}
           </div>
         </article>
         <div className="relative md:w-1/2 w-full">
