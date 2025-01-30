@@ -42,7 +42,7 @@ const App = () => {
         form.id = "razorpay-form";
         const script = document.createElement("script");
         script.src = "https://checkout.razorpay.com/v1/payment-button.js";
-        script.setAttribute("data-payment_button_id", "pl_PJdpX1IBSSjJo5");
+        script.setAttribute("data-payment_button_id", "pl_PpaSdjTee9uAyU");
         script.async = true;
         form.appendChild(script);
         const container = document.getElementById("razorpay-form-container");
