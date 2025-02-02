@@ -8,6 +8,7 @@ import Pricing from "@/components/ui/Pricing";
 import Testimonial from "@/components/ui/Testimonial";
 import VisualFeatures from "@/components/ui/VisualFeatures";
 import CardComponent from "@/components/ui/CardComponent";
+import CardCertificate from "@/components/ui/CardCertificate";
 
 export default function Home() {
   const [isDetailedPricingOpen, setIsDetailedPricingOpen] = useState(false);
@@ -55,6 +56,9 @@ export default function Home() {
       )}
       <div className="mt-14">
         <CardComponent />
+      </div>
+      <div className="mt-14">
+      <CardCertificate/>
       </div>
 
       {/* Other Components */}
