@@ -52,7 +52,7 @@ const FAQs = () => {
 
                 <div className="mt-6 py-4">
                     <LayoutEffect
-                        className="duration-1000 delay-300"
+                        className="duration-500 delay-100"
                         isInviewState={{
                             trueState: "opacity-1",
                             falseState: "opacity-0 translate-y-12"

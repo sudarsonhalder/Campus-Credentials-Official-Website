@@ -28,7 +28,7 @@ const VisualFeatures = () => {
                 "Access courses anytime, anywhere with a user-friendly mobile platform",
                 "Join live webinars and recorded sessions for flexible learning"
             ],
-             url:"https://campuscredentials.online/",
+             url:"https://learn.campuscredentials.com/learn",
             imageUrl: Feature2,
         },
     ];
