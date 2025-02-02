@@ -2,7 +2,7 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <div className="container mx-auto px-6 lg:px-16">
+    <div className="container mb-12 mx-auto px-6 lg:px-16">
       <div className="space-y-10">
         {/* Refund Policy Section */}
         <h1 className="text-4xl font-extrabold mt-12 mb-8 text-center text-gray-800">
@@ -121,7 +121,6 @@ const TermsAndConditions = () => {
           </div>
         </div>
 
-        <hr className="border-gray-300 my-8" />
       </div>
     </div>
   );

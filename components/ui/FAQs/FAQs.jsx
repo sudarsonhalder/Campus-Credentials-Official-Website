@@ -30,7 +30,6 @@ const faqsList = [
     }
 ];
 
-
 const FAQs = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -40,17 +39,18 @@ const FAQs = () => {
 
     return (
         <SectionWrapper id="faqs">
-            <div className="custom-screen text-gray-800">
+            <div className="custom-screen text-gray-800 py-8">
                 <div className="max-w-xl text-center mx-auto">
-                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold py-8 mt-6">
+                    {/* Reduced padding and margin for heading and subheading */}
+                    <h2 className="text-gray-800 text-2xl sm:text-4xl font-extrabold py-2 mt-2">
                         Everything you need to know
                     </h2>
-                    <p className="mt-2 text-base sm:text-lg text-gray-600">
+                    <p className="mt-1 text-base sm:text-lg text-gray-600 text-center">
                         Here are the most questions people always ask about.
                     </p>
                 </div>
 
-                <div className="mt-6 py-2">
+                <div className="mt-6 py-4">
                     <LayoutEffect
                         className="duration-500 delay-100"
                         isInviewState={{
@@ -58,29 +58,27 @@ const FAQs = () => {
                             falseState: "opacity-0 translate-y-12"
                         }}
                     >
-                        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+                        {/* Increased gap for a more spaced-out layout */}
+                        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 mb-12">
                             {faqsList.map((item, idx) => (
-                                <li key={idx} className="space-y-3">
+                                <li key={idx} className="space-y-4">
                                     <button
                                         onClick={() => toggleAccordion(idx)}
-                                        className="flex items-center justify-between w-full font-semibold text-gray-800"
+                                        className="flex items-center justify-between w-full font-semibold"
                                     >
-                                        {/* Adjusted the font size for desktop */}
-                                        <span className="text-base lg:text-md text-left">
+                                        <span 
+                                            className={`text-base lg:text-md text-left ${activeIndex === idx ? 'text-[#ef4444]' : 'text-gray-800'}`}
+                                        >
                                             {item.q}
                                         </span>
                                         <span className="text-xl">
-                                            {activeIndex === idx ? (
-                                                <FiChevronUp />
-                                            ) : (
-                                                <FiChevronDown />
-                                            )}
+                                            {activeIndex === idx ? <FiChevronUp /> : <FiChevronDown />}
                                         </span>
                                     </button>
                                     {activeIndex === idx && (
                                         <p
                                             dangerouslySetInnerHTML={{ __html: item.a }}
-                                            className="mt-2 text-sm sm:text-base leading-relaxed text-gray-600"
+                                            className="mt-2 text-sm sm:text-base leading-relaxed text-gray-600 text-justify"
                                         ></p>
                                     )}
                                 </li>
