@@ -1,26 +1,34 @@
-const fs = require('fs');
-const path = require('path');
+import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv'; // Import dotenv to load environment variables
 
-// Your GNews API key
-const API_KEY = '320b570a616b655b22c1074a314d65a5'; 
-const NEWS_FILE_PATH = path.join(__dirname, '..', 'data', 'news.json');
+// Load environment variables from .env file
+dotenv.config();
+
+// Create __dirname equivalent for ES modules
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Your GNews API key loaded from the environment variable
+const API_KEY = process.env.GNEWS_API_KEY;
+const NEWS_FILE_PATH = join(__dirname, '..', 'data', 'news.json');
 
 async function fetchArticles() {
   // Use the exact keywords you specified
   const keywords = [
-    'jobs', 'employment', 'unemployment', 
-    'hiring', 'placements', 'internship', 'freshers', 
+    'jobs', 'employment', 'unemployment',
+    'hiring', 'placements', 'internship', 'freshers',
     'coding', 'apprenticeships', 'layoffs'
   ];
 
   // Create a query string
   const query = keywords.join(' OR ');
-  
+
   // Construct the URL with encoded query and category filters
   const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=in&max=20&sortby=publishedAt&token=${API_KEY}&topic=politics,education,technology,science&exclude=horoscope,entertainment`;
-  
+
   console.log('Fetching articles with query:', url);
-  
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -37,7 +45,7 @@ async function fetchArticles() {
     const uniqueArticles = articles.filter(article => {
       // Get first 6 words of the title
       const titleStart = article.title.split(' ').slice(0, 6).join(' ').toLowerCase();
-      
+
       // If we haven't seen this title start before, keep the article
       if (!seenTitleStarts.has(titleStart)) {
         seenTitleStarts.add(titleStart);
@@ -49,7 +57,7 @@ async function fetchArticles() {
     // Enhanced logging for article content
     console.log(`Fetched ${uniqueArticles.length} unique articles`);
     uniqueArticles.forEach((article, index) => {
-      console.log(`Article ${index + 1}: 
+      console.log(`Article ${index + 1}:
         Title: ${article.title}
         Source: ${article.source.name}
         URL: ${article.url}`);
@@ -67,9 +75,9 @@ async function updateNews() {
   const today = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
 
   // Read existing data if available
-  if (fs.existsSync(NEWS_FILE_PATH)) {
+  if (existsSync(NEWS_FILE_PATH)) {
     try {
-      const rawData = fs.readFileSync(NEWS_FILE_PATH, 'utf8');
+      const rawData = readFileSync(NEWS_FILE_PATH, 'utf8');
       if (rawData) {
         data = JSON.parse(rawData);
       }
@@ -88,7 +96,7 @@ async function updateNews() {
   // Fetch articles
   try {
     const newArticles = await fetchArticles();
-    
+
     // Combine and deduplicate articles
     const combinedArticles = [...newArticles, ...data.articles];
     const uniqueArticles = Array.from(new Map(
@@ -107,7 +115,7 @@ async function updateNews() {
 
   // Write updated data back to news.json
   try {
-    fs.writeFileSync(NEWS_FILE_PATH, JSON.stringify(data, null, 2));
+    writeFileSync(NEWS_FILE_PATH, JSON.stringify(data, null, 2));
     console.log('News updated successfully.');
   } catch (writeError) {
     console.error('Error writing to news.json:', writeError);
