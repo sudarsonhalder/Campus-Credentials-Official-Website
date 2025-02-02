@@ -30,8 +30,7 @@ const Navbar = () => {
                 { name: "News & Updates", href: "/news" },
             ]
         },
-        { name: "Companies", href: "/companies" },
-        { name: "Blogs", href: "/blogs" }
+        { name: "Companies", href: "/companies" }
     ]
 
     useEffect(() => {
@@ -85,8 +84,8 @@ const Navbar = () => {
                             {navigation.map((item, idx) => {
                                 if (item.dropdown) {
                                     return (
-                                        <li 
-                                          key={idx} 
+                                        <li
+                                          key={idx}
                                           className="relative group text-base font-semibold transition-colors duration-200"
                                         >
                                             <button className="flex items-center focus:outline-none hover:text-gray-900 transition-colors duration-200">
@@ -103,8 +102,8 @@ const Navbar = () => {
                                             <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md py-1 w-48 z-50">
                                                 {item.links.map((link, lidx) => (
                                                     <li key={lidx}>
-                                                        <Link 
-                                                          href={link.href} 
+                                                        <Link
+                                                          href={link.href}
                                                           className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
                                                         >
                                                             {link.name}
