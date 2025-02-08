@@ -1,0 +1,49 @@
+.postContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .postTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .postDate {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 2rem;
+  }
+  
+  .postImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .postContent {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .postContent h2 {
+    margin-top: 2rem;
+    color: #333;
+  }
+  
+  .postContent p {
+    margin: 1rem 0;
+  }
+  
+  .postContent a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .postContent a:hover {
+    text-decoration: underline;
+  }
+  
