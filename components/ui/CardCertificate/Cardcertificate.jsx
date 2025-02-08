@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 const Cardcertificate = () => {
-  const [activeCategory, setActiveCategory] = useState('java');
+  // Default to "all" so that all cards are visible initially.
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const courses = {
     python: [
@@ -78,97 +79,102 @@ const Cardcertificate = () => {
       },
     ],
   };
-  
-  
+
+  // Define the tab options.
+  const tabs = ['all', 'java', 'python', 'sql', 'c', 'cpp'];
+
+  // Determine which courses to display based on the active category.
+  const displayedCourses =
+    activeCategory === 'all'
+      ? Object.values(courses).flat()
+      : courses[activeCategory] || [];
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-orange-600 mb-8">
-          Explore Our Certification Programs
-        </h2>
-
-        <div className="flex justify-center space-x-6 mb-10">
-          {['java', 'python', 'sql',"cpp"].map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`py-2 px-4 sm:py-3 sm:px-6 rounded-lg font-medium text-lg transition focus:outline-none ${
-                activeCategory === category
-                  ? 'bg-orange-600 text-white'
-                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-              }`}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
+        {/* Container for Heading and Tabs */}
+        <div className="bg-white rounded-lg shadow p-4 mb-12">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <h2 className="text-4xl font-bold text-red-500 mb-4 md:mb-0">
+              Get Certified with Campus Credentials
+            </h2>
+            <div className="flex space-x-2">
+              {tabs.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`py-1 px-2 sm:py-2 sm:px-3 rounded-md font-medium text-sm transition transform duration-200 focus:outline-none ${
+                    activeCategory === category
+                      ? 'bg-red-500 text-white'
+                      : 'bg-[#f9fafb] text-gray-800 hover:bg-gray-100 hover:scale-105'
+                  }`}
+                >
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses[activeCategory].map((course, index) => (
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          {displayedCourses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between group hover:shadow-lg"
+              className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col h-full transition-transform transform hover:-translate-y-1 hover:shadow-lg"
             >
-<div className="w-full rounded-lg overflow-hidden flex justify-center items-center p-4">
-  <img
-    src={course.img}
-    alt={course.title}
-    className="w-full h-[250px] object-contain"
-  />
-</div>
-
-
-
-
-
-
-
-
-
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {course.title}
-              </h3>
-              <p className="text-gray-600 mb-4 text-base">
-                {course.description}
-              </p>
-              <ul className="space-y-3 mb-4">
-                {course.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-orange-600"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-gray-800 text-lg font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex justify-between items-center">
-                <div>
-                  <del className="text-gray-400 text-lg">
-                    {/* ₹{parseInt(course.price.replace('₹', '')) + 500} */}
-                    {course.delprice}
-                  </del>
-                  <span className="text-orange-600 text-2xl font-bold ml-2">
-                    {course.price}
-                  </span>
+              {/* Image Banner */}
+              <div className="w-full">
+                <img
+                  src={course.img}
+                  alt={course.title}
+                  className="w-full h-55 object-cover"
+                />
+              </div>
+              {/* Card Content */}
+              <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-800 mt-2">
+                  {course.title}
+                </h3>
+                <p className="text-gray-600 text-base mt-1">
+                  {course.description}
+                </p>
+                <ul className="space-y-1 mt-2 mb-2">
+                  {course.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-red-500"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="text-gray-800 text-base font-medium">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto flex justify-between items-center">
+                  <div>
+                    <del className="text-gray-400 text-lg">{course.delprice}</del>
+                    <span className="text-black text-2xl font-bold ml-2">
+                      {course.price}
+                    </span>
+                  </div>
+                  <a
+                    href={course.link}
+                    rel="noopener noreferrer"
+                    className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-200"
+                  >
+                    Know More
+                  </a>
                 </div>
-                <a
-                  href={course.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition"
-                >
-                  View More
-                </a>
               </div>
             </div>
           ))}

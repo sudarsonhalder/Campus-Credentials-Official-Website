@@ -97,10 +97,10 @@ const encodeQueryParams = (params) => {
 // Function to build the API URL
 const buildApiUrl = (offset = 0, limit = 100) => {
   const advancedTitleFilter = constructAdvancedTitleFilter(jobRoles);
-  
+
   // URL encode the advanced_title_filter
   const encodedAdvancedTitleFilter = encodeURIComponent(advancedTitleFilter);
-  
+
   const params = {
     advanced_title_filter: advancedTitleFilter, // Will be URL encoded below
     location_filter: '"India"',
@@ -108,7 +108,7 @@ const buildApiUrl = (offset = 0, limit = 100) => {
     limit: limit,
     offset: offset,
   };
-  
+
   const queryString = encodeQueryParams(params);
   return `https://${RAPIDAPI_HOST}/active-jb-7d?${queryString}`;
 };
@@ -122,10 +122,10 @@ const fetchJobs = async (url) => {
         'x-rapidapi-key': RAPIDAPI_KEY,
       },
     });
-    
+
     console.log(`Response Status for ${url}:`, response.status);
     console.log(`Response Data for ${url}:`, JSON.stringify(response.data, null, 2)); // Log full response for debugging
-    
+
     // Adjust based on the actual structure of the API response
     if (Array.isArray(response.data)) {
       return response.data;

@@ -176,7 +176,7 @@ const App = () => {
       ],
     },
   ];
-  
+
 
   const faqs = [
     {
@@ -252,8 +252,8 @@ python.          </p>
         <div className="relative md:w-1/2 w-full">
         <img
     src="https://ik.imagekit.io/99djpd8k3/CC/Python%20with%20Projects.png?updatedAt=1738162412627"
-   
-    className="w-full h-[300px] object-contain"
+
+    className="w-full rounded-lg h-[360px] object-cover"
   />
           {/* <video
             ref={videoRef}
