@@ -95,7 +95,7 @@ const Cardcertificate = () => {
         {/* Container for Heading and Tabs */}
         <div className="bg-white rounded-lg shadow p-4 mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <h2 className="text-4xl font-bold text-orange-600 mb-4 md:mb-0">
+            <h2 className="text-4xl font-bold text-red-500 mb-4 md:mb-0">
               Get Certified with Campus Credentials
             </h2>
             <div className="flex space-x-2">
@@ -105,7 +105,7 @@ const Cardcertificate = () => {
                   onClick={() => setActiveCategory(category)}
                   className={`py-1 px-2 sm:py-2 sm:px-3 rounded-md font-medium text-sm transition transform duration-200 focus:outline-none ${
                     activeCategory === category
-                      ? 'bg-orange-600 text-white'
+                      ? 'bg-red-500 text-white'
                       : 'bg-[#f9fafb] text-gray-800 hover:bg-gray-100 hover:scale-105'
                   }`}
                 >
@@ -144,7 +144,7 @@ const Cardcertificate = () => {
                     <li key={idx} className="flex items-center gap-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-orange-600"
+                        className="h-5 w-5 text-red-500"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -163,7 +163,7 @@ const Cardcertificate = () => {
                 <div className="mt-auto flex justify-between items-center">
                   <div>
                     <del className="text-gray-400 text-lg">{course.delprice}</del>
-                    <span className="text-orange-600 text-2xl font-bold ml-2">
+                    <span className="text-black text-2xl font-bold ml-2">
                       {course.price}
                     </span>
                   </div>

@@ -1,63 +1,46 @@
-import { useRef, useEffect } from 'react';
+import React from 'react';
 
-const Squares = ({
-  borderColor = '#999',
-  squareSize = 40,
-}) => {
-  const canvasRef = useRef(null);
+const Squares = () => {
+  const style = {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#FFF',
+    backgroundImage: `
+      /* Radial blur/gradient layer (painted first = on top) */
+      radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0) 40%,
+        #FFF 90%
+      ),
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+      /* Upper layer: 2px lines repeating every 100px */
+      linear-gradient(0deg, #E1E1E1 2px, transparent 2px),
+      linear-gradient(90deg, #E1E1E1 2px, transparent 2px),
 
-    const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      drawGrid();
-    };
+      /* Lower layer: 1px lines repeating every 25px */
+      linear-gradient(0deg, #E1E1E1 1px, transparent 1px),
+      linear-gradient(90deg, #E1E1E1 1px, transparent 1px)
+    `,
+    backgroundSize: `
+      /* Radial gradient size */
+      100% 100%,
 
-    // Draw the grid without animation or hover effects
-    const drawGrid = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      /* 2px lines grid size */
+      120px 120px,
+      120px 120px,
 
-      const numSquaresX = Math.ceil(canvas.width / squareSize) + 1;
-      const numSquaresY = Math.ceil(canvas.height / squareSize) + 1;
+      /* 1px lines grid size */
+      40px 40px,
+      40px 40px
+    `,
+    /*
+      - The first layer (radial) doesn’t repeat (no-repeat).
+      - The line grids all repeat to fill the container.
+    */
+    backgroundRepeat: 'no-repeat, repeat, repeat, repeat, repeat',
+  };
 
-      // Draw each square
-      for (let x = 0; x < numSquaresX; x++) {
-        for (let y = 0; y < numSquaresY; y++) {
-          const squareX = x * squareSize;
-          const squareY = y * squareSize;
-
-          ctx.strokeStyle = borderColor;
-          ctx.strokeRect(squareX, squareY, squareSize, squareSize);
-        }
-      }
-
-      // Optional: If you want to keep the radial gradient:
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2
-      );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      gradient.addColorStop(1, '#060606');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    };
-
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas(); // draw initially
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, [borderColor, squareSize]);
-
-  return <canvas ref={canvasRef} className="w-full h-full border-none block" />;
+  return <div style={style} />;
 };
 
 export default Squares;
