@@ -5,7 +5,129 @@ author: "John Doe"
 thumbnail: "https://ik.imagekit.io/99djpd8k3/CC/java%20with%20Projects.png?updatedAt=1738162411765"
 metaDescription: "This is the first blog post on my site. Learn about Next.js and MDX integration."
 ---
+## Comprehensive Guide to Companies' Interview Preparation Questions
 
-# Welcome to My First Blog Post
+Preparing for interviews can be daunting, but having the right strategy and resources can make all the difference. This blog provides a deep dive into the types of questions companies typically ask during interviews, along with helpful resources and examples to guide your preparation.
 
-This is the content of the first blog post written in MDX. 🎉
+### Why Prepare for Specific Interview Questions?
+Different companies have unique recruitment processes and emphasize various skills. By understanding their patterns, you can:
+
+- Anticipate the type of questions they might ask.
+- Focus on the relevant skills and topics.
+- Build confidence through targeted practice.
+
+### Common Categories of Interview Questions
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Technical Questions</strong></td>
+      <td>Focus on coding, algorithms, and system design.</td>
+    </tr>
+    <tr>
+      <td><strong>Aptitude Questions</strong></td>
+      <td>Test logical reasoning, problem-solving, and analytical skills.</td>
+    </tr>
+    <tr>
+      <td><strong>Behavioral Questions</strong></td>
+      <td>Explore your experiences, teamwork, and adaptability.</td>
+    </tr>
+    <tr>
+      <td><strong>Company-Specific Questions</strong></td>
+      <td>Questions tailored to a company’s culture and role expectations.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Sample Interview Questions
+
+#### Technical Questions
+```python
+# Example: Reverse a string in Python
+
+def reverse_string(s):
+    return s[::-1]
+
+# Test the function
+print(reverse_string("Interview"))  # Output: weivretnI
+```
+
+#### Aptitude Questions
+**Question:** If a train travels 60 km in 1 hour, how long will it take to cover 180 km?
+
+**Solution:**
+```math
+\text{Speed} = 60 \text{ km/h}
+\text{Distance} = 180 \text{ km}
+\text{Time} = \frac{\text{Distance}}{\text{Speed}} = \frac{180}{60} = \textbf{3 hours}
+```
+
+#### Behavioral Questions
+**Question:** Describe a challenging project you worked on and how you handled it.
+
+**Tips for Answering:**
+- Use the STAR method (Situation, Task, Action, Result).
+- Focus on your role and contributions.
+
+### Preparation Guide for Top Companies
+
+#### Google
+- **Key Focus Areas:** Data structures, algorithms, system design.
+- **Example Question:** Implement a binary tree traversal algorithm.
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)
+        print(root.value, end=' ')
+        inorder_traversal(root.right)
+
+# Example Usage
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+inorder_traversal(root)  # Output: 2 1 3
+```
+
+#### Amazon
+- **Key Focus Areas:** Problem-solving, leadership principles.
+- **Example Question:** Solve the two-sum problem.
+
+```python
+# Two-sum problem in Python
+
+def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+
+# Example
+print(two_sum([2, 7, 11, 15], 9))  # Output: [0, 1]
+```
+
+#### TCS
+- **Key Focus Areas:** Aptitude, logical reasoning, and technical basics.
+- **Example Question:** Solve a quadratic equation.
+
+#### Wipro
+- **Key Focus Areas:** Behavioral questions, technical basics, and aptitude.
+
+### Pro Tips for Interview Success
+1. Practice coding problems on platforms like LeetCode and HackerRank.
+2. Prepare for behavioral questions using real-life examples.
+3. Research the company’s culture and tailor your answers accordingly.
