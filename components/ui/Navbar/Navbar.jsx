@@ -55,7 +55,8 @@ const Navbar = () => {
       links: [
         { name: 'Free Resources', href: 'https://resource.prepcrazy.com' },
         { name: 'Job Opportunities', href: '/jobs' },
-        { name: 'News & Updates', href: '/news' }
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Certification Courses', href: '/certifications' }
       ]
     },
     { name: 'Companies', href: '/companies' }
