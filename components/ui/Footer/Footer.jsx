@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="lg:w-1/3 text-center lg:text-left">
                         <img
                             className="w-auto h-24 mx-auto lg:mx-0"
-                            src="https://campuscredentials.online/wp-content/uploads/2022/08/CC-Logo-Dark.png"
+                            src="https://campuscredentials.com/CAMPUS.png"
                             alt="Campus Credentials Logo"
                         />
                         <p className="text-base leading-relaxed text-gray-600 mt-4 lg:mt-0">
