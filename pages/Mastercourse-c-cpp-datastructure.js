@@ -42,7 +42,7 @@ const App = () => {
         form.id = "razorpay-form";
         const script = document.createElement("script");
         script.src = "https://checkout.razorpay.com/v1/payment-button.js";
-        script.setAttribute("data-payment_button_id", "pl_PJdpX1IBSSjJo5");
+        script.setAttribute("data-payment_button_id", "pl_QJduEJIsxd0xOM");
         script.async = true;
         form.appendChild(script);
         const container = document.getElementById("razorpay-form-container");
@@ -465,7 +465,7 @@ const App = () => {
             </button> */}
           </div>
         </article>
-        <div className="relative md:w-1/2 w-full">
+        {/* <div className="relative md:w-1/2 w-full">
           <video
             ref={videoRef}
             className="w-full rounded-lg"
@@ -486,7 +486,7 @@ const App = () => {
           >
             {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
           </button>
-        </div>
+        </div> */}
       </section>
       {/* Course Curriculum */}
       <section className="w-full py-8">
