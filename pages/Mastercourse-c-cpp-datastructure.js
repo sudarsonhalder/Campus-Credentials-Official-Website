@@ -125,16 +125,11 @@ const App = () => {
         'Variables and Constants',
         'Data types',
         'Input/Output functions: printf(), scanf()',
-        {
-          title: 'Basic Operators',
-          content: [
-            'Arithmetic',
-            'Relational',
-            'Logical',
-            'Assignment',
-            'Bitwise',
-          ],
-        },
+        'Arithmetic',
+        'Relational',
+        'Logical',
+        'Assignment',
+        'Bitwise',
       ],
     },
     {
@@ -303,21 +298,16 @@ const App = () => {
     },
     {
       title: 'Queues',
-      content: [
-        'Introduction to Queues',
-        {
-          title: 'Types of Queues',
-          content: [
+      content:[
+                  'Introduction to Queues',
             'Linear Queue',
             'Circular Queue',
             'Deque (Double-ended Queue)',
             'Priority Queue',
+            'Implementation using Array, Linked List, and STL',
+            'Applications',
           ],
         },
-        'Implementation using Array, Linked List, and STL',
-        'Applications',
-      ],
-    },
     {
       title: 'Trees (Theory)',
       content: [
@@ -427,10 +417,10 @@ const App = () => {
             Unlock the power of C, C++ and Data Structure with this comprehensive course designed for beginners and experienced developers alike.
           </p>
               {/* Course Duration, Mode, and Level Section */}
-    <div className="flex items-center justify-center md:justify-start gap-6 mb-6">
+    {/* <div className="flex items-center justify-center md:justify-start gap-6 mb-6">
       <div className="flex items-center gap-2">
         <img
-          src="https://ik.imagekit.io/99djpd8k3/CC/clock-solid%20(1).svg?updatedAt=1731241927965"
+          src="https://ik.imagekit.io/201782465/clock-solid%20(1).svg?updatedAt=1744953738904"
           alt="Time Icon"
           className="w-6 h-6"
         />
@@ -452,7 +442,7 @@ const App = () => {
         />
         <span>Intermediate</span>
       </div>
-    </div>
+    </div> */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-1">
             <div id="razorpay-form-container" className="flex items-center">
               {/* Razorpay form will load here */}

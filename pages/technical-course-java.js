@@ -521,7 +521,7 @@ const sqlCurriculum = [
     <div className="flex items-center justify-center md:justify-start gap-6 mb-6">
       <div className="flex items-center gap-2">
         <img
-          src="https://ik.imagekit.io/99djpd8k3/CC/clock-solid%20(1).svg?updatedAt=1731241927965"
+          src="https://ik.imagekit.io/201782465/clock-solid%20(1).svg?updatedAt=1744953738904"
           alt="Time Icon"
           className="w-6 h-6"
         />
