@@ -541,7 +541,7 @@ const App = () => {
       </section>
 
       {/* Certification Section */}
-      <section className="w-full py-8">
+      {/* <section className="w-full py-8">
         <h2 className="text-4xl font-bold mb-4 text-red-600">Certification</h2>
         <p className="text-lg text-gray-600 mb-4">
           Showcase your achievements with our industry-recognized certificate.
@@ -551,7 +551,7 @@ const App = () => {
           alt="Certificate Preview"
           className="w-full md:w-1/2 mx-auto rounded-lg shadow-lg"
         />
-      </section>
+      </section> */}
 
       {/* Student Reviews */}
       <section className="w-full py-8">
